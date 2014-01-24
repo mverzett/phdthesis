@@ -1,0 +1,107 @@
+\documentclass[12pt,a4paper,oneside, openright]{book}
+%\documentclass[11pt]{ETHthesis}
+
+% Ein paar brauchbare Pakete, nach Bedarf zu/abschalten mit %
+
+% für Deutsch: erlaubt sind D, E, F, I
+\usepackage{E}
+%ETH-Layout, erst nach der Sprache festlegen
+\usepackage{ETHthesis}
+%\initETHthesis
+
+% oneside - solo fronte, twoside - fronte retro
+% openright - prima pagina dei capitoli su pagina destra, openany - indifferentemente
+%
+\usepackage{graphicx}                 %Pacchetto per inserire le figure nel Latex
+\usepackage{latexsym}
+%\usepackage{amsfonts}                 %Pacchetto per inserire i caratteri matematici
+\usepackage{mathrsfs}
+\usepackage{amsmath}                 
+\usepackage{makeidx}                  %Pacchetto per generare l'indice analitico
+%\usepackage[latin9]{inputenc}         %Pacchetto per poter inserire direttamente nel testo
+                                      %lettere accentate. Se si scrive in inglese
+                                      %si puï¿½ commentare
+\usepackage[T1]{fontenc}              %Pacchetto che gestisce l'encoding T1
+
+
+
+\renewcommand{\rmdefault}{ppl}                                                                                 %             PER CAMBIARE I FONT..SE POI VUOI TI DO LA LISTA :)
+
+
+
+\usepackage[english]{babel}   %Pacchetto per la sillabazione delle parole
+                                      %in italiano e in inglese
+
+\usepackage{verbatim}                 %Pacchetti per stampare il codice
+\usepackage{listings}                 %Pacchetti per stampare il codice
+\usepackage{fancyvrb}                 %Pacchetti per stampare il codice
+
+\usepackage{epigraph}
+\usepackage{acronym}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{textcomp}
+
+\usepackage[linkcolor=black,colorlinks=true,citecolor=black,filecolor=black,backref=page]{hyperref}
+\usepackage{siunitx}
+\sisetup{
+load-configurations  = {abbreviations,binary},
+product-units        = power,
+list-units           = single,
+list-final-separator = {, and },
+range-phrase         = { -- },
+separate-uncertainty
+}
+
+\setlength{\topmargin}{-10mm}
+\setlength{\headheight}{5.mm}
+\setlength{\headsep}{+15.mm}
+\setlength{\textheight}{220mm}
+\setlength{\footskip}{+20.mm}
+\setlength{\textwidth}{161mm} %!!!
+\setlength{\oddsidemargin}{0mm}
+\setlength{\evensidemargin}{0mm}
+\setlength{\parindent}{0pt}
+
+% keeps the distance between paragraphs constant
+\setlength{\parskip}{1ex plus 0.0ex minus 0.0ex}
+
+\input{src/symbols.tex}
+\input{src/commands.tex}
+\input{src/environments.tex}
+
+
+\begin{document}
+
+% frontmatter
+\frontmatter
+\input{0_misc_headers/frontpage.tex} 
+\input{0_misc_headers/abstract_DE.tex}
+\input{0_misc_headers/abstract_EN.tex}
+\input{0_misc_headers/aknoledgments.tex}
+\tableofcontents
+
+% mainmatter
+\mainmatter
+\input{1_Introduction_Th_and_Exp/chap.tex}
+\input{2_LHC_and_CMS/chap.tex}
+\input{3_Evt_Reconstruction/chap.tex}
+\input{4_Analisys/chap.tex}
+\input{5_Conclusions_and_Outlook/chap.tex}
+
+%\appendix                       % Commentare solo se non ci sono appendici
+%\input{Appendice1.tex}          % ï¿½ facoltativo
+%\input{Appendice1.tex}          % ï¿½ facoltativo
+
+% backmatter
+\backmatter
+%\addcontentsline{toc}{chapter}{Bibliography}
+%\pagestyle{myheadings} \markright{Bibliography}
+%\bibliographystyle{unsrt}
+%\bibliography{tesi} 
+
+%\input{elencoacronimi.tex}      % ï¿½ facoltativo
+%\printindex                     % Indice analitico ï¿½ facoltativo
+
+
+\end{document}
