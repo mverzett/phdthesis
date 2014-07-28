@@ -1,0 +1,19 @@
+name                                              b-only fit            s+b fit         rho
+CMS_eff_e_7TeV                                   +0.04, 0.99        +0.01, 0.99       -0.06
+CMS_eff_t_eet_7TeV                               +0.06, 0.99        +0.01, 0.99       -0.08
+CMS_fake_b_7TeV                                  +0.01, 0.99        +0.00, 0.99       -0.01
+CMS_scale_t_eet_7TeV                             +0.03, 0.99        +0.01, 0.99       -0.04
+CMS_trigger_e_7TeV                               +0.01, 0.99        +0.00, 0.99       -0.01
+CMS_vhtt_charge_fakesNorm_eet_7TeV               +0.02, 1.00        +0.01, 0.99       -0.01
+CMS_vhtt_eet_7TeV_fakes_bin_3                 * -0.31, 1.03*        -0.22, 1.04       +0.09
+CMS_vhtt_eet_7TeV_fakes_bin_4                    +0.21, 0.92        +0.21, 0.93       -0.02
+CMS_vhtt_eet_chargeFlipShape_7TeV                +0.00, 0.99        +0.00, 0.99       -0.00
+CMS_vhtt_eet_chargeFlipYield_7TeV                +0.04, 1.00        +0.02, 1.00       -0.03
+CMS_vhtt_fakesNorm_eet_7TeV                      +0.13, 0.99        +0.03, 0.99       -0.11
+CMS_vhtt_signalNorm_eet_7TeV                     +0.00, 0.99        +0.00, 0.99       -0.04
+CMS_vhtt_wzNorm_eet_7TeV                         +0.05, 0.99        +0.01, 0.99       -0.04
+CMS_vhtt_zzNorm_eet_7TeV                         +0.01, 0.99        +0.00, 0.99       -0.01
+QCDscale_VH                                      +0.00, 0.99        +0.00, 0.99       -0.01
+QCDscale_VV                                      +0.03, 0.99        +0.01, 0.99       -0.03
+lumi_7TeV                                        +0.02, 0.99        +0.01, 0.99       -0.03
+pdf_qqbar                                        +0.04, 0.99        +0.01, 0.99       -0.05

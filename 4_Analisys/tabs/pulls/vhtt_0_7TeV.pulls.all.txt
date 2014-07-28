@@ -1,0 +1,17 @@
+name                                              b-only fit            s+b fit         rho
+CMS_eff_m_7TeV                                   -0.01, 0.99        -0.02, 0.99       -0.04
+CMS_eff_t_mmt_7TeV                               -0.02, 0.99        -0.03, 0.99       -0.06
+CMS_fake_b_7TeV                                  -0.00, 0.99        -0.00, 0.99       -0.01
+CMS_scale_t_mmt_7TeV                             -0.01, 0.99        -0.01, 0.99       -0.03
+CMS_trigger_m_7TeV                               -0.00, 0.99        -0.00, 0.99       -0.01
+CMS_vhtt_fakesNorm_mmt_7TeV                      +0.05, 1.00        +0.03, 1.01       -0.16
+CMS_vhtt_mmt_7TeV_fakes_bin_3                    +0.23, 0.95        +0.20, 0.97       -0.19
+CMS_vhtt_mmt_7TeV_fakes_bin_4                 ! +0.14, 1.68!     ! +0.13, 1.68!       -0.04
+CMS_vhtt_mmt_fakeshape_7TeV                   * -0.04, 0.83*     * -0.03, 0.85*       +0.03
+CMS_vhtt_signalNorm_mmt_7TeV                     -0.00, 0.99        +0.00, 0.99       -0.01
+CMS_vhtt_wzNorm_mmt_7TeV                         -0.01, 0.99        -0.02, 0.99       -0.04
+CMS_vhtt_zzNorm_mmt_7TeV                         -0.00, 0.99        -0.00, 0.99       -0.00
+QCDscale_VH                                      -0.00, 0.99        +0.00, 0.99       -0.00
+QCDscale_VV                                      -0.01, 0.99        -0.02, 0.99       -0.03
+lumi_7TeV                                        -0.01, 0.99        -0.01, 0.99       -0.02
+pdf_qqbar                                        -0.01, 0.99        -0.02, 0.99       -0.04

@@ -1,0 +1,23 @@
+name                                              b-only fit            s+b fit         rho
+CMS_eff_e_8TeV                                   -0.04, 0.99        -0.04, 0.99       -0.00
+CMS_eff_t_eet_8TeV                               -0.05, 0.99        -0.05, 0.99       -0.00
+CMS_fake_b_8TeV                                  -0.01, 0.99        -0.01, 0.99       -0.00
+CMS_scale_t_eet_8TeV                             -0.03, 0.99        -0.03, 0.99       -0.00
+CMS_trigger_e_8TeV                               -0.01, 0.99        -0.01, 0.99       -0.00
+CMS_vhtt_charge_fakesNorm_eet_8TeV               -0.01, 0.99        -0.01, 0.99       -0.00
+CMS_vhtt_eet_8TeV_fakes_bin_6                    -0.26, 1.00        -0.26, 1.00       +0.00
+CMS_vhtt_eet_8TeV_fakes_bin_7                 * -0.30, 1.01*     * -0.30, 1.01*       +0.00
+CMS_vhtt_eet_8TeV_fakes_bin_8                    -0.27, 1.00        -0.27, 1.00       +0.00
+CMS_vhtt_eet_8TeV_fakes_bin_9                 * +0.48, 0.92*     * +0.49, 0.92*       +0.00
+CMS_vhtt_eet_chargeFlipShape_8TeV                -0.00, 0.99        -0.00, 0.99       -0.00
+CMS_vhtt_eet_chargeFlipYield_8TeV                -0.02, 0.99        -0.02, 0.99       -0.00
+CMS_vhtt_eet_fakeshape_8TeV                      +0.02, 0.91        +0.02, 0.91       -0.00
+CMS_vhtt_eet_taufakes_8TeV                    * -0.98, 0.79*     * -0.98, 0.79*       +0.00
+CMS_vhtt_fakesNorm_eet_8TeV                      -0.10, 0.96        -0.10, 0.96       -0.00
+CMS_vhtt_signalNorm_eet_8TeV                     +0.00, 0.99        +0.00, 0.99       -0.00
+CMS_vhtt_wzNorm_eet_8TeV                         -0.03, 0.99        -0.03, 0.99       -0.00
+CMS_vhtt_zzNorm_eet_8TeV                         -0.00, 0.99        -0.00, 0.99       -0.00
+QCDscale_VH                                      +0.00, 0.99        +0.00, 0.99       -0.00
+QCDscale_VV                                      -0.03, 0.99        -0.03, 0.99       -0.00
+lumi_8TeV                                        -0.02, 0.99        -0.02, 0.99       -0.00
+pdf_qqbar                                        -0.03, 0.99        -0.03, 0.99       -0.00

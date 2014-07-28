@@ -1,0 +1,18 @@
+import ROOT
+import os
+import glob
+
+two_sided = ROOT.TH1F('two_sided', 'two_sided', 100, -2, 2)
+one_sided = ROOT.TH1F('one_sided', 'two_sided', 100,  0, 2)
+
+for filename in glob.glob('*.txt'):
+    with open(filename) as infile:
+        for line in infile.readlines():
+            mod = line.replace('*','').replace('!','')
+            pull = mod.split()[1]
+            if ',' in pull:
+                val = float(pull.replace(',',''))
+                two_sided.Fill(val)
+                one_sided.Fill(abs(val))
+
+    

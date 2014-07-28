@@ -1,0 +1,32 @@
+name                                              b-only fit            s+b fit         rho
+CMS_eff_e_8TeV                                   +0.03, 0.99        +0.03, 0.99       -0.00
+CMS_eff_m_8TeV                                   +0.03, 0.99        +0.03, 0.99       -0.00
+CMS_eff_t_emt_8TeV                               +0.08, 0.98        +0.08, 0.98       -0.00
+CMS_fake_b_8TeV                                  +0.01, 0.99        +0.01, 0.99       -0.00
+CMS_scale_t_emt_8TeV                             +0.04, 0.99        +0.04, 0.99       -0.00
+CMS_trigger_e_8TeV                               +0.01, 0.99        +0.01, 0.99       -0.00
+CMS_vhtt_charge_fakesNorm_emtCatHigh_8TeV         -0.00, 0.99        -0.00, 0.99       -0.00
+CMS_vhtt_charge_fakesNorm_emtCatLow_8TeV         +0.00, 0.99        +0.00, 0.99       -0.00
+CMS_vhtt_emtCatHigh_8TeV_fakes_bin_7             -0.25, 0.99        -0.25, 0.99       +0.00
+CMS_vhtt_emtCatHigh_8TeV_fakes_bin_8             -0.05, 0.97        -0.05, 0.97       +0.00
+CMS_vhtt_emtCatHigh_8TeV_fakes_bin_9             +0.17, 0.96        +0.17, 0.96       -0.00
+CMS_vhtt_emtCatHigh_taufakes_8TeV             * +0.53, 0.74*     * +0.53, 0.74*       +0.00
+CMS_vhtt_emtCatLow_8TeV_fakes_bin_7              -0.15, 1.00        -0.15, 1.00       +0.00
+CMS_vhtt_emtCatLow_8TeV_fakes_bin_8              -0.12, 1.00        -0.12, 1.00       +0.00
+CMS_vhtt_emtCatLow_8TeV_fakes_bin_9              -0.18, 1.00        -0.18, 1.00       +0.00
+CMS_vhtt_emtCatLow_taufakes_8TeV              * -0.44, 0.60*     * -0.44, 0.60*       +0.00
+CMS_vhtt_emt_chargeFlipShape_8TeV                -0.00, 0.99        -0.00, 0.99       +0.00
+CMS_vhtt_emt_chargeFlipYield_8TeV                -0.00, 0.99        -0.00, 0.99       -0.00
+CMS_vhtt_emt_fakeshape_8TeV                   * -0.03, 0.72*     * -0.03, 0.72*       +0.00
+CMS_vhtt_fakesNorm_emtCatHigh_8TeV               -0.06, 0.97        -0.06, 0.97       -0.00
+CMS_vhtt_fakesNorm_emtCatLow_8TeV                +0.27, 0.96        +0.27, 0.96       -0.00
+CMS_vhtt_signalNorm_emtCatHigh_8TeV              -0.00, 0.99        +0.00, 0.99       -0.00
+CMS_vhtt_signalNorm_emtCatLow_8TeV               -0.00, 0.99        -0.00, 0.99       +0.00
+CMS_vhtt_wzNorm_emtCatHigh_8TeV                  -0.02, 0.99        -0.02, 0.99       -0.00
+CMS_vhtt_wzNorm_emtCatLow_8TeV                   +0.06, 0.99        +0.06, 0.99       -0.00
+CMS_vhtt_zzNorm_emtCatHigh_8TeV                  -0.00, 0.99        -0.00, 0.99       -0.00
+CMS_vhtt_zzNorm_emtCatLow_8TeV                   +0.00, 0.99        +0.00, 0.99       -0.00
+QCDscale_VH                                      -0.00, 0.99        +0.00, 0.99       -0.00
+QCDscale_VV                                      +0.06, 0.99        +0.06, 0.99       -0.00
+lumi_8TeV                                        +0.04, 0.99        +0.04, 0.99       -0.00
+pdf_qqbar                                        +0.06, 0.99        +0.06, 0.99       -0.00
