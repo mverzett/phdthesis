@@ -1,4 +1,4 @@
-\chapter{The Standard Model of particle physics and the Higgs boson}
+\chapter[The Higgs boson]{The Standard Model of particle physics and the Higgs boson}
 
 Back in the 1960's the understanding of particle physics and its underlying mathematical structure was the following: fundamental particles were described as excitations of their peculiar fields, a description derived from quantum mechanics, and their interaction was governed by a lagrangian mixing those fields. In this scheme each fundamental force is associated to a field and its relative particle(s), which have integer spin value (gauge bosons). Conserved physical observables in this framework (particle's quantum numbers) are preserved by dedicated gauge symmetries introduced in the lagrangian. At that time, though, the behavior of the weak force, responsible of $\beta$ decays and more generally of all the decays with long lifetime observed in nature (e.g. the decay of the muon), could not fit in this description. Due to its long lifetime and short interaction distance, the weak force mediator was ought to be massive and the naive introduction of a mass term for a bosonic field would lead to a disruption of the gauge symmetrical properties of the lagrangian. In this period the work of several physicists, in particular of Peter Higgs and Francois Englert, led to a different formulation of the origin of mass for gauge bosons, compliant with the restrictions of a gauge-invariant lagrangian. This breakthrough led to consolidation of the model at the price of the addition of a new, theoretical, fundamental particle: the Higgs boson.
 
@@ -491,44 +491,174 @@ Where V can be either the W or the Z boson, and $v$ is the vacuum expectation va
 The introduction of a mass term for fermions as in the Dirac equation 
 
 \begin{equation}
-002
+\l_{m,Dirac}= -m\bar{\psi}\psi=-m(\bar{\psi}_L\psi_R+\bar{\psi}_R\psi_L)
 \end{equation}
 
 would break the SU(2) gauge invariance of the lagrangian as it directly mixes left and right handed components of the fermionic fields, which transform differently under SU(2). To introduce the mass term for the fermions without breaking the gauge invariance it is possible to resort again on the spontaneous symmetry breaking mechanism and the $\phi$ field. A \emph{Yukawa}--type coupling
 \footnote{This coupling was initially introduced by Yukawa \cite{Yukawa:1935xg} to describe the interactions between hadrons, postulating a new boson mediator, the \emph{pion}}:
 
 \begin{equation}
-003
+\l_{Yuk}=-g_f(L_f \phi d^f_R + d^f_R \phi^{\dag} L_f)
 \end{equation}
 
 respect the gauge invariance and can produce the desired mass terms which becomes:
 
 \begin{equation}
-004
+m_f = \frac{g_f v}{\sqrt{2}}
 \end{equation}
 
 In addition to the masses of the different fermions a term coupling the fermions with the Higgs boson appears with strength proportional to the fermion mass:
 
 \begin{equation}
-005
+g_{Hff}=i\frac{m_f}{v}
 \end{equation}
 
 This procedure assign mass to the down--type fermions, to achieve the same results for the up--type ones it is possible to consider the coupling of the Higgs charge conjugate
 
 \begin{equation}
-006
+\phi_C = i \sigma_2 \phi^{\ast} = \frac{1}{\sqrt{2}}=\begin{pmatrix}
+v+H\\ 
+0
+\end{pmatrix}
 \end{equation}
 
 obtaining equivalent results for the up--type sector.
 
 As anticipated in the previous sections, mass eigenstates do not correspond to weak ones. To model this effect it is possible to introduce a mixing matrix, the \emph{CKM} matrix, in the equations. 
 
-\section{Higgs boson production at LHC}
+\section{The Higgs boson at LHC}
+
+\subsection{Higgs production}
 
 The Large Hadron Collider (LHC) is the most advance accelerator present at CERN, Geneva, where two proton beams collide with a center--of--mass energy $\sqrt{s} = 8$ TeV. A more detailed description of the accelerator and the experimental set--up is available in the following chapter.
 
-Protons are not fundamental ``point--like'' particles, but are 
+Protons are not fundamental ``point--like'' particles, but are made by three valence quarks: two up quarks and one down. In addition to these valence quarks, the quantum vacuum and the binding energy among them produces around the valence quarks a cloud of virtual quarks and gluons that can also be accessed during a collision process. The exact constitution of the proton is impossible to compute from theoretical assumptions as the QCD is not perturbative at those scale. The momentum carried by each constituent, valence or virtual, is also a continuous function that has to be probed experimentally. 
+
+The probability for a quark or a gluon to be observed within a proton, with a certain momentum $p = x \cdot p_{proton}$, with $x \, \epsilon \, [0,1]$ is encoded in the parton distribution functions, measured experimentally. Figure \ref{fig:pdf} shows an example of a parton distribution function for the proton.
+
+\begin{figure}
+\includegraphics[width=0.5\textwidth]{1_Introduction_Th_and_Exp/pics/pdf.jpg}
+\caption{Parton distribution function of the proton.}
+\label{fig:pdf}
+\end{figure}
+
+As it is evident from the previous picture, the overwhelming majority of the partons present in the protons are gluons, especially at low $x$. This effects directly translate in a dominance of the gluon--fusion process in the Higgs boson production at the LHC. The Feynman diagram sketching the gluon fusion process is shown in Figure \ref{fig:ggf}. The loop inside the gluon fusion process is dominated in the SM by the top quark, since it has the largest mass in the standard model, but may receive additional contribution from new physics. 
+
+The second largest contribution to the total Higgs production cross section comes from the vector boson fusion process (Figure \ref{fig:vbf}) in which two quarks radiate two weak bosons that then fuse producing a Higgs boson. The scattered quarks produce two high--transverse momentum (\pT) jets in the forward/backward direction that can be used to experimentally tag the events.
+
+The third most significant production mode is the so called \emph{Higgsstralhung}, or associated production with a vector boson (Figure \ref{fig:vh}). This is the process exploited in this work to experimentally tag the events. Even though the production cross section is significantly lower than the previous two processes, the presence of an vector boson reduces greatly the background contamination. This process is also the leading source of Higgs bosons at lepton colliders.
+
+Finally, the least Higgs production process is $tt$H, the production is association with top quarks (Figure \ref{fig:tth}). The single production cross sections depend both on the mass of the Higgs boson, a free parameter of the SM, and on the center--of--mass energy of the two beams colliding. Figure \ref{fig:hxs} shows the production cross section as function of the Higgs mass at 7 and 8 TeV.
+
+\begin{figure}
+        \centering
+        \begin{subfigure}[b]{0.3\textwidth}
+                \includegraphics[width=\textwidth]{1_Introduction_Th_and_Exp/pics/ggFusion.png}
+                \caption{Gluon fusion}
+                \label{fig:ggf}
+        \end{subfigure}%
+        ~ 
+        \begin{subfigure}[b]{0.3\textwidth}
+                \includegraphics[width=\textwidth]{1_Introduction_Th_and_Exp/pics/BosonFusion.png}
+                \caption{Vector boson fusion}
+                \label{fig:vbf}
+        \end{subfigure}
+
+        \begin{subfigure}[b]{0.3\textwidth}
+                \includegraphics[width=\textwidth]{1_Introduction_Th_and_Exp/pics/Higgsstralhung.png}
+                \caption{Higgsstralhung or associated production}
+                \label{fig:vh}
+        \end{subfigure}
+        ~ 
+        \begin{subfigure}[b]{0.3\textwidth}
+                \includegraphics[width=\textwidth]{1_Introduction_Th_and_Exp/pics/ttFusion.png}
+                \caption{$tt$H}
+                \label{fig:tth}
+        \end{subfigure}
+        \caption{Tree--level Feynman diagrams for the main Higgs boson production mechanism at LHC}\label{fig:hprod}
+\end{figure}
+
+\begin{figure}
+        \centering
+	\includegraphics[width=0.48\textwidth]{1_Introduction_Th_and_Exp/pics/Higgs_XS_7TeV_LM.eps}
+	\includegraphics[width=0.48\textwidth]{1_Introduction_Th_and_Exp/pics/Higgs_XS_8TeV_LM.pdf}
+       \caption{Higgs production cross section at 7 TeV (left) and 8 TeV (right). The bands represent the theoretical uncertainties on the computation.}
+       \label{fig:hxs}
+\end{figure}
 
 
+\subsection{Higgs decays}
+
+Even though the couplings of the Higgs boson are dictated by the mass of the fundamental particles, the branching ratio of the Higgs boson to fundamental particles is dependent on the Higgs mass, as a phase--space factor is added. The running of the main decay modes for the Higgs boson as a function of its mass are shown in Figure \ref{fig:hbr}. 
+
+From this picture it is possible to notice that even though the Higgs boson has no direct coupling to the photon, a seizable branching ratio is anyway achieved through loop contributions. These loops, as in case of the gluon fusion could contain contributions from new physics making this process a viable channel to probe theories beyond the stand model.
 
 \section{Higgs boson searches}
+
+The first evidence of a new resonance at the mass of 125 GeV compatible with the SM Higgs has been announced by the ATLAS and CMS experiments on the 4$^{th}$ of July 2011 \cite{TODO}. This first evidence has been based on analyses searching for the Higgs boson in decay channels with gauge bosons, mainly ZZ$^*$ and $\gamma\gamma$.
+
+Currently, the significance of the Higgs boson signal exceeds 5$\sigma$ for $\H\To\gamma\gamma$ searches in both CMS and ATLAS \cite{TODO}. A similar situation is also present in the ZZ and WW channels.
+
+The high significance of these channels has allowed to perform initial studies on the properties of the resonance. The high invariant mass resolution of $\gamma\gamma$ and ZZ channels has allowed to measure the mass of the boson with high precision: $m_\H = 125.36 \pm 0.37\, \rm{(stat)} \pm 0.18\, \rm{(syst)}$ GeV and $m_\H = 125.03^{+0.26}_{-0.27} \,\rm{(stat)}^{+0.13}_{-0.15}  \,\rm{(syst)} = 125.03^{0.29}_{-0.31} \, \rm{(tot)}$ GeV for ATLAS \cite{Aad:2014aba} and CMS \cite{CMS:2014ega}, respectively.
+
+The spin and parity ($J^P$) of the resonance has also been characterized by dedicated studies on the ZZ and WW channels, which decay topology is more sensitive to these physical observables. The results \cite{CMS:2014gga}, shown in Figure \ref{fig:hjp}, exclude any concurrent hypothesis at more than 99\% confidence level (CL), leaving only $0\+$ as an option.
+
+\begin{figure}
+        \centering
+	\includegraphics[width=0.8\textwidth]{1_Introduction_Th_and_Exp/pics/hwwhzz_JP_SummaryPlot.pdf}
+       \caption{Summary of different $J^P$ hypotheses tested against the $0\+$ one using ZZ and WW Higgs decay data. The orange and blue bands represent the 1?, 2?, and 3? around the median expected value for the SM Higgs boson hypothesis and the alternative hypothesis hypothesis, respectively. The black point represents the observed value. }
+       \label{fig:hjp}
+\end{figure}
+
+The theoretical SM Higgs boson width for $m_\H \approx 125$ GeV boson is $\Gamma_\H \approx 4$ MeV way below the mass resolution of both detectors. It has been possible, though, to measure with better precision the upper limit of the width from the ratio between on--shell and off--shell event yields, obtaining $\Gamma_{obs} / \Gamma_\H < 5.3$ for CMS \cite{Khachatryan:2014iha} and $\Gamma_{obs} / \Gamma_\H < 5.7$ for ATLAS \cite{ATLASCONF:2014042}. 
+
+The search for Higgs boson decays to bottom quark pairs is the only feasible search of Higgs decays to down--type quarks at hadronic colliders, as the coupling to the other two quarks are largely suppressed by their mass while the hadronic background increases dramatically. The large background contamination in $\H\To b\bar{b}$ restricts the searches to all production processes but the gluon fusion, allowing for the richer final state to be used to remove most of the irreducible backgrounds.
+
+Currently no evidence has been found of Higgs decays to $b$--quark pairs, but CMS reported a $2.1\sigma$ excess in the VH production \cite{Chatrchyan:2013zna}, compatible with the SM predictions. The equivalent analysis for ATLAS does not show any excess \cite{TheATLAScollaboration:2013lia}, but is also less sensitive.
+
+The branching fraction of the Higgs boson to muon pairs is predicted to be very low, therefore any excess might be a strong indication of new physics. Both ATLAS \cite{Aad:2014xva} and CMS \cite{CMS:2013aga} performed a search for such decay, exploiting the extremely good resolution that can be achieved in this channel, without finding any significant excess so far. The analyses set an independent upper limit on the branching ratio approximately 7 times the SM expectation.
+
+The only direct observation of SM Higgs coupling to top quarks can be observed in the $tt$H associated production, since the low mass of the Higgs boson forbids the decay. The search for $tt$H is performed in many Higgs final states. Both ATLAS and CMS exploit the $b\bar{b}$ and $\gamma\gamma$ final states; additionally CMS searches for this production mode also in multi-lepton final states, targeting the $\tau\tau$ and WW Higgs decay modes.
+
+The combination of these searches leads in CMS to a $3.5\sigma$ excess with respect to the background--only hypothesis \cite{CMS:2014ega}. The combined \emph{signal stranght} ($\mu$), i.e. the ratio $\mu = (\sigma \times BR)_{obs} / (\sigma \times BR)_{SM}$, is $\mu = 2.76^{+1.05}_{0.92}$ which is two standard deviation away from the SM expectation ($\mu = 1$). The excess in this combination is driven by the same--sign dimuon analysis, which looks for $\H\To \W\W$, and $\H\To\gamma\gamma$. The results from ATLAS show a mild, non conclusive, excess \cite{ATLASCONF:2014043}.
+
+The $\H \to \tau \tau$ decay mode is searched for in gluon fusion, VBF (CMS and ATLAS) and associated production (CMS only). In CMS \cite{H_tautau}, events are selected on--line by dedicated triggers and selected according the isolation of the final state leptons. Events are separated into categories tailored around specific production mechanisms (VBF, VH, gluon fusion) and, in the gluon fusion, according to the boost of the hadronic tau and Higgs candidate. The invariant mass spectrum of the Higgs final states is smeared in this decay mode due to the presence of neutrinos in the tau lepton decay. To recover this effect, a dedicated likelihood integration method, called SVFit, performs the di-tau invariant mass calculation taking as input the momentum of the visible Higgs product and the missing transverse energy (\MET) information. The resolution achieved with this technique, that can be applied only where the taus are the only source of missing energy, varies between 10 and 20\%, depending on the final state and the category.
+
+Most of the backgrounds present in the direct production (VBF and gluon fusion) categories are modeled using simulated events with dedicated sideband regions to cross--check the simulation and apply correction factors where needed. The main background for these categories is given by $\Z \To \tau\tau$ events which are modeled with \emph{embedded Monte Carlo} techniques: real $\Z \To \mu \mu$ events are selected from collision data and the two muons are replaced with simulated tau decays, after correcting for the appropriate phase space.
+
+A combined fit to all the channels and categories reveals a $3.2\sigma$ deviation from the background--only hypothesis and a combined $\mu = 0.78 \pm 0.27$, well compatible between channels as shown in Figure \ref{fig:htt_mu}, and a best-fit mass of $m_\H = 122 \pm 7$ GeV, compatible with what observed by the other searches. Similar results are obtained by ATLAS \cite{ATLASCONF:2013108}, with a $4.1\sigma$ deviation from the background--only hypothesis and $\mu = 1.4^{+0.5}_{-0.4}$, slightly in excess, but still compatible, with respect to the SM value.
+
+\begin{figure}
+        \centering
+	\includegraphics[width=0.6\textwidth]{1_Introduction_Th_and_Exp/pics/BestFit_sm_per_chn.pdf}
+       \caption{ }
+       \label{fig:htt_mu}
+\end{figure}
+
+The $\H \To b\bar{b}$ and $\H \To \tau \tau$ results can be combined leading to a $3.8\sigma$ combined evidence of Higgs coupling to down--type fermions from CMS \cite{Chatrchyan:2014vua}.
+
+The outcome of the various searches have been combined by the single experiments in a simultaneous fit to better determine the couplings of the Higgs boson to the different fundamental particles. The result of the single and combined signal strengths for both ATLAS \cite{ATLASCONF:2014009} and CMS \cite{CMS:2014ega} is presented in Figure \ref{fig:combination}.
+
+\begin{figure}
+        \centering
+	\includegraphics[width=0.39\textwidth]{1_Introduction_Th_and_Exp/pics/fig_01.pdf}
+	\includegraphics[width=0.54\textwidth]{1_Introduction_Th_and_Exp/pics/sqr_mlz_ccc_mH125.pdf}
+       \caption{ }
+       \label{fig:combination}
+\end{figure}
+
+Another way to interpret the results is to compute the couplings of the Higgs boson to gauge bosons ($k_V$) and to fermions ($k_F$) and to plot the one--sigma contour regions allowed by each measurements. This interpretation assumes the absence of new physics in loop processes to infer information of the different production processes (e.g. assumes that the gluon fusion is almost completely mediated by a top loop). This interpretation of the results is available in Figure \ref{fig:kvf} for both the experiments.
+
+\begin{figure}
+        \centering
+	\includegraphics[width=0.53\textwidth]{1_Introduction_Th_and_Exp/pics/fig_05b.pdf}
+	\includegraphics[width=0.41\textwidth]{1_Introduction_Th_and_Exp/pics/cVcF_all_channels_2quadrant.pdf}
+       \caption{ }
+       \label{fig:combination}
+\end{figure}
+
+All the results found so far by both ATLAS and CMS experiments are compatible with the interpretation of this new resonance as a purely SM Higgs boson, but the precision of such measurements still allows plenty of room for new physics processes.
+
+%In the following part of this work a more detailed description of the $\W\H \To \ell \ell \tau$ analysis will be shown. This 
+
+
