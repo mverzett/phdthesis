@@ -645,7 +645,7 @@ According to the Neyman-Pearson lemma, the most powerful test statistics to disc
 
 Where $\thetahat$ and $\hat{\mu}$ are the set of nuisance values and the value of $\mu$ that maximize the likelihood (called \emph{maximum likelihood estimator}) and $\thetahat_\mu$ is the maximum likelihood estimator of the nuisances for a fixed value of $\mu$.
 
-Equation \ref{eq:likeratio} is complemented by the boundary condition $0 \leq \muhat \leq \mu$ that ensures that the expected signal yield is positive and that the computed confidence interval is one sided (and therefore $\mu \geq \muhat$). These conditions are imposed on the test statistic by forcing $\muhat = 0$ even when the fit yields as best result a negative value and by collapsing the test statistic to 0 when $\mu < \muhat$
+Equation \ref{eq:likeratio} is complemented by the boundary condition $0 \leq \muhat \leq \mu$ ensuring that the expected signal yield is positive and that the computed confidence interval is one sided (and therefore $\mu \geq \muhat$). These conditions are imposed on the test statistic by forcing $\muhat = 0$ even when the fit yields as best result a negative value and by setting the test statistic to 0 when $\mu < \muhat$
 
 \begin{equation}
 q(\mu) = \left\{\begin{matrix}
@@ -657,11 +657,11 @@ q(\mu) = \left\{\begin{matrix}
 
 Under this definition small values of the test statistic are more likely under the $H_1$ hypothesis.
 
-Under the assumption of large samples the distribution of the test statistic $q_\mu$ under both hypotheses collapse into well-defined analytical functions as described by the Wilkins theorem and reported in \cite{Cowan:2010js, higgscombo}. This assumption allows to compute the p-value under a certain hypothesis with a simple numerical integration rather than having to resort to toy MC methods.
+Under the assumption of large samples the distribution of the test statistic $q_\mu$ under both hypotheses collapse into well-defined analytical functions as described by the Wilkins theorem and reported in \cite{Cowan:2010js, higgscombo}. This assumption allows to compute the p-value under a specific hypothesis with a numerical integration rather than toy MC methods.
 
-A naive approach to limit setting would be computing, for each mass point, the value $\mu_{up}$ for which $p(q(\mu_{up}) | H_1) = \int_{q_{\mu,obs}}^{\infty}f(q_\mu|H_{\mu_{up}})dq_\mu = 0.05$. This approach would not be safe from under-fluctuations of the backgrounds in case of a small signal. In this case the value $p(q(\mu_{up}) | H_0)$ is also a small number, potentially very close to the threshold of 0.05. This would lead to an absurd where both $H_1$ \emph{and} $H_0$ have to be rejected.
+A naive approach to limit setting would be computing, for each mass point, the value $\mu_{up}$ for which $p(q(\mu_{up}) | H_1) = \int_{q_{\mu,obs}}^{\infty}f(q_\mu|H_{\mu_{up}})dq_\mu = 0.05$. This approach would not be safe in case of background under-fluctuations and a small expected signal. In this case the value $p(q(\mu_{up}) | H_0)$ is also a small number, potentially very close to the threshold of 0.05. This would lead to a paradox in which both $H_1$ \emph{and} $H_0$ have to be rejected.
 
-The truth in this situation is that our data have no power to reject the $H_1$ hypothesis. To overcome this effect the \CLs\ method defines the confidence level as:
+In this situation data are not sufficient to reject the $H_1$ hypothesis. To overcome this effect the \CLs\ method defines the confidence level as:
 
 \begin{equation}
 CL_s(\mu) = \dfrac{CL_{s+b}}{CL_b} = \dfrac{p(q(\mu) | H_1)}{p(q(\mu) | H_0)}
@@ -678,10 +678,10 @@ The likelihood function is defined as the product of the likelihoods of each cat
 where
 
 \begin{equation}
-\operatorname{Poisson}(obs_c, \mu, \boldtheta) = \dfrac{(\mu s_i(\boldtheta) + b_i(\boldtheta))^{n_i}}{n_i!}e^{(\mu s_i(\boldtheta) + b_i(\boldtheta))}
+\operatorname{Poisson}(obs_c, \mu, \boldtheta) = \dfrac{(\mu s_i(\boldtheta) + b_i(\boldtheta))^{n_i}}{n_i!}e^{(\mu s_i(\boldtheta) + b_i(\boldtheta))}.
 \end{equation}
 
-As described in sections \ref{sec:systematics}, two kinds of systematic uncertainties were considered. Yield systematic uncertainties are considered to be distributed according to a \emph{log--normal} distribution 
+As described in section \ref{sec:systematics}, two kinds of systematic uncertainties were considered. Systematic uncertainties associated to the overall normalization are considered to be distributed according to a \emph{log--normal} distribution 
 
 \begin{equation}
 \rho(\theta, \hat{\theta}) = \dfrac{1}{\theta\sqrt{2\pi}\opname{ln}(k)} e^{-\left(\dfrac{\opname{ln}(\theta/\hat{\theta})}{\sqrt{2}\opname{ln}k}\right)^2}
@@ -689,29 +689,29 @@ As described in sections \ref{sec:systematics}, two kinds of systematic uncertai
 
 with $k = 1+ \epsilon$ where $\epsilon$ is the size of the yield uncertainty.
 
-Shape uncertainties are modeled starting from three input distributions: the central value and the one-sigma shifted templates. A family of distributions is obtained starting from these three templates through a morphing function governed by a single parameter. The morphing function is made such that the input parameter assumes the value 0 for the central template and the values $\pm1$ for the shifted templates. The probability distribution function, \emph{pdf}, of the morphing parameter is considered to be a gaussian with mean 0 and $\sigma = 1$.
+Shape uncertainties are modeled starting from three input distributions: the central value and the templates shifted upwards and downwards by one standard deviation. A family of distributions is obtained starting from these three templates using a morphing function with a single parameter. The morphing function quadratically interpolates the contents of each bin within the boundaries provided by the two additional shifted templates and linearly beyond this point. A gaussian distribution with mean 0 and $\sigma = 1$ is assigned to the single morphing parameter. The extrapolation is built in such way that the parameter assumes the value 0 for the central template and the values $\pm1$ for the shifted templates. More details on this ``vertical morphing'' technique can be found in \cite{Conway:2011in}.
 
 \subsection{Fit results}
 
-The reliability of the our background and systematics modeling can probed by analyzing the ancillary output of the templated maximum likelihood fit performed during the CL$_s$ limit evaluation. A common practice is to screen the values:
+The reliability of the background modeling and systematic uncertainties can tested by analyzing the ancillary output of the templated maximum likelihood fit performed during the CL$_s$ limit evaluation. A common practice is to compute the values:
 
 \begin{equation}
-\dfrac{\hat{\theta} - \theta}{\sigma_{\theta}}
+\dfrac{\hat{\theta} - \theta}{\sigma_{\theta}},
 \end{equation}
 
-Which are the difference between the best--fit value and the central value of the nuisance parameter, normalized to its expected variation. This quantity is commonly referred as \emph{pull}. The maximum likelihood fit also evaluates the a posteriori variance of each nuisance. Large outliers in the pull distribution can indicate an under-estimation of the systematic effect connected to the nuisance. Very small a posteriori variance of a nuisance indicates that the data are constraining a certain systematic uncertainty to a better degree than the a priori knowledge. This effect is not necessarily a flaw in the modeling, but requires additional scrutiny to ensure that the correlation of such nuisance in multiple categories is well motivated. This effect is widely exploited when creating a high statistics low sensitivity category on the sole purpose of constraining some systematic effect on a more sensitive, but with smaller statistics, one. 
+which are the difference between the best--fit value and the central value of the nuisance parameter, divided by its expected variation. This quantity is commonly referred as \emph{pull}. The maximum likelihood fit also evaluates the a posteriori variance of each nuisance. Large outliers in the pull distribution can indicate an under-estimation of the systematic uncertainty associated to the corresponding nuisance parameter. Very small a posteriori variance of a nuisance indicates that the data are constraining a certain systematic uncertainty to a better degree than the a priori knowledge. This effect is not necessarily a flaw in the modeling, but requires additional scrutiny to ensure that the correlation of such nuisance in multiple categories is well motivated. This effect is widely exploited when creating a category with large number of selected events and low sensitivity on the sole purpose of constraining one or more systematic effects on a more sensitive, but small size, category. 
 
-Table \ref{tab:pulls} summarizes the largest pulls observed in the ML fit of the data.
+Table \ref{tab:pulls} summarizes the largest pulls observed in the ML fit to the data.
 
 \begin{table}
 \input{4_Analisys/tabs/pulls.tex}
-\caption{List of all the nuisance parameters which pull either is greater than 0.3 or a posteriori variance changed by 10\% from the a priori one}
+\caption{List of all the nuisance parameters which either the pull ($\Delta x/\sigma_{\text{in}}$) is larger than $\pm0.3$ or the a posteriori variance ($\sigma_{\text{out}}/\sigma_{\text{in}}$) changed by more than 10\% with respect to the a priori one. $\Delta x$ denotes shift in the nuisance value that best represents the data and $\sigma_{\text{in}}, \,\sigma_{\text{out}}$ represent the a priori and a posteriori variance of the nuisance parameter, respectively}
 \label{tab:pulls}
 \end{table}
 
-The agreement between the data and the background description is also tested by the goodness of fit. The goodness of fit is computed by randomly sampling a set pseudo--data, called \emph{toys}, from the distribution of the backgrounds, allowing for fluctuations within the nuisances variance. These pseudo--data are then fit with the same background description obtaining a ``observed'' limit. 
+The agreement between the data and the background description is also tested by the goodness of fit. It is computed by randomly sampling a set of pseudo--data, called \emph{toys}, from the distribution of the backgrounds, allowing for fluctuations within the variance of the nuisance parameters. These pseudo--data are then fit with the same background description obtaining a ``observed'' limit. 
 
-The distribution of the limits computed with the toys is then compared with the one observed with real data. The goodness of the fit (as in the case of the $\chi^2$ method) is the right-sided integral of the toys distribution starting from the observed value. Figure \ref{fig:gof} shows the goodness of fits for the different channels.
+The distribution of the limits computed with the toys is then compared with the one observed with real data. The goodness of the fit, as in the case of the $\chi^2$ method, is the right-sided integral of the toys distribution starting from the observed value. Figure \ref{fig:gof} shows the goodness of fits for the different channels.
 
 \begin{figure}
 \begin{center}
@@ -732,7 +732,7 @@ Figures \ref{fig:LLT_mmt_postfit}, \ref{fig:LLT_emt_postfit}, \ref{fig:LLT_eet_p
   \includegraphics[width=0.49\textwidth]{4_Analisys/pics/postfit/mmt_postfit_7TeV_FitAllChannels.pdf}\\
   \includegraphics[width=0.49\textwidth]{4_Analisys/pics/postfit/mmt_low_postfit_8TeV_FitAllChannels.pdf}
   \includegraphics[width=0.49\textwidth]{4_Analisys/pics/postfit/mmt_high_postfit_8TeV_FitAllChannels.pdf}\\
-  \caption{Comparison of measured and predicted backgrounds in the $\mu\mu\tau_h$ signal region for 7TeV data (top) and 8TeV data (bottom) after ML fit of the components to the observed data. The 8TeV data are split according the optimal categorization.}
+  \caption{Comparison of measured and predicted $\rm{M}_{\ell_2\tau}$ distributions in the $\mu\mu\tau_h$ signal region for 7 TeV data (top) and 8 TeV data (bottom) after the ML fit to the data. The 8 TeV data are split according the optimal categorization.}
   \label{fig:LLT_mmt_postfit}
 \end{center}
 \end{figure}
@@ -742,7 +742,7 @@ Figures \ref{fig:LLT_mmt_postfit}, \ref{fig:LLT_emt_postfit}, \ref{fig:LLT_eet_p
   \includegraphics[width=0.49\textwidth]{4_Analisys/pics/postfit/emt_postfit_7TeV_FitAllChannels.pdf}\\
   \includegraphics[width=0.49\textwidth]{4_Analisys/pics/postfit/emt_low_postfit_8TeV_FitAllChannels.pdf}
   \includegraphics[width=0.49\textwidth]{4_Analisys/pics/postfit/emt_high_postfit_8TeV_FitAllChannels.pdf}\\
-  \caption{Comparison of measured and predicted backgrounds in the $e\mu\tau_h$ signal region for 7TeV data (top) and 8TeV data (bottom) after ML fit of the components to the observed data. The 8TeV data are split according the optimal categorization.}
+  \caption{Comparison of measured and predicted $\rm{M}_{\ell_2\tau}$ distributions in the $e\mu\tau_h$ signal region for 7 TeV data (top) and 8 TeV data (bottom) after the ML fit to the data. The 8 TeV data are split according the optimal categorization.}
   \label{fig:LLT_emt_postfit}
 \end{center}
 
@@ -751,18 +751,18 @@ Figures \ref{fig:LLT_mmt_postfit}, \ref{fig:LLT_emt_postfit}, \ref{fig:LLT_eet_p
 \begin{center}
   \includegraphics[width=0.49\textwidth]{4_Analisys/pics/postfit/eet_postfit_7TeV_FitAllChannels.pdf}
   \includegraphics[width=0.49\textwidth]{4_Analisys/pics/postfit/eet_postfit_8TeV_FitAllChannels.pdf}\\
-  \caption{Comparison of measured and predicted backgrounds in the $ee\tau_h$ signal region for 7TeV data (left) and 8TeV data (right) after ML fit of the components to the observed data.}
+  \caption{Comparison of measured and predicted $\rm{M}_{\ell_2\tau}$ distributions in the $e\tau_h$ signal region for 7 TeV data (top) and 8 TeV data (bottom) after the ML fit to the data.}
   \label{fig:LLT_eet_postfit}
 \end{center}
 \end{figure}
 
-\subsection{Limits}
+\subsection{Exclusion limits}
 
-The exclusion limit on the process $pp\To\W\rm{H}\To\ell\nu_\ell\tau\tau$ is computed for SM Higgs mass range between 90 GeV and 145 GeV with 5 GeV steps. In this computation the process $pp\To\W\H$ with $\H\To\W\W\To\ell\nu_{\ell}\ell'\nu_{\ell'}$, which is present in our signal region, is treated as a background. The Higgs mass for this background process is fixed to 125 GeV, following the joint CMS and ATLAS discovery \cite{Chatrchyan:2013lba,Aad:2012tfa}, and the yield is fixed to the theoretical cross--section value, lacking any experimental measurement. The choice of fixing the Higgs mass in the $H\To\W\W$ process, while still scanning for a Higgs presence in a range of masses is motivated by the possibility of having multiple Higgs bosons, close in mass, with different decay modes.
+The exclusion limit on the process $pp\To\W\rm{H}\To\ell\nu_\ell\tau\tau$ is computed for SM Higgs mass range between 90 GeV and 145 GeV in 5 GeV steps. In this computation the process $pp\To\W\H$ with $\H\To\W\W\To\ell\nu_{\ell}\ell'\nu_{\ell'}$, which is present in our signal region, is treated as a background. The Higgs mass for this background process is fixed to 125 GeV, following the joint CMS and ATLAS mass measurement \cite{CMS:2014ega, Aad:2014aba}, and the yield is fixed to the theoretical cross--section value, which agrees with current measurements. The choice of fixing the Higgs mass in the $H\To\W\W$ process, while still scanning for a Higgs presence in a range of masses is motivated by the possibility of having multiple Higgs bosons, close in mass, with different decay modes.
 
-For each mass point the expected exclusion limit and its one and two sigma confidence intervals are computed  by evaluating the exclusion limit (and variance) on the \emph{Asimov dataset}\footnote{The Asimov dataset owes its name to the famous Sci-Fi novelist Isaac Asimov, author of the short story \emph{Franchise} \cite{franchise}, in which elections are performed by polling a single representative of the population.}, a set of pseudo-data that reflects exactly the average expected background. 
+For each mass point the expected exclusion limit and its one and two sigma confidence intervals are computed  by evaluating the exclusion limit (and variance) on the \emph{Asimov dataset}\footnote{The Asimov dataset owes its name to the famous Sci-Fi novelist Isaac Asimov, author of the short story \emph{Franchise} \cite{franchise}, in which elections are performed by polling a single representative of the population.}, a set of pseudo-data that reflects the average expected background. 
 
-Expected and observed upper limits on SM Higgs boson detection in the three channels are shown in Figure \ref{fig:llt_chan_limits}. Figure \ref{fig:llt_limits} shows the combined limit for the whole WH analysis.
+Expected and observed exclusion limits on SM Higgs boson detection in the three channels are shown in Figure \ref{fig:llt_chan_limits}. Figure \ref{fig:llt_limits} shows the combined limit for the whole WH analysis.
 
 \begin{figure}
 \begin{center}
@@ -775,7 +775,7 @@ Expected and observed upper limits on SM Higgs boson detection in the three chan
   \includegraphics[width=0.32\textwidth]{4_Analisys/pics/limits/eet/eet_7TeV.pdf}
   \includegraphics[width=0.32\textwidth]{4_Analisys/pics/limits/eet/eet_8TeV.pdf}
   \includegraphics[width=0.32\textwidth]{4_Analisys/pics/limits/eet/eet.pdf} \\
-  \caption{Expected and observed limits 7TeV (left), 8TeV (middle) and combined (right) for the $\mu\mu\tau_h$ (top), $e\mu\tau_h$ (middle) and $ee\tau_h$ (bottom)}
+  \caption{Expected and observed exclusion limits on $\sigma/\sigma_{SM}$ for the process $\W\rm{H} \To \ell \ell \tau$ for 7 TeV (left), 8 TeV (middle) and combined (right) data. Top, middle and bottom plots show the limits obtained by the $\mu\mu\tau_h$, $e\mu\tau_h$ and $ee\tau_h$ channels, respectively. Values above the solid black line are excluded by the data. The benchmark points used for the computation of the exclusion limits are shown as a dot in the black line. The red line represent the expected exclusion limit while the green and yellow bands show the one and two standard deviations on such expected limit, respectively.}
   \label{fig:llt_chan_limits}
 \end{center}
 \end{figure}
@@ -785,7 +785,7 @@ Expected and observed upper limits on SM Higgs boson detection in the three chan
   \includegraphics[width=0.49\textwidth]{4_Analisys/pics/limits/vhtt_wh/vhtt_wh_7TeV.pdf}
   \includegraphics[width=0.49\textwidth]{4_Analisys/pics/limits/vhtt_wh/vhtt_wh_8TeV.pdf}\\
   \includegraphics[width=0.8\textwidth]{4_Analisys/pics/limits/vhtt_wh/vhtt_wh.pdf}
-  \caption{Combined expected and observed limits for WH$\To\ell\ell\tau_h$ for 7TeV (top left), 8TeV (top right) and full combination}
+  \caption{Combined expected and observed limits for WH$\To\ell\ell\tau_h$ for the 7 TeV (top left), the 8 TeV (top right) datasets and overall combination (bottom).}
   \label{fig:llt_limits}
 \end{center}
 \end{figure}
@@ -794,7 +794,7 @@ Expected and observed upper limits on SM Higgs boson detection in the three chan
 
 A search for the decay $\W\rm{H}\To\ell\nu_\ell\tau\tau \To \ell \nu_\ell \ell \tau_h$ has been performed. This channel, combined with the other VH, H$\To\tau\tau$ channels, is very sensitive to very-low Higgs boson masses, with a sensitivity rapidly decreasing. Nonetheless this channel provides a clean signature that could be exploited in future to measure the Higgs coupling to taus with high precision. 
 
-The search has been performed in three distinct channels: $\mu\mu\tau_h$, $e\mu\tau_h$, and $ee\tau_h$ analyzing from LHC Run I collected by the CMS detector. The total integrated luminosity analyzed amounts to 4.9 fb$\inv$ recorded with $sqrt{s} = 7$ TeV collisions and 19.7 fb$\inv$ at $sqrt{s} = 8$ TeV. Events are selected by requiring two isolated and identified light leptons and an isolated and identified hadronic tau, an additional separation of the events in two categories according to the scalar sum of the \pT of the leptons has been found beneficial for the sensitivity of the analysis. 
+The search has been performed in three distinct channels: $\mu\mu\tau_h$, $e\mu\tau_h$, and $ee\tau_h$ analyzing data from LHC Run I collected by the CMS detector. The total integrated luminosity analyzed amounts to 4.9 fb$\inv$ recorded with $\sqrt{s} = 7$ TeV collisions and 19.7 fb$\inv$ at $\sqrt{s} = 8$ TeV. Events are selected by requiring two isolated and identified light leptons and an isolated and identified hadronic tau, an additional separation of the events in two categories according to the scalar sum of the \pT of the leptons has been found beneficial for the sensitivity of the analysis. 
 
 The main backgrounds for this channel are the WZ production, which has the same signature as the desired process, and the W+Jets production, in which two jets are misidentified as a light lepton and an hadronic tau. Despite the optimal performance of our detector and reconstruction system the overwhelming production cross section difference between the investigated process and the W production cause a relevant number of these events to enter in our signal region.
 
@@ -802,4 +802,6 @@ The reducible backgrounds, which include W+Jets and all the backgrounds with at 
 
 A dedicated study on the performance of the kNN estimator has been carried out in order to maximize the agreement between the background and its modeling and to infer the statistical systematics connected to the limited size of the training sample and the choice of the training variables.
 
+The analysis sensitivity might be improved in future by a better selection of the light lepton to pair with the hadronic tau to form the Higgs candidate and by a better mass reconstruction technique. Theoretically both tasks can be achieved with a single algorithm exploiting the topology of the event including the missing transverse energy information. The SVFit algorithm, already used in the rest of the $\rm{H} \To \tau\tau$ analysis is a very good candidate to perform these tasks, but a MVA approach is also a viable option.
 
+Reducible background is the second major source of background for the analysis, with a sizable increase in the 8 TeV dataset due to pileup conditions. The dire running environment of LHC Run II will see an increase of this source of backgrounds. More detailed studies on the misidentification probability, with the aim to bring the fake tau method to the same strength of the fake lepton one, would allow for an average of the two background shapes, leading to a significant reduction of the uncertainties.
