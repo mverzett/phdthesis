@@ -43,7 +43,7 @@ Offline event selection is different for the three channels and is detailed in t
 
 \subsubsection{$\mu\mu\tau_h$}
 \begin{itemize}
-\item The event must pass one of the triggers quoted in Table \ref{tab:triggers};
+\item The event must pass the lowest--threshold unprescaled double muon trigger;
 \item Both the muons must be matched to the corresponding trigger candidates;
 \item The leading muon must have $\pt > 20$ GeV, to be compliant with the online thresholds;
 \item Both muons must pass the PF Tight identification working point;
@@ -54,7 +54,7 @@ Offline event selection is different for the three channels and is detailed in t
 
 \subsubsection{$e\mu\tau_h$}
 \begin{itemize}
-\item The event must pass one of the triggers quoted in Table \ref{tab:triggers};
+\item The event must pass the lowest--threshold unprescaled muon plus electron trigger;
 \item Both the electron and the muon must be matched to the corresponding trigger candidates;
 \item The muon is required to have $\pt > 20$ GeV if the trigger accepting the event has a 17 GeV threshold on the muon candidate;
 \item The electron is required to have $\pt > 20$ GeV if the trigger accepting the event has a 17 GeV threshold on the electron candidate;
@@ -67,7 +67,7 @@ Offline event selection is different for the three channels and is detailed in t
 
 \subsubsection{$ee\tau_h$}
 \begin{itemize}
-\item The event must pass one of the triggers quoted in Table \ref{tab:triggers} 
+\item The event must pass the lowest--threshold unprescaled double electron trigger; 
 \item Both the electrons must be matched to the corresponding trigger candidates;
 \item The leading electron must have $\pt > 20$ GeV, to be compliant with the online thresholds, and pass the tight MVA electron identification working point;
 \item The leading electron $\Delta \beta$-corrected relative PF in a cone of $\Delta R < 0.4$ isolation has to be less than 0.15 (0.1) for candidates with $|\eta| < 1.479$ ($|\eta| > 1.479$);
@@ -166,13 +166,13 @@ For each tested neighbor working point, the shape of important physics observabl
 
 The minimum of the scan is taken as reference value of number of neighbors to be used for training in the analysis. A parabolic fit around the minimum is performed to estimate the one sigma confidence interval as the value for which the parabolic fit is $fcn(i) = \chi^2_{min} + 1$. This confidence interval reflects both the statistical uncertainties on the training sample and the related uncertainty on the choice of the parameters. For each channel and each lepton, three classifiers are trained with the corresponding central values and one sigma boundaries.
 
-A summary of the chosen minima and confidence interval boundaries is available in table \ref{tab:kNN_minima}. A graphic representation of a sample scan is shown in Fig. \ref{fig:kNN_minima_sample}. The misidentification rate observed in the training sample is displayed in Fig. \ref{fig:fake_rate_sample} overlaid with the output of the respective kNN classifier.
+A summary of the chosen minima and confidence interval boundaries is available in Table \ref{tab:kNN_minima}. A graphic representation of a sample scan is shown in Fig. \ref{fig:kNN_minima_sample}. The misidentification rate observed in the training sample is displayed in Fig. \ref{fig:fake_rate_sample} overlaid with the output of the respective kNN classifier.
 
 
 \begin{table}
 
-\input{4_Analisys/tabs/kNN_minima_table.tex}
 \caption{Minimization points for each kNN scan and relative uncertainties as obtained from a parabolic fit}
+\input{4_Analisys/tabs/kNN_minima_table.tex}
 \label{tab:kNN_minima}
 \end{table}
 
@@ -682,8 +682,8 @@ which are the difference between the best--fit value and the central value of th
 Table \ref{tab:pulls} summarizes the largest pulls observed in the maximum likelihood (ML) fit to the data.
 
 \begin{table}
-\input{4_Analisys/tabs/pulls.tex}
 \caption{List of all the nuisance parameters which either the pull ($\Delta x/\sigma_{\text{in}}$) is larger than $\pm0.3$ or the a posteriori variance ($\sigma_{\text{out}}/\sigma_{\text{in}}$) changed by more than 10\% with respect to the a priori one. $\Delta x$ denotes shift in the nuisance value that best represents the data and $\sigma_{\text{in}}, \,\sigma_{\text{out}}$ represent the a priori and a posteriori variance of the nuisance parameter, respectively}
+\input{4_Analisys/tabs/pulls.tex}
 \label{tab:pulls}
 \end{table}
 
