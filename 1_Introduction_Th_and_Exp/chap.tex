@@ -178,16 +178,17 @@ The first attempt to describe the weak interaction dates back to 1933 by Fermi, 
 
 \begin{equation}
 \l_{Fermi} = \sqhalf G_F \bar{\nu}_\mu \gamma_\alpha (1-\gamma^5) \mu \bar{e} \gamma^\alpha (1-\gamma^5) \nu_e
+\label{eq:l_fermi}
 \end{equation}
 
 Where $G_F = 1.166 \cdot 10^{-5}$ GeV$^{-2}$. This Lagrangian consists of a single point-like interaction among four fermions and correctly reproduces the muon decay at tree level. Increasing the degree of the perturbative expansion, though, several divergencies arise that cannot be cancelled or renormalized, leading to a violation of unitarity and a breakdown of the theory. It has also been demonstrated that this behavior can be immediately recognised by the dimensionality of the coupling constant.
 
-It was later shown by Glashow in 1961 \cite{Glashow:1961tr} and Salam and Ward \cite{Salam:1961en} in the same year that the weak interaction could be modeled in a quantum field theory with the SU(2) group and its related gauge bosons. 
-The four-fermion interaction present in the Fermi Lagrangian gets split into two interaction points connected by a charged vector boson named W$^\pm$. In order to obtain the same parity violating properties as observed in the experiments the gauge group had to be extended to SU(2)$\times$U(1), introducing a mixing between the gauge bosons. This theory showed to be representing not only weak interaction, but also the electromagnetic one. 
+It was later shown by Glashow in 1961 \cite{Glashow:1961tr}, and Salam and Ward \cite{Salam:1961en} in the same year, that the weak interaction could be described in a quantum field theory with the SU(2) group and its related gauge bosons. 
+The four-fermion interaction in Eq. \ref{eq:l_fermi} is divided into two interaction vertices connected by a charged vector boson named W$^\pm$. In order to obtain the same parity violating properties as observed in the experiments the gauge group had to be extended to SU(2)$\times$U(1), introducing a mixing between the gauge bosons. This theory showed to be representing not only weak interaction, but also the electromagnetic one. 
 The new modeling of these fundamental interactions was finally completed by Weinberg in 1967 \cite{Weinberg:1967tq}, who named it \emph{electroweak theory}. 
 As the weak interaction couples only to left-handed particles, the gauge group is sometimes noted as SU(2)$_L$, to remind this feature.
 
-Since the generator of the fundamental representation of SU(2) are the Pauli matrices (noted as $\sigma_i$, $i \, \epsilon \, [1,3]$) it is possible to extend the spin formalism to the weak interaction. In this case the quantum number (or charge) carried by the fundamental particles is called \emph{weak isospin}, noted with I. The gauge bosons linked to the generators of the symmetry will be noted as $W^i$. Left-handed fermions are considered to carry total isospin 1/2 and are grouped in doublets of the form.
+Since the generator of the fundamental representation of SU(2) are the Pauli matrices (noted as $\sigma_i$, $i \, \epsilon \, [1,3]$) it is possible to extend the spin formalism to the weak interaction. In this case the quantum number (or charge) carried by the fundamental particles is called \emph{weak isospin}, noted with I. The gauge bosons linked to the generators of the symmetry will be represented as $W^i$. Left-handed fermions are considered to carry total isospin 1/2 and are grouped in doublets of the form.
 
 \begin{equation}
 L_f = \left(\begin{array}{c}f_{up} \\f_{down}\end{array}\right)
@@ -195,45 +196,45 @@ L_f = \left(\begin{array}{c}f_{up} \\f_{down}\end{array}\right)
 
 Doublets can be divided in ``up--type'' and ``down--type'' fermions, where the former are considered to have the third component of the isospin I$_3 = +1/2$, while the latter have I$_3 = -1/2$. Up--type fermions are the neutrinos and the up, charm and top quarks, while down--type fermions are the charged leptons and the down, strange, and bottom quarks.
 
-The right--handed fermions were experimentally found to not interact weakly and therefore carry no charge. They are represented as singlets under the SU(2) group.
+The right--handed fermions were experimentally found not to interact weakly and therefore carry no charge. They are represented as singlets under the SU(2) group.
 
-Left and right handed components of the fermions can be obtained by using the appropriate projector on the fermionic field: $\dfrac{1}{2}(1-\gamma^5)$ and $\dfrac{1}{2}(1+\gamma^5)$, respectively.
+Left-- and right--handed components of the fermions can be obtained by using the appropriate projector on the fermionic spinor: $\dfrac{1}{2}(1-\gamma^5)$ and $\dfrac{1}{2}(1+\gamma^5)$, respectively.
 
-It is worth noting that quark flavor eigenstates under the weak interaction are not necessary also mass eigenstates, but rather a superimposition of them, giving raise to a mixing matrix. The mixing matrix has been first suggested by Cabibbo in 1963 \cite{Cabibbo:1963yz} and later by Kobayashi and Maskawa in 1973 \cite{Kobayashi:1973fv}.
+It is worth noting that quark flavor eigenstates under the weak interaction are not necessary also mass eigenstates, but rather a superimposition of them, giving raise to a mixing matrix. The mixing matrix has been first suggested by Cabibbo in 1963 \cite{Cabibbo:1963yz} and by Kobayashi and Maskawa in 1973 \cite{Kobayashi:1973fv}.
 
 The additional U(1) symmetry preserves a quantum number called \emph{hypercharge}, Y, and is connected to a gauge boson, noted with $B$. 
 
-In this framework the derivative present in the Dirac Lagrangian, shown in Eq. \ref{eq:dirac_lag}, is replaced by its covariant form:
+In this framework the derivative present in the Dirac Lagrangian, Eq. \ref{eq:dirac_lag}, is replaced by its covariant form:
 
 \begin{equation}
-\calD^L_\mu = \d_\mu - ig\dfrac{\sigma_i}{2}W^i_\mu - ig'\dfrac{Y}{2}B_\mu
+\calD^L_\mu = \d_\mu - ig\dfrac{\sigma_i}{2}W^i_\mu - ig'\dfrac{Y}{2}B_\mu.
 \end{equation}
 
-Since the transformations under SU(2) and U(1) are independent, two coupling constants, $g$ and $g'$, are assigned. The lagrangian therefore becomes
+Since the transformations under SU(2) and U(1) are independent, two coupling constants, $g$ and $g'$, are assigned. The Lagrangian therefore becomes
 
 \begin{equation}
 \l = \sum^f i \bar{L_f}\slash{\calD}^LL_f + \bar{f^{up}_R}\slash{\calD}^Rf^{up}_R  + \bar{f^{down}_R}\slash{\calD}^Rf^{down}_R 
 \end{equation}
 
-Where $f^{up}_R$ and $f^{down}_R$ are the right handed up and down fermions fields, respectively. Since they are singlets under SU(2) they are presented separately, but they still transform under U(1). To account for this effect we have defined $\calD^R$, which is the same as $\calD^L$, but lacks the couplings with the $W$ fields. 
+Where $f^{up}_R$ and $f^{down}_R$ are the right--handed up and down fermions fields spinors, respectively. Since they are singlets under SU(2) they are presented separately, but they still transform under U(1). To account for this effect we have defined $\calD^R$, which is the same as $\calD^L$, but lacks the couplings with the $W$ fields. 
 
-We can now restrict ourselves to the electron family, without losing any generality, and identify in the lagrangian a charged and a neutral current:
+We can now restrict ourselves to the electron family, without losing any generality, and identify in the Lagrangian a charged and a neutral current:
 
 \begin{eqnarray}
-\l_{charged} &=& g \bar{L} \slash{W}_1 \dfrac{\sigma_1}{2}L + g \bar{L} \slash{W}_2 \dfrac{\sigma_2}{2}L \\ 
+\l_{charged} &=& g \bar{L} \slash{W}_1 \dfrac{\sigma_1}{2}L + g \bar{L} \slash{W}_2 \dfrac{\sigma_2}{2}L, \\ 
 \l_{neutral} &=& \dfrac{g}{2} W_3^\mu (\bar{\nu}_{e,L}\gamma_\mu\nu_{e,L} - \bar{e}_L\gamma_\mu e_L) +  \nonumber \\
 & & + \dfrac{g'}{2} B^\mu \mathbf{\big(} Y(L) ( \bar{\nu}_{e,L}\gamma_\mu\nu_{e,L} + \bar{e}_L\gamma_\mu e_L ) + \nonumber \\
 & & + Y(\nu_R) \bar{\nu}_{e,R}\gamma_\mu\nu_{e,R} + Y(\nu_R)  \bar{e}_R\gamma_\mu e_R \mathbf{\big)}
 \end{eqnarray}
 
-The charged part of the lagrangian contains off-diagonal Pauli matrices that mix the neutrino and electron fields. Operating the substitution:
+The charged part of the Lagrangian contains off-diagonal Pauli matrices that mix the neutrino and electron fields. By replacing:
 
 \begin{equation}
 W^\pm_\mu = \frac{1}{\sqrt{2}}(W^{1}_{\mu} \mp i W^{2}_{\mu}).
 \label{eq:wpm_def}
 \end{equation}
 
-it is possible to rewrite the charged part of the lagrangian as:
+it is possible to rewrite the charged part of the Lagrangian as:
 
 \begin{equation}
 \l_c = \frac{g}{\sqrt{2}}(\bar{L}\slash{W}^{+} \sigma^{+} L +\bar{L}\slash{W}^{-}\sigma^{-} L)
@@ -242,10 +243,10 @@ it is possible to rewrite the charged part of the lagrangian as:
 where:
 
 \begin{equation}
-\sigma^+ = \spinmatrix{0}{1}{0}{0}\,\, \sigma^- = \spinmatrix{0}{0}{1}{0}.
+\sigma^+ = \spinmatrix{0}{1}{0}{0},\,\, \sigma^- = \spinmatrix{0}{0}{1}{0}.
 \end{equation}
 
-In the neutral part of the lagrangian neither $W^3$, nor $B$ can be directly identified with the photon since they both interact with the neutrino, which has no electric charge. The two gauge bosons have the same quantum numbers ($Q = 0$ and $J^P = 1^-$), it is therefore possible to create a linear combination of the two fields which represent the electromagnetic photon.
+In the neutral part of the Lagrangian neither $W^3$, nor $B$ can be directly identified with the photon since they both interact with the neutrino, which has no electric charge. The two gauge bosons have the same quantum numbers ($Q = 0$ and $J^P = 1^-$), it is therefore possible to create a linear combination of the two fields which represent the electromagnetic photon.
 
 \begin{equation}
 \left\{\begin{matrix}
@@ -257,7 +258,7 @@ W^{\mu}_3=A^{\mu}\operatorname{sin}\theta_{W}+Z^{\mu}\cos\theta_{W}\\
 \end{equation}
 
 This linear combination can be seen as a rotation of the fields by a $\theta_W$ angle, called \emph{Weinberg angle}. 
-The neutral part of the lagrangian therefore becomes:
+The neutral part of the Lagrangian therefore becomes:
  
 \begin{equation}
 \l_{N}=\bar{\Psi}\gamma_{\mu}(g\operatorname{sin}\theta_{W}T_3+ \frac{Y}{2}g'\operatorname{cos}\theta_{W})\Psi A^{\mu}+\bar{\Psi}\gamma_{\mu}(g\operatorname{cos}\theta_{W}T_3- \frac{Y}{2}g'\operatorname{sin}\theta_{W})\Psi Z^{\mu}
@@ -271,16 +272,16 @@ where:
 e_L\\ 
 \nu_R\\ 
 e_R
-\end{pmatrix}, \, \, \, T_3 = {\rm diag}\left(\frac{1}{2},-\frac{1}{2},0,0\right)
+\end{pmatrix}, \, \, \, T_3 = \rm{diag}\left(\frac{1}{2},-\frac{1}{2},0,0\right)
 \end{equation}
 
-In this lagrangian the boson $A$ can be identified with the QED photon. Similarly to what happens to the fields, the electric charge can be written as a linear combination of the third component of the weak isospin and the hypercharge. The charge operator can be derived from the coupling of the photon field to the fermions obtaining: 
+In this Lagrangian the boson $A$ can be identified with the QED photon. Similarly to what happens to the fields, the electric charge can be written as a linear combination of the third component of the weak isospin and the hypercharge. The charge operator can be derived from the coupling of the photon field to the fermions obtaining: 
 
 \begin{equation}
 Q = T_3 + \dfrac{Y}{2}
 \end{equation}
 
-Which, in the case of the electron family leads to the relations:
+which, in the case of the electron family leads to the relations:
 
 \begin{equation}
 g \opname{sin}\theta_W = g' \opname{cos}\theta_W = e
@@ -298,16 +299,16 @@ Which links the coupling constants and the electron charge to the value of $\the
 
 The identification of the $A$ boson with the photon completely determines the choice of the quantum numbers of the fundamental particles also defining their coupling to the new bosonic $Z$ field. At the time of the formulation of the electroweak theory the presence of this new boson, the Z, was yet to be observed.
 
-The interaction between the gauge boson fields is described by the following lagrangian:
+The interaction between the gauge boson fields is described by the following Lagrangian:
 
 \begin{equation}
 \l_g = -\dfrac{1}{4}W^a_{\mu\nu}W_a^{\mu\nu} -\dfrac{1}{4}B_{\mu\nu}B^{\mu\nu}
 \label{eq:weak_free}
 \end{equation}
 
-Where in this case $W$ and $B$ represent the \emph{field strength tensor} for the relative field. As in the QCD formalism, the SU(2) generators do not commute with each other creating additional trilinear and quartic terms in the lagrangian that allow for interactions between the gauge fields.
+Where in this case $W$ and $B$ represent the \emph{field strength tensor} for the relative field. As in the QCD formalism, the SU(2) generators do not commute with each other creating additional trilinear and quartic terms in the Lagrangian that allow for interactions between the gauge fields.
 
-The short range experimentally observed in the weak interaction necessitates the presence of massive gauge bosons. The naive introduction of a mass term in the lagrangian in the form
+The short range experimentally observed in the weak interaction necessitates the presence of massive gauge bosons. The naive introduction of a mass term in the Lagrangian in the form
 
 \begin{equation}
 \l = -\frac{1}{16\pi}F^{\mu\nu}F_{\mu\nu}+\frac{1}{8\pi}m^2 A^{\nu}A_{\nu}
@@ -320,25 +321,25 @@ leads to a violation of the gauge invariance, which allows the theory to be pert
 
 \subsection{Spontaneous symmetry breaking}
 
-Let us consider now a field theory comprising N scalar massless fields $\vec{\phi(x)} = (\phi_1(x),\ldots,\phi_N(x))$, and a lagrangian of the form:
+Let us consider now a field theory comprising N scalar massless fields $\vec{\phi}(x) = (\phi_1(x),\ldots,\phi_N(x))$, and a Lagrangian of the form:
 
 \begin{equation}
-\l_\sigma = \half \d_\mu \vec{\phi(x)} \d^\mu \vec{\phi(x)} - V(|\vec{\phi(x)}|)
+\l_\sigma = \half \d_\mu \vec{\phi}(x) \d^\mu \vec{\phi}(x) - V(|\vec{\phi}(x)|)
 \label{eq:lin_sigma}
 \end{equation}
 
-The lagrangian shows a global invariance under the field rotations $\phi'_i(x) = R_i^j \phi_j(x)$ which can be represented by the O(N) group. 
+The Lagrangian shows a global invariance under the field rotations $\phi'_i(x) = R_i^j \phi_j(x)$ which can be represented by the O(N) group. 
 
 If we now choose a potential of the type:
 
 \begin{equation}
-V(|\vec{\phi(x)}|) = - \half \mu^2 |\vec{\phi(x)}|^2 + \dfrac{\lambda}{4} (|\vec{\phi(x)}|^2)^2
+V(|\vec{\phi}(x)|) = - \half \mu^2 |\vec{\phi}(x)|^2 + \dfrac{\lambda}{4} (|\vec{\phi}(x)|^2)^2
 \label{eq:lin_sigma}
 \end{equation} 
 
-with both $\lambda$ and $\mu > 0$. It must be noted that with $\mu > 0$ the quadratic term has the wrong sign to be considered a mass for the field, and therefore the potential interpretation is consistent.
+with both $\lambda$ and $\mu$ positive. It must be noted that with $\mu > 0$ the quadratic term has the wrong sign to be considered a mass for the field, and therefore the potential interpretation is consistent.
 
-The perturbative expansion of the theory has to be performed around the classical vacuum configuration, which is the minimum of the potential. In this case the minimum is independent from the field configuration and is $|\vec{\phi(x)}|^2 = \mu^2 / \lambda \neq 0$, which is degenerate and symmetric with respect to O(N).
+The perturbative expansion of the theory has to be performed around the classical vacuum configuration, which is the minimum of the potential. In this case the minimum is independent from the field configuration and is $|\vec{\phi}(x)|^2 = \mu^2 / \lambda \neq 0$, which is degenerate and symmetric with respect to O(N).
 
 We can arbitrarily choose a vacuum configuration and parametrize the fields accordingly
 
@@ -346,9 +347,9 @@ We can arbitrarily choose a vacuum configuration and parametrize the fields acco
 \phi_0^i = (0, \ldots, v), \, v= \dfrac{\mu}{\sqrt{\lambda}}, \, \phi^i(x) = (\pi^k(x), v + \sigma(x))
 \end{equation}
 
-Where the index $k$ runs over $N-1$ indices. 
+Where $\pi^k(x)$ and $\sigma(x)$ are the transformed fields and the index $k$ runs over $N-1$ elements. 
 
-Substituting the new fields into the lagrangian it is possible to obtain several components:
+Substituting the new fields into the Lagrangian it is possible to obtain several components:
 
 \begin{eqnarray}
 \l_{kin} &=& \half \d_\mu \pi^k \d^\mu \pi_k + \half  \d_\mu \sigma \d^\mu \sigma \nonumber \\
@@ -358,8 +359,8 @@ Substituting the new fields into the lagrangian it is possible to obtain several
 \l_{vac} &=& \dfrac{\mu^4}{4\lambda} 
 \end{eqnarray}
 
-In this final lagrangian the initial O(N) symmetry is broken, as it is evident from the different couplings that the $\sigma$ boson has with respect to the $\pi$ ones. A residual O(N-1) symmetry is still present among the $\pi^k$ fields.
-We can assign to the different fragments of the lagrangian special meanings, related to couplings expressed:
+In this final Lagrangian the initial O(N) symmetry is broken, as it is evident from the different couplings that the $\sigma$ boson has with respect to the $\pi$ ones. A residual O(N-1) symmetry is still present among the $\pi^k$ fields.
+We can assign to the different fragments of the Lagrangian special meanings, related to couplings expressed:
 \begin{itemize}
 \item $\l_{kin}$ represents the kinetic term for $N$ scalar bosons, as in the beginning of our model;
 \item $\l_{\sigma \, mass}$ arise after the spontaneous breaking of the O(N) symmetry and represent a mass term for the $\sigma$ boson. No mass term is assigned to the $\pi$ fields, though;
@@ -367,7 +368,7 @@ We can assign to the different fragments of the lagrangian special meanings, rel
 \item $\l_{vac}$ represents the energy of the vacuum, the vacuum expectation value of the $\sigma$ boson. Classically this term can be neglected, as only energy differences are physical observables.
 \end{itemize}
 
-This example can be generalized in the \emph{Goldstone theorem} \cite{1962PhRv..127..965G}, which states that a theory containing $K$ global symmetry generators, out of which $d$ are broken by the choice of the potential and therefore of the vacuum, $K - d$ massless bosons arise, called goldstone bosons. 
+This example can be generalized in the \emph{Goldstone theorem} \cite{1962PhRv..127..965G}, which states that a theory containing $K$ global symmetry generators, out of which $d$ are broken by the choice of the potential and therefore of the vacuum, $K - d$ massless bosons arise, called Goldstone bosons. 
 
 In our case the inital O(N) symmetry has $N(N-1)/2$ generators of the symmetry, while the final O(N-1) one has $(N-1)(N-2)/2$, leaving a difference of $N-1$ broken generators, leading to the $\pi$ fields being massless. 
 
@@ -375,7 +376,7 @@ This mechanism is valid both in quantum field theory and in quantum dynamics, wh
 
 \subsection{The Higgs mechanism}
 
-The previously described mechanism has been studied in the context of a gauge field theory by several authors, with Higgs and Englert among them, reporting their results in 1964 \cite{Englert:1964et, Higgs:1964ia}. The combination of these studies with the SU(2)$\times$U(1) formalism led, as said, to the definition of the electroweak theory by Weinberg and Salam in 1967.
+The previously described mechanism has been studied in the context of a gauge field theory by several authors, with Higgs and Englert among them, reporting their results in 1964 \cite{Englert:1964et, Higgs:1964ia}. The combination of these studies with the SU(2)$\times$U(1) formalism led to the electroweak theory by Weinberg and Salam in 1967.
 
 If we now take, in the framework of the electroweak theory, a complex doublet under SU(2)
 
@@ -418,10 +419,10 @@ we obtain therefore two allowed configurations:
 
 \begin{enumerate}
 \item $v_1 = 0, \, v_2 = v, \, Y = 1$
-\item $v_1 = v, \, v_2 = 0, \, Y = -1$
+\item $v_1 = v, \, v_2 = 0, \, Y = -1$.
 \end{enumerate}
 
-In the former case $\phi_1$ is positive and $\phi_2$ is neutral, while in the latter $\phi_1$ is neutral and $\phi_2$ has negative electric charge. It can be shown that the two configurations are equivalent though, as in both cases the charged scalar is made of goldstone bosons of the theory and has no physical meaning alone.
+In the former case $\phi_1$ is positive and $\phi_2$ is neutral, while in the latter $\phi_1$ is neutral and $\phi_2$ has negative electric charge. It can be shown that the two configurations are equivalent, as in both cases the charged scalar is made of Goldstone bosons and has no physical meaning alone.
 
 We choose as a convention the first option and we decompose the $\phi_i$ fields in their real and imaginary components:
 
@@ -429,7 +430,7 @@ We choose as a convention the first option and we decompose the $\phi_i$ fields 
 \phi(x) = \spinor{\phi^{(+)}(x)}{\phi^{(0)}(x)} = \sqhalf \spinor{ \pi_1(x) + i \pi_2(x) }{ v + H(x) + i \pi_3(x) }
 \end{equation}
 
-where, as in the previous example, the $\pi$ fields are the goldstone bosons.  To allow a proper renormalization, these fields have to be kept in the lagrangian, but for our purposes we can set the unitary gauge conditions and obtain:
+where, as in the previous example, the $\pi$ fields are the Goldstone bosons.  To allow a proper renormalization, these fields have to be kept in the Lagrangian, but for our purposes we can set the unitary gauge conditions and obtain:
 
 \begin{equation}
 \phi(x) = \sqhalf \spinor{ 0 }{ v + H(x) }
@@ -443,9 +444,9 @@ After this transformation the potential becomes:
 V(\phi) = -\dfrac{\mu^4}{4\lambda} + \mu^2H^2 + \lambda v H^3 + 2 \lambda v^2
 \end{equation}
 
-From the potential a mass term for the Higgs boson arises: $m^{2}_H = 2\mu^2 = 2 \lambda v^2$. There are additional triple and quartic Higgs boson self--couplings that appear in the potential description. As said before, the additional $2 \lambda v^2 = m^{2}_H$ can be neglected when measuring physical observables. This term, though, gains importance once a coupling with gravity is introduced and can be linked to the cosmological constant $\Lambda$ of the general relativity theory.
+From the potential a mass term for the Higgs boson arises: $m^{2}_H = 2\mu^2 = 2 \lambda v^2$. There are additional triple and quartic Higgs boson self--couplings that appear in the potential description. As previously mentioned, the additional $2 \lambda v^2 = m^{2}_H$ term can be neglected when measuring physical observables. This term, though, gains importance once a coupling with gravity is introduced and can be linked to the cosmological constant $\Lambda$ of the general relativity theory.
 
-The power of the spontaneous symmetry breaking mechanism becomes apparent when computing the interaction lagrangian for the $\phi$ field:
+The importance of the spontaneous symmetry breaking mechanism becomes apparent when computing the interaction Lagrangian for the $\phi$ field:
 
 \begin{equation}
 \l_{int} = (\calD_\mu\phi)\dag\calD^\mu\phi
@@ -464,33 +465,33 @@ Using the relations described in Eq. \ref{eq:win_angle}, \ref{eq:su2_rotation}, 
 \spinor{g(W_{1\mu} - i W_{2\mu})}{-g W_{3\mu} + g'B_\mu} = \spinor{\sqrt{2} g W^+_{\mu}}{-\sqrt{g^2+g'^2}Z_\mu}
 \end{equation}
 
-The interaction lagrangian then becomes:
+The interaction Lagrangian becomes:
 
 \begin{equation}
 \l_{int} = (\calD_\mu\phi)\dag\calD^\mu\phi = \frac{1}{2}\partial_{\mu}H\partial^{\mu}H+(v+H)^2\left[\frac{g^2}{4}W^+_{\mu}W^{\mu-} + \frac{1}{8}(g^2+g'^2) Z^{\mu}Z_{\mu}\right ]
 \end{equation}
 
-In which quadratic terms of the $W$ and $Z$ fields appear with the correct sign to be interpreted as a mass term. 
+In which quadratic terms of the $W$ and $Z$ fields appear with the correct sign and are interpreted as a mass term. 
 
-With the Higgs mechanism it has been possible to introduce a mass term for the gauge bosons without breaking the underlying gauge symmetry of the lagrangian. 
+With the Higgs mechanism it is possible to introduce a mass term for the gauge bosons without breaking the underlying gauge symmetry of the Lagrangian. 
 
-A common representation of this method arises from the computation of the elicity states of the gauge bosons: massless bosons have only two possible elicity states, while massive boson have an additional one. The goldstone bosons can be viewed as the additional degree of freedom that is absorbed by the weak bosons to become massive.
+A common representation of this method arises from the computation of the elicity states of the gauge bosons: massless bosons have only two possible elicity states, while massive boson have an additional one. The Goldstone bosons can be viewed as the additional degree of freedom that is absorbed by the weak bosons to become massive.
 
 The mass of the weak bosons is determined by their coupling of the Higgs boson: 
 
 \begin{equation}
-M^2_W=\frac{1}{4}g^2v^2, \, \, \, \, M^2_Z=\frac{1}{4}(g^2+g'^2)v^2
+M^2_W=\frac{1}{4}g^2v^2, \, \, \, \, M^2_Z=\frac{1}{4}(g^2+g'^2)v^2.
 \end{equation}
 
 Additionally, the following relation between the Z and W bosons mass holds:
 
 \begin{equation}
-\frac{M_W^2}{M_Z^2}=\frac{g^2}{g^2+g'^2}=\operatorname{cos^2}\theta_W
+\frac{M_W^2}{M_Z^2}=\frac{g^2}{g^2+g'^2}=\operatorname{cos^2}\theta_W.
 \end{equation}
 
 \subsection{Couplings to gauge bosons}
 
-The interaction lagrangian contains additional terms describing the interaction of the Higgs boson with the weak gauge bosons. No direct coupling with the photon is predicted. The vertices allowed by the theory include vertices with two gauge bosons and one or two Higgs bosons. In addition, the vertices do not mix W and Z bosons. The coupling constants of these vertices are proportional to the mass of the gauge bosons interested and can be written as:
+The interaction Lagrangian contains additional terms describing the interaction of the Higgs boson with the weak gauge bosons. No direct coupling with the photon is predicted. The theory includes interaction vertices with two gauge bosons and one or two Higgs bosons. In addition, the vertices do not mix W and Z bosons. The coupling constants of these vertices are proportional to the mass of the gauge bosons interested and can be written as:
 
 \begin{equation}
 g_{HVV}=\frac{2m^2_V}{v}, \,\,\,   g_{HHVV}=\frac{2m^2_V}{v^2}
@@ -506,14 +507,14 @@ The introduction of a mass term for fermions as in the Dirac equation
 \l_{m,Dirac}= -m\bar{\psi}\psi=-m(\bar{\psi}_L\psi_R+\bar{\psi}_R\psi_L)
 \end{equation}
 
-would break the SU(2) gauge invariance of the lagrangian as it directly mixes left and right handed components of the fermionic fields, which transform differently under SU(2). To introduce the mass term for the fermions without breaking the gauge invariance it is possible to resort again on the spontaneous symmetry breaking mechanism and the $\phi$ field. A \emph{Yukawa}--type coupling
+would break the SU(2) gauge invariance of the Lagrangian as it directly mixes left and right handed components of the fermionic fields, which transform differently under SU(2). To introduce the mass term for the fermions without breaking the gauge invariance it is possible to resort again on the spontaneous symmetry breaking mechanism and the $\phi$ field. A \emph{Yukawa}--type coupling
 \footnote{This coupling was initially introduced by Yukawa \cite{Yukawa:1935xg} to describe the interactions between hadrons, postulating a new boson mediator, the \emph{pion}}:
 
 \begin{equation}
 \l_{Yuk}=-g_f(L_f \phi d^f_R + d^f_R \phi^{\dag} L_f)
 \end{equation}
 
-respect the gauge invariance and can produce the desired mass terms which becomes:
+where $d^f_R$ it's the right--handed singlet, respects the gauge invariance and can produce the desired mass terms which becomes:
 
 \begin{equation}
 m_f = \frac{g_f v}{\sqrt{2}}
@@ -525,7 +526,7 @@ In addition to the masses of the different fermions a term coupling the fermions
 g_{Hff}=i\frac{m_f}{v}
 \end{equation}
 
-This procedure assign mass to the down--type fermions. To achieve the same results for the up--type ones it is possible to consider the coupling of the Higgs charge conjugate
+This procedure assigns mass to the down--type fermions. To achieve the same results for the up--type ones it is possible to consider the coupling of the Higgs charge conjugate
 
 \begin{equation}
 \phi_C = i \sigma_2 \phi^{\ast} = \frac{1}{\sqrt{2}}=\begin{pmatrix}
@@ -540,30 +541,30 @@ As anticipated in the previous sections, mass eigenstates do not correspond to w
 
 \section{The Higgs boson at LHC}
 
-\subsection{Higgs production}
+\subsection{Higgs production and decays}
 
-The Large Hadron Collider (LHC) is the most advanced accelerator present at CERN, Geneva, where two proton beams collide with a center--of--mass energy $\sqrt{s} = 8$ TeV. A more detailed description of the accelerator and the experimental set--up is available in the following chapter.
+The Large Hadron Collider (LHC) is the largest and most advanced accelerator present at CERN (Geneva, Switzerland), where two proton beams collide with a center--of--mass energy $\sqrt{s} = 8$ TeV. A more detailed description of the accelerator and the experimental set--up is available in in Chapter \ref{sec:chap_2}.
 
-Protons are not fundamental ``point--like'' particles, but are made by three valence quarks: two up quarks and a down one. In addition to these valence quarks, the quantum vacuum and the binding energy among the quarks produces around them a cloud of virtual quarks and gluons that can also be accessed during a collision process. The exact constitution of the proton is impossible to compute from theoretical assumptions as the QCD is not perturbative at that energy scale. The momentum carried by each constituent, valence or virtual, is also a continuous function that has to be probed experimentally. 
+Protons are not elementary ``point--like'' particles, but are made by three valence quarks, two up quarks and a down one, bound by gluons. In addition to these valence quarks, the quantum vacuum and the binding energy among the quarks produces around them a cloud of virtual quarks and gluons that can also be accessed during a collision process. The exact structure of the proton is impossible to compute from theoretical assumptions as the QCD is not perturbative at that energy scale. The momentum carried by each constituent, valence or virtual, is also a continuous function that has to be measured experimentally. 
 
-The probability for a quark or a gluon to be observed within a proton, with a certain momentum $p = x \cdot p_{proton}$, with $x \, \epsilon \, [0,1]$, is encoded in the parton distribution functions, measured experimentally. Figure \ref{fig:pdf} shows an example of a parton distribution function for the proton.
+The probability for a quark or a gluon to be observed within a proton, with a certain momentum $p = x \cdot p_{proton}$, with $x \, \epsilon \, [0,1]$, is embedded in the parton distribution functions, measured experimentally. Figure \ref{fig:pdf} shows an example of a parton distribution function for the proton \cite{Pumplin:2002vw}.
 
 \begin{figure}
 \centering
 \includegraphics[width=0.5\textwidth]{1_Introduction_Th_and_Exp/pics/pdf.jpg}
-\caption{Parton distribution function of the proton.}
+\caption{Parton distribution function of the proton as a function of the Bjorken variable x, for a $Q^2=10$ GeV$^2$. }
 \label{fig:pdf}
 \end{figure}
 
-As it is evident from the previous picture, the overwhelming majority of the partons present in the protons are gluons, especially at low $x$. This effects directly translate in a dominance of the gluon--fusion process in the Higgs boson production at the LHC. The Feynman diagram sketching the gluon fusion process is shown in Figure \ref{fig:ggf}. The loop inside the gluon fusion process is dominated in the SM by the top quark, since it has the largest mass in the standard model, but may receive additional contribution from new physics. 
+As shown in Fig. \ref{fig:pdf}, the majority of the partons present in the protons are gluons, especially at low $x$. This effects directly translate in a dominance of the gluon--fusion process in the Higgs boson production at the LHC. The Feynman diagram showing the gluon fusion process is in Figure \ref{fig:ggf}. The loop inside the gluon fusion process is dominated by the top quark, since it has the largest mass in the standard model, but may receive additional contribution from new physics. 
 
-The second largest contribution to the total Higgs production cross section comes from the vector boson fusion process (Figure \ref{fig:vbf}) in which two quarks radiate two weak bosons that then fuse producing a Higgs boson. The scattered quarks produce two high transverse momentum (\pT) jets in the forward/backward direction that can be used to experimentally tag the events.
+The second largest contribution to the total Higgs production cross section comes from the vector boson fusion (VBF) process (Figure \ref{fig:vbf}) in which two quarks radiate two weak bosons that then interact producing a Higgs boson. The scattered quarks produce two jets in the forward/backward direction that can be used to experimentally tag the events.
 
 The third most significant production mode is the so called \emph{Higgsstralhung}, or associated production with a vector boson (Figure \ref{fig:vh}). This work is focused on this production mechanism. Even though the production cross section is significantly lower than the previous two processes, the presence of a vector boson reduces greatly the background contamination. This process is also the leading source of Higgs bosons at lepton colliders.
 
-Finally, the least Higgs production process is $tt$H, the production in association with top quarks (Figure \ref{fig:tth}). 
+Finally, the Higgs production in association with top quarks, $t\bar{t}$H (Figure \ref{fig:tth}), has the smallest cross--section with respect to the previous processes.
 
-The production cross sections of the single processes depend both on the mass of the Higgs boson, a free parameter of the SM, and on the center--of--mass energy of the two colliding beams. Figure \ref{fig:hxs} shows the production cross section as function of the Higgs mass at 7 and 8 TeV.
+The production cross sections of each process depends both on the mass of the Higgs boson, a free parameter of the SM, and on the center--of--mass energy of the two colliding beams. Figure \ref{fig:hxs} shows the production cross sections as a function of the Higgs mass at 7 and 8 TeV.
 
 \begin{figure}
         \centering
@@ -587,68 +588,68 @@ The production cross sections of the single processes depend both on the mass of
         ~ 
         \begin{subfigure}[b]{0.3\textwidth}
                 \includegraphics[width=\textwidth]{1_Introduction_Th_and_Exp/pics/ttFusion.png}
-                \caption{$tt$H}
+                \caption{$t\bar{t}$H}
                 \label{fig:tth}
         \end{subfigure}
-        \caption{Tree--level Feynman diagrams for the main Higgs boson production mechanism at LHC}\label{fig:hprod}
+        \caption{Tree--level Feynman diagrams for the main Higgs boson production mechanism at LHC.}\label{fig:hprod}
 \end{figure}
 
 \begin{figure}
         \centering
 	\includegraphics[width=0.48\textwidth]{1_Introduction_Th_and_Exp/pics/Higgs_XS_7TeV_LM.eps}
 	\includegraphics[width=0.48\textwidth]{1_Introduction_Th_and_Exp/pics/Higgs_XS_8TeV_LM.pdf}
-       \caption{Higgs production cross section at 7 TeV (left) and 8 TeV (right). The bands represent the theoretical uncertainties on the computation.}
+       \caption{Higgs production cross section at 7 TeV (left) and 8 TeV (right). The bands represent the theoretical uncertainties on the computation \cite{Heinemeyer:2013tqa}.}
        \label{fig:hxs}
 \end{figure}
 
 
-\subsection{Higgs decays}
-
-Even though the couplings of the Higgs boson are dictated by the mass of the fundamental particles, the branching ratio of the Higgs boson to fundamental particles is dependent on the Higgs mass, as a phase--space factor is added. The running of the main decay modes for the Higgs boson as a function of its mass are shown in Figure \ref{fig:hbr}. 
+Even though the couplings of the Higgs boson are dictated by the mass of the fundamental particles, the branching ratio of the Higgs boson to fundamental particles is dependent on the Higgs mass, as a phase--space factor is added. The dependence of the branching fractions for the main Higgs decay modes as a function of its mass are shown in Figure \ref{fig:hbr}. 
 
 \begin{figure}
 \centering
 \includegraphics[width=0.5\textwidth]{1_Introduction_Th_and_Exp/pics/Higgs_BR_LM.eps}
-\caption{Higgs branching ratios to different fundamental particles as function of Higgs mass.}
+\caption{Higgs branching ratios for different decay channels as function of Higgs mass \cite{Heinemeyer:2013tqa}.}
 \label{fig:hbr}
 \end{figure}
 
-From this picture it is possible to notice that even though the Higgs boson has no direct coupling to the photon, a seizable branching ratio is anyway achieved through loop contributions. These loops, as in case of the gluon fusion could contain contributions from new physics making this process a viable channel to probe theories beyond the stand model.
+Even though the Higgs boson has no direct coupling to the photon, a seizable branching ratio is given by loop contributions. These loops, as in case of the gluon fusion could contain contributions from new physics making this process a viable channel to probe theories beyond the standard model. The branching fraction to down--type fermions, may be sensitive to several beyond the standard model (BSM) models, in which these branching fractions are either enhanced or suppressed.
 
 \section{Higgs boson searches}
 
-On the 4$^{th}$ of July 2012 the CMS and ATLAS experiments reported the observation of a new resonance at the mass of 125 GeV compatible with the SM Higgs \cite{Chatrchyan:2013lba}. This observation has been possible combining the results of different searches for the Higgs boson in decay channels with gauge bosons, mainly ZZ$^*$ and $\gamma\gamma$.
+On the July 4$^{th}$ 2012 the CMS and ATLAS collaborations reported the observation of a new resonance at the mass of 125 GeV compatible with the SM Higgs boson \cite{Chatrchyan:2013lba}. This observation has been possible combining the results of different searches for the Higgs boson in decay channels with gauge bosons, mainly ZZ$^*$ and $\gamma\gamma$.
 
 Currently, the significance of the Higgs boson signal exceeds 5$\sigma$ for $\H\To\gamma\gamma$ searches in both CMS and ATLAS \cite{Khachatryan:2014ira, ATLASCONF:2014009}. A similar situation is also present in the ZZ and WW channels.
 
-The high significance of these channels has allowed to perform initial studies on the properties of the resonance. The high invariant mass resolution of $\gamma\gamma$ and ZZ channels has allowed to measure the mass of the boson with high precision: $m_\H = 125.36 \pm 0.37\, \rm{(stat)} \pm 0.18\, \rm{(syst)}$ GeV and $m_\H = 125.03^{+0.26}_{-0.27} \,\rm{(stat)}^{+0.13}_{-0.15}  \,\rm{(syst)} = 125.03^{0.29}_{-0.31} \, \rm{(tot)}$ GeV for ATLAS \cite{Aad:2014aba} and CMS \cite{CMS:2014ega}, respectively.
+The large amount of signal events in these decay channels has allowed to perform initial studies on the resonance properties. The high invariant mass resolution of $\gamma\gamma$ and ZZ channels has allowed to measure the mass of the boson with high precision: $m_\H = 125.36 \pm 0.37\, \rm{(stat)} \pm 0.18\, \rm{(syst)}$ GeV and $m_\H = 125.03^{+0.26}_{-0.27} \,\rm{(stat)}^{+0.13}_{-0.15}  \,\rm{(syst)} = 125.03^{+0.29}_{-0.31} \, \rm{(tot)}$ GeV for ATLAS \cite{Aad:2014aba} and CMS \cite{CMS:2014ega}, respectively.
 
-The spin and parity ($J^P$) of the resonance has also been characterized by dedicated studies on the ZZ and WW channels, which decay topology is more sensitive to these physical observables. The results \cite{CMS:2014gga}, shown in Figure \ref{fig:hjp}, exclude any concurrent hypothesis at more than 99\% confidence level (CL), leaving only $0\+$ as an option.
+The spin and parity ($J^P$) of the resonance has also been studied in the ZZ and WW channels, which are more sensitive to these physical observables. The results, shown in Figure \ref{fig:hjp}, exclude any concurrent hypothesis at more than 99\% confidence level (CL), leaving only $0\+$ as an option \cite{CMS:2014gga}.
 
 \begin{figure}
         \centering
 	\includegraphics[width=0.8\textwidth]{1_Introduction_Th_and_Exp/pics/hwwhzz_JP_SummaryPlot.pdf}
-       \caption{Summary of different $J^P$ hypotheses tested against the $0\+$ one using ZZ and WW Higgs decay data. The orange and blue bands represent the $1\sigma$, $2\sigma$, and $3\sigma$ around the median expected value for the SM Higgs boson hypothesis and the alternative hypothesis hypothesis, respectively. The black point represents the observed value. }
+       \caption{Summary of different $J^P$ hypotheses tested against the $0\+$ one using ZZ and WW Higgs candidate decays. The orange and blue bands represent the $1\sigma$, $2\sigma$, and $3\sigma$ around the median expected value for the SM Higgs boson hypothesis and the alternative hypothesis hypothesis, respectively. The black points represent the observed values. }
        \label{fig:hjp}
 \end{figure}
 
-The theoretical SM Higgs boson width for $m_\H \approx 125$ GeV is $\Gamma_\H \approx 4$ MeV, which is below the mass resolution of both detectors. It has been possible, though, to measure with better precision the upper limit of the width from the ratio between on--shell and off--shell event yields, obtaining $\Gamma_{obs} / \Gamma_\H < 5.3$ for CMS \cite{Khachatryan:2014iha} and $\Gamma_{obs} / \Gamma_\H < 5.7$ for ATLAS \cite{ATLASCONF:2014042}. 
+The expected SM Higgs boson width for $m_\H \approx 125$ GeV is $\Gamma_\H \approx 4$ MeV, which is below the mass resolution of both detectors. It has been possible to measure with better precision the 95\% CL upper limit on the width from the ratio between on--shell and off--shell event yields, obtaining $\Gamma_{obs} / \Gamma_\H < 5.3$ for CMS \cite{Khachatryan:2014iha} and $\Gamma_{obs} / \Gamma_\H < 5.7$ for ATLAS \cite{ATLASCONF:2014042}. 
 
-The search for Higgs boson decays to bottom quark pairs is the only feasible search of Higgs decays to down--type quarks at hadronic colliders, as the coupling to the other two quarks are largely suppressed by their mass while the hadronic background increases dramatically. The large background contamination in $\H\To b\bar{b}$ restricts the searches to all production processes but the gluon fusion, allowing for the richer final state to be used to remove most of the backgrounds.
+The search for Higgs boson decays to bottom quark pairs is the only feasible search to down--type quarks at hadronic colliders, as the coupling to the other two quarks are largely suppressed by their mass while the hadronic background increases dramatically. The large background contamination in $\H\To b\bar{b}$ restricts the searches to all production processes but the gluon fusion, allowing for the richer final state to be used to remove most of the backgrounds.
 
 The combination of the CDF and D0 results \cite{Aaltonen:2012qt} show a $3.1\sigma$ evidence of the $\rm{H} \To b \bar{b}$ decay mode. The CMS experiment reported a $2.1\sigma$ excess in the VH, $\rm{H} \To b \bar{b}$ production \cite{Chatrchyan:2013zna}, compatible with the SM predictions. The equivalent analysis for ATLAS does not show any excess \cite{TheATLAScollaboration:2013lia}, but is also less sensitive.
 
-The branching fraction of the Higgs boson to muon pairs is predicted to be very low, therefore any excess might be a strong indication of new physics. Both ATLAS \cite{Aad:2014xva} and CMS \cite{CMS:2013aga} performed a search for such decay, exploiting the extremely good resolution that can be achieved in this channel, without finding any significant excess so far. The analyses set an independent upper limit on the branching ratio approximately 7 times the SM expectation.
+The branching fraction of the Higgs boson to muon pairs is predicted to be very low, therefore any excess might be a strong indication of new physics. Both ATLAS \cite{Aad:2014xva} and CMS \cite{CMS:2013aga} performed a search for such decay, exploiting the extremely good dimuon mass resolution, without finding any significant excess. The analyses set an independent upper limit on the branching ratio of approximately 7 times the SM expectation.
 
-The only direct observation of SM Higgs coupling to top quarks can be observed in the $tt$H associated production, since the low mass of the Higgs boson forbids such decay. The search for $tt$H is performed in many Higgs final states. Both ATLAS and CMS exploit the $b\bar{b}$ and $\gamma\gamma$ final states; additionally CMS searches for this production mode also in multi-lepton final states, targeting the $\tau\tau$ and WW Higgs decay modes.
+The SM Higgs coupling to top quarks can only be observed through the $t\bar{t}$H associated production, since the Higgs boson mass forbids the decay in top quark pairs. The search for $t\bar{t}$H \cite{ATLASCONF:2014043,CMS:2014ega} is performed in many Higgs final states. Both ATLAS and CMS exploit the $b\bar{b}$ and $\gamma\gamma$ final states; additionally CMS searches for this production mode also in multi-lepton final states, targeting the $\tau\tau$ and WW Higgs decay modes.
 
-The combination of these $tt$H searches leads in CMS to a $3.5\sigma$ excess with respect to the background--only hypothesis \cite{CMS:2014ega}. The combined \emph{signal stranght} ($\mu$), i.e. the ratio $\mu = (\sigma \times BR)_{obs} / (\sigma \times BR)_{SM}$, is $\mu = 2.76^{+1.05}_{0.92}$ which is two standard deviations away from the SM expectation ($\mu = 1$). The excess in this combination is driven by the same--sign dimuon analysis, which looks for $\H\To \W\W$, and $\H\To\gamma\gamma$. The results from ATLAS show a mild, non conclusive, excess \cite{ATLASCONF:2014043}.
+The combination of these $tt$H searches leads in CMS to a $3.5\sigma$ excess with respect to the background--only hypothesis \cite{CMS:2014ega}. The combined \emph{signal strenght} ($\mu$), i.e. the ratio $\mu = (\sigma \times BR)_{obs} / (\sigma \times BR)_{SM}$, is $\mu = 2.76^{+1.05}_{-0.92}$ which is two standard deviations away from the SM expectation ($\mu = 1$). The excess in this combination is driven by the same--sign dimuon analysis, which searches for $\H\To \W\W$, and $\H\To\gamma\gamma$ decays. The results from ATLAS are consistent with the background--only hypothesis \cite{ATLASCONF:2014043}.
 
-The $\H \to \tau \tau$ decay mode is searched by CMS in gluon fusion, VBF and associated production \cite{H_tautau}. Events are selected on--line by dedicated triggers and selected according the isolation of the final state leptons. Events are separated into categories tailored around specific production mechanisms (VBF, VH, gluon fusion) and, in the gluon fusion case, according to the boost of the hadronic tau and Higgs candidate. The invariant mass spectrum of the Higgs final states is smeared in this decay mode due to the presence of neutrinos in the tau lepton decay. To recover this effect, a dedicated likelihood integration method, called SVFit, performs the di-tau invariant mass calculation taking as input the momenta of the visible Higgs products and the missing transverse energy (\MET) information. The resolution achieved with this technique, that can be applied only where the taus are the only source of missing energy, varies between 10 and 20\%, depending on the final state and the category.
+The $\H \to \tau \tau$ decay mode is searched by CMS in gluon fusion, VBF and associated production \cite{H_tautau}. Events are selected in real time by dedicated triggers and according to the isolation of the final state leptons. Events are separated into categories tailored around specific production mechanisms (VBF, VH, gluon fusion) and, in the gluon fusion case, according to the boost of the hadronic tau and Higgs candidates. The invariant mass spectrum of the Higgs final states is smeared due to the presence of neutrinos in the tau lepton decay. To recover this effect, a dedicated likelihood integration method, called SVFit, calculates the di-tau invariant mass taking as input the momenta of the visible Higgs products and the missing transverse energy (\MET) information. The mass resolution achieved with this technique, applicable only when taus are the only source of missing energy, varies between 10\% and 20\%, depending on the final state and the category.
 
 Most of the backgrounds present in the direct production (VBF and gluon fusion) categories are modeled using simulated events with dedicated sideband regions to cross--check the simulation and apply correction factors where needed. The main background for these categories is given by $\Z \To \tau\tau$ events which are modeled with \emph{embedded Monte Carlo} techniques: real $\Z \To \mu \mu$ events are selected from collision data and the two muons are replaced with simulated tau decays, after correcting for the appropriate phase space factor.
 
-A combined fit to all the channels and categories reveals a $3.2\sigma$ deviation from the background--only hypothesis and a combined $\mu = 0.78 \pm 0.27$, well compatible between channels as shown in Figure \ref{fig:htt_mu}. The best-fit mass, $m_\H = 122 \pm 7$ GeV, is also compatible with the ZZ and $\gamma\gamma$ value. The equivalent ATLAS analysis \cite{ATLASCONF:2013108}, which lacks the associated production search, observes a $4.1\sigma$ deviation from the background--only hypothesis and $\mu = 1.4^{+0.5}_{-0.4}$, which is slightly in excess, but still compatible, with respect to the SM value.
+The search for the Higgs boson in the associated production process is performed in final states including both a Z and a W boson. These searches exploit the presence of the additional leptons in the final state to suppress the backgrounds. The remaining backgrounds are estimated with MC simulation or with the misidentification rate method. Part of the work presented in this thesis has been included in the final result published by the collaboration, but additional effort has been put into estimating the uncertainties in one of the major sources of backgrounds. 
+
+A combined fit to all the channels and categories reveals a $3.2\sigma$ deviation from the background--only hypothesis and a combined $\mu = 0.78 \pm 0.27$, well compatible between channels, as shown in Figure \ref{fig:htt_mu}. The best-fit mass, $m_\H = 122 \pm 7$ GeV, is also compatible with the ZZ and $\gamma\gamma$ value. The equivalent ATLAS analysis \cite{ATLASCONF:2013108}, which lacks the associated production search, observes a $4.1\sigma$ deviation from the background--only hypothesis and $\mu = 1.4^{+0.5}_{-0.4}$, which is slightly in excess, but still compatible, with respect to the SM value.
 
 \begin{figure}
         \centering
@@ -657,7 +658,7 @@ A combined fit to all the channels and categories reveals a $3.2\sigma$ deviatio
        \label{fig:htt_mu}
 \end{figure}
 
-The CMS $\H \To b\bar{b}$ and $\H \To \tau \tau$ results have been combined leading to a $3.8\sigma$ evidence of Higgs coupling to down--type fermions \cite{Chatrchyan:2014vua}.
+The CMS $\H \To b\bar{b}$ and $\H \To \tau \tau$ searches have been combined leading to a $3.8\sigma$ evidence of Higgs coupling to down--type fermions \cite{Chatrchyan:2014vua}.
 
 The outcome of the various searches have been combined by the single experiments in a simultaneous fit to better determine the couplings of the Higgs boson to the different fundamental particles. The result of the single and combined signal strengths for both ATLAS \cite{ATLASCONF:2014009} and CMS \cite{CMS:2014ega} is presented in Figure \ref{fig:combination}.
 
@@ -679,7 +680,7 @@ Another way to interpret the results is to compute the couplings of the Higgs bo
        \label{fig:kvf}
 \end{figure}
 
-All the results found so far by both ATLAS and CMS experiments are compatible with the interpretation of this new resonance as a purely SM Higgs boson, but the precision of such measurements still allows room for new physics processes.
+All the results reported so far by both ATLAS and CMS are compatible with the interpretation of the new resonance being a purely SM Higgs boson, but the accuracy of the measurements still allows room for new physics processes.
 
 %In the following part of this work a more detailed description of the $\W\H \To \ell \ell \tau$ analysis will be shown. This 
 
