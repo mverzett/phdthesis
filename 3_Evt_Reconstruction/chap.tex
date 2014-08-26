@@ -63,7 +63,7 @@ Photon identification is based on the same supercluster quantities as the electr
 
 The redundancy of signals that particles traversing the CMS detector leave in multiple sub detectors is exploited by the \emph{Particle Flow} (PF) algorithm in order to improve the overall description of the event. The particle flow method furthermore allows for cross-cleaning of spurious signals and achieve to a global description of the event.
 
-Building blocks for the PF algorithm are the different types of track collections plus the calorimeter energy deposits. Local maxima in the calorimeter deposits serve as seed for ``topological clusters'' which are grown iteratively, by adding adjacent cells with an energy deposit above a customizable threshold. After the clustering stage the algorithm links the different blocks according to their position in the $\eta-\phi$\ plane. Tracks are considered linked to calorimeter clusters if the track trajectory propagated to the average shower depth falls within the cluster boundaries, within some distance that accounts for resolution effects. Calorimeter clusters are linked if the center of the inner cluster fits within the boundaries of the outer one. The radial ordering of the linking step reflects the higher spatial resolution of the inner calorimeters (pre-shower, ECAL, HCAL). After the linking step is completed, the algorithm starts building the final objects, starting with muons. Each global muon that has a combined momentum measurement compatible with the track reconstructed in the inner detector is called a \emph{PF muon}. The corresponding track is removed from the track collection and an estimate of the associated energy deposit in the calorimeter is also removed from the list of linked clusters. Electrons are the second category of objects that is built with the procedure detailed above. Tangents to the electron trajectory in correspondence of the tracker layers are propagated to the ECAL in search for bremsstrahlung photons. If the electron candidate passes the selection cuts a \emph{PF Electron} is created and the track as well as the ECAL deposits linked to the track are removed. A tighter selection is performed on remaining the tracks, requiring that the tracker \pT resolution is smaller than the calorimetric energy resolution. This requirement is found to reject about 0.2\% of tracks in hadronic jets, 90\% of which being fake tracks. 
+Building blocks for the PF algorithm are the different types of track collections plus the calorimeter energy deposits. Local maxima in the calorimeter deposits serve as seed for ``topological clusters'' which are grown iteratively, by adding adjacent cells with an energy deposit above a customizable threshold. After the clustering stage the algorithm links the different blocks according to their position in the $\eta-\phi$\ plane. Tracks are considered linked to calorimeter clusters if the track trajectory propagated to the average shower depth falls within the cluster boundaries, within some distance that accounts for resolution effects. Calorimeter clusters are linked if the center of the inner cluster fits within the boundaries of the outer one. The radial ordering of the linking step reflects the higher spatial resolution of the inner calorimeters (pre-shower, ECAL, HCAL). After the linking step is completed, the algorithm starts building the final objects, starting with muons. Each global muon that has a combined momentum measurement compatible with the track reconstructed in the inner detector is called a \emph{PF muon}. The corresponding track is removed from the track collection and an estimate of the associated energy deposit in the calorimeter is also removed from the list of linked clusters. Electrons are the second category of objects that is built with the procedure detailed above. Tangents to the electron trajectory in correspondence of the tracker layers are propagated to the ECAL in search for bremsstrahlung photons. If the electron candidate passes the selection cuts a \emph{PF Electron} is created and the track as well as the ECAL deposits linked to the track are removed. A tighter selection is performed on the remaining tracks, requiring that the tracker \pT resolution is smaller than the calorimetric energy resolution. This requirement is found to reject about 0.2\% of tracks in hadronic jets, 90\% of which being fake tracks. 
 %Nonetheless this requirement was found to be a issue for hadronic tau reconstruction for high \pT taus and a custom modification was introduced. 
 The algorithm finally exploits the redundancy in the transverse momentum measurement performed by the tracker and by the calorimeter to build \emph{PF charged hadrons, photons and neutral hadrons}. The PF algorithm operates under the assumption that all the hadrons (charged and neutral) traversing the detector are pions. Photons and neutral hadrons are produced from the calorimetric energy in the clusters once the energy of the linked tracks is subtracted. In the rare case that a calorimetric cluster has a total energy that is incompatible and lower than the sum of the linked tracks a dedicated procedure aimed at recovering mis-reconstructed muons is performed, recovering muon identification efficiency at no expense of increasing the fake rate.% Finally, to each PF object is assigned a PDG identification number and a mass.
 
@@ -125,23 +125,23 @@ Neutrinos and other hypothetical (not yet observed) weakly--interacting particle
 \vec{\cancel{E}_T} = -\sum^{PF\;obj.} \vec{p_{T}}
 \end{equation}
 
-The magnitude of the \MET is found to be underestimated for various reasons including thresholds in the calorimeter clustering and signal non-linearities. This bias is significantly reduced when the correction to jet energies is introduced to the formula \cite{Chatrchyan:2011ds}, obtaining the ``type 1''-corrected \MET. The introduction of jet Energy Corrections (JEC) is performed by subtracting the vectorial residuals between all corrected and uncorrected jets found in the event:
+The magnitude of the \MET is found to be underestimated for various reasons including thresholds in the calorimeter clustering and signal non-linearities. This bias is significantly reduced in case the correction to jet energies are included in the formula \cite{Chatrchyan:2011ds}, obtaining the ``type 1''-corrected \MET. The introduction of jet energy corrections (JEC) is performed by subtracting the vectorial residuals between all corrected and uncorrected jets found in the event:
 
 \begin{equation}
 \vec{\cancel{E}_T^{corr}} = \vec{\cancel{E}_T } - \sum_\mathrm{jets} (\vec{p}_\mathrm{T,jet}^\mathrm{corr}-\vec{p}_\mathrm{T,jet})
 \label{eq:Type1MET}
 \end{equation}
 
-Additional corrections, named ``type 0'' and ``$\phi$'', correct for biases induced by pileup and by asymmetries in the $\phi$\ direction.
+Additional corrections, named ``type 0'' and ``$\phi$'', correct for biases induced by pileup and by asymmetries in the $\phi$\ direction \cite{AN-13-233}.
 
 \section{Tau reconstruction and identification}
 \label{sec:tau_id}
 
-Hadronic taus are one of the highest level objects reconstructed from CMS data and the last in the reconstruction chain. The reconstruction and identification algorithm exploits all the detector capabilities and the Particle Flow algorithm to achieve a reconstruction efficiency close to 60\% with a sub-percent fake rate. The tau reconstruction algorithm used in CMS is called \emph{Hadron Plus Strip} (HPS) \cite{CMS-PAS-TAU-11-001}. 
+Hadronic taus are one of the highest level objects reconstructed from CMS data and the last in the event reconstruction chain. The reconstruction and identification algorithm exploits all the detector capabilities and the Particle Flow algorithm to achieve a reconstruction efficiency close to 60\% with a sub-percent fake rate. The tau reconstruction algorithm used in CMS is called \emph{Hadron Plus Strip} (HPS) \cite{CMS-PAS-TAU-11-001,AN-14-008}. 
 
 \subsection{Reconstruction}
 
-Tau reconstruction is seeded from PF jets clustered with Anti-kT algorithm with a radius of 0.5. In order to recover most of the photon conversions, PF electromagnetic objects (electrons and photons) with deposited energy above 0.5 GeV are clustered in topological ``strips'' $0.05 \times 0.20$\ wide along $\eta$\ and $\phi$, respectively. Strips satisfying a minimum transverse energy of 2.5 GeV are combined with the charged hadrons to form the tau candidate. Charged hadrons included in the tau reconstruction must satisfy the following requirements:
+Tau reconstruction is seeded from PF jets clustered by the Anti-kT algorithm with $r = 0.5$. In order to recover most of the photon conversions, the tau reconstruction algorithm clusters PF electromagnetic objects (electrons and photons) with deposited energy above 0.5 GeV in topological ``strips'' of size $0.05 \times 0.20$\ in $\eta$\ and $\phi$ direction, respectively. Strips satisfying a minimum transverse energy of 2.5 GeV are combined with the charged hadrons to form the tau candidate. The charged hadrons included in the tau reconstruction must satisfy the following requirements:
 
 \begin{itemize}
 \item $\pt > 0.5$\ GeV;
@@ -151,55 +151,59 @@ Tau reconstruction is seeded from PF jets clustered with Anti-kT algorithm with 
 \item At least three hits in the tracker.
 \end{itemize}
 
-The algorithm builds all possible combinations of hadrons and strips matching one of the following decay modes:
+The algorithm builds all possible combinations of hadrons plus strips matching one of the following decay modes:
 
 \begin{enumerate}
 \item \emph{single hadron}: corresponding to a single hadron and no strip.
-\item \emph{hadron plus one strip}: the invariant mass of the pair has to fall within the window of the $\rho$\ meson, $0.4 < M_{\tau \; candidate} < 1.3 \cdot \sqrt{\pt \mathrm{[GeV]} / 200}$\ GeV. The upper boundary of this window is limited at 1.3 (2.1) GeV for candidates with $\pt < 200 \, (> 800)$. This shifting window size compensates for resolution effects at high \pT.
-\item \emph{hadron plus two strips}: the invariant mass of the triplet has to fall within the window of the $\rho$\ meson, $0.4 < M_{\tau \; candidate} < 1.2 \cdot \sqrt{\pt \mathrm{[GeV]} / 200}$\ GeV. The upper boundary of this window is limited at 1.2 (2.0) GeV for candidates with $\pt < 200 \, (> 800)$.
-\item \emph{three hadrons}: the invariant mass of the triplet must fall within the window of the $a_1$\ meson, $0.8 < M_{\tau \; candidate} < 1.5$\ GeV. The tracks are required to be compatible with originating from the same vertex and to sum to unit charge
+\item \emph{hadron plus one strip}: the invariant mass of the pair has to be compatible with the $\rho$\ meson, $0.4 < M_{\tau \; candidate} < 1.3 \cdot \sqrt{\pt \mathrm{[GeV]} / 200}$\ GeV. The upper boundary of this window is limited at 1.3 (2.1) GeV for candidates with $\pt < 200 \, (> 800)$. The increasing window size accounts for resolution effects at high \pT.
+\item \emph{hadron plus two strips}: the invariant mass of the triplet has to be compatible with the $\rho$\ meson, $0.4 < M_{\tau \; candidate} < 1.2 \cdot \sqrt{\pt \mathrm{[GeV]} / 200}$\ GeV. The upper boundary of this window is limited at 1.2 (2.0) GeV for candidates with $\pt < 200 \, (> 800)$.
+\item \emph{three hadrons}: the invariant mass of the triplet must be compatible with the $a_1$\ meson, $0.8 < M_{\tau \; candidate} < 1.5$\ GeV. The tracks are required to be compatible with originating from the same vertex and to sum to unit charge.
 \end{enumerate}
 
-In addition the previous requirements, tau constituents are required to be contained in a cone of size 0.1, $3 / \pt \mathrm{[GeV]}$\ or 0.05 for tau candidate with $\pt < 30$ GeV, $30 < \pt < 60$ GeV and $\pt > 60$ GeV, respectively. If more than a candidate can be formed within the same jet only the candidate with the largest \pT is kept.
+In addition the previous requirements, tau constituents are required to be contained within a cone of size 0.1, $3 / \pt \mathrm{[GeV]}$\ or 0.05 for tau candidate with $\pt < 30$ GeV, $30 < \pt < 60$ GeV and $\pt > 60$ GeV, respectively. If more than a tau candidate can be formed within the same jet only the candidate with the largest \pT is kept.
 
 \subsection{Identification}
 
-Hadronic tau decays reconstructed with the HPS algorithm are identified according to their isolation within the seeding jet. Only charged hadrons with \pT above 1 GeV and photons with $E_T$\ above 1.5 GeV are considered when computing the isolation. To mitigate the effect of pileup the neutral isolation is corrected with the $\D\beta$\ method computed in a cone of $\Delta R = 0.8$ around the tau candidate. The mismatch in the size of the isolation cone ($0.5$) and the one in which the pileup contribution is computed (0.8) leads to a conversion factor from charged pileup to neutral pileup isolation of 0.4576 that is empirically found to make efficiency insensitive to pileup.
+Hadronic tau decays reconstructed by the HPS algorithm are %identified according to their isolation within the seeding jet. 
+required to be isolated in order to suppress fakes due to quark and gluon jets. Only charged hadrons with \pT above 1 GeV and photons with $E_T$\ above 1.5 GeV are considered when computing the isolation. To mitigate the effect of pileup the neutral isolation is corrected with the $\D\beta$\ method computed in a cone of $\Delta R = 0.8$ around the tau candidate. The mismatch in the size of the isolation cone ($0.5$) and the one in which the pileup contribution is computed (0.8) leads to a conversion factor from charged pileup to neutral pileup isolation of 0.4576 that is empirically found to make the tau identification efficiency insensitive to pileup.
 
-Three working points are provided: loose, medium and tight corresponding to isolation thresholds of 2.0, 1.0 and 0.8 GeV respectively.
+Three working points are provided: loose, medium and tight, corresponding to isolation thresholds of 2.0, 1.0 and 0.8 GeV respectively.
 
-An MVA-based discrimination exploiting tau kinematic variables and isolation as well as transverse inpact parameter is also provided, but is not used in this work.
+%An MVA-based discrimination exploiting tau kinematic variables and isolation as well as transverse inpact parameter is also provided, but is not used in this work.
 
 \subsection{Light lepton rejection}
 
-The PF charged--hadron collection may contain a significant amount of electrons and muons that don't pass the selections to enter the PF electron and muon collections, and therefore are considered charged hadrons by the algorithm. In addition, light leptons from the decay of W and Z bosons are isolated. The combination of this two effects causes a relatively large $e\To\tau_h$\ and $\mu\To\tau_h$\ fake rates, especially in the single hadron (muon and electrons) and in the hadron plus one strip (electrons only) decay modes. To mitigate this effect dedicated discriminators to reject electron or muon compatible taus have been developed.
+The PF charged--hadron collection may contain a significant amount of electrons and muons that don't pass the selections to enter the PF electron and muon collections, and therefore are considered to be charged hadrons by the tau reconstruction algorithm. Electrons and muons from the decay of W and Z bosons are typically isolated. 
+As a consequence, the background due to $e\To\tau_h$\ and $\mu\To\tau_h$\ fakes may be sizable. %The combination of this two effects causes a relatively large $e\To\tau_h$\ and $\mu\To\tau_h$\ fake rates, especially in the single hadron (muon and electrons) and in the hadron plus one strip (electrons only) decay modes. 
+In order to reduce these backgrounds, dedicated discriminators against electrons and muons have been developed \cite{AN-12-417}.
 
-\paragraph{Electron rejection:} is performed with the aid of \emph{boosted decision trees} (BDT) MVA method. Tau candidates are classified into different categories depending on:
+\paragraph{Electron rejection:} The rejection of electrons is performed with the aid of a boosted decision tree. Tau candidates are classified into different categories depending on:
 
 \begin{itemize}
-\item The decay mode in which the tau candidate is reconstructed. Three options are considered: single hadron, hadron plus one or two strips, and three hadrons. The three hadrons decay mode always passes the electron rejection discriminator;
+\item The decay mode in which the tau candidate is reconstructed. Three decay modes are considered: single hadron, hadron plus one or two strips, and three hadrons. The three hadrons decay mode always passes the electron rejection discriminator;
 \item Whether the hadron is associated to a track reconstructed by the GSF algorithm;
-\item Whether a GSF electron candidate is reconstructed in the same direction of the tau candidate within a cone of $\Delta R = 0.3$;
+\item Whether a GSF electron candidate is reconstructed in the same direction as the tau candidate within a distance $\Delta R < 0.3$;
 \item Whether the tau candidate is reconstructed in the ECAL barrel ($|\eta| < 1.479$) or endcap ($|\eta| > 1.479$).
 \end{itemize}
 
-All the possible combinations of the previous cases are considered, leading to a total of 16 mutually exclusive categories. Each category is trained separately using a mixture of  simulated events containing both signal and background processes: $\Z/\gamma^*\To\tau\tau$, $\Z/\gamma^*\To ee$, $\W\To \tau\nu$, $\W\To e\nu$, $t\anti{t}$, $H\To\tau\tau$, $\Z'\To\tau\tau$, $\Z'\To ee$, $\W'\To \tau\nu$, $\W'\To e\nu$. Events are considered as ``signal'' or ``background'' if the tau candidate is matched to a generator-level hadronic tau decay or electron within a cone of $\D R < 0.3$, respectively. 
+All the possible combinations of the previous cases are considered, leading to a total of 16 mutually exclusive categories. Each category is trained separately using a mixture of  simulated events containing both signal and background processes: $\Z/\gamma^*\To\tau\tau$, $\Z/\gamma^*\To ee$, $\W\To \tau\nu$, $\W\To e\nu$, $t\anti{t}$, $H\To\tau\tau$, $\Z'\To\tau\tau$, $\Z'\To ee$, $\W'\To \tau\nu$, $\W'\To e\nu$. Events are considered as ``signal'' or ``background'' depending on whether the tau candidate is matched to a generator-level hadronic tau decay or an electron within a cone of size $\D R < 0.3$, respectively. 
 
-MVA training variables can be divided into four groups and are used in the training depending on the category whenever possible. The variables are summarized below.
+%MVA training variables can be divided into four groups and are used in the training depending on the category whenever possible. The variables are summarized below.
+The input variables to the BDT can be divided into four groups. The variables are:
 
-\bold{Hadronic tau variables} (available for all the categories):
+\bold{Hadronic tau variables} (available for all categories):
 \begin{itemize}
 \item Invariant mass, \pT and \Eta of the tau candidate;
-\item Ratio of ECAL over the sum ECAL and HCAL energy deposited by the tau constituents;
-\item Ratio of ECAL and HCAL energy deposited by the tau constituents over the tau candidate \pT;
+\item Ratio of ECAL to the sum ECAL plus HCAL energy deposits of the tau constituents;
+\item Ratio of ECAL plus HCAL energy deposits of the tau constituents to the tau candidate \pT;
 \item $\D\eta$\ between the tau candidate and the closest ECAL crack;
-\item $\D\phi$\ between the tau candidate and the closest ECAL crack (used only for candidates in the ECAL barrel).
+\item $\D\phi$\ between the tau candidate and the closest ECAL crack (used for candidates in the ECAL barrel only).
 \end{itemize}
 
-\bold{Strip variables} (available only for taus reconstructed in hadron plus one or two strips decay modes):
+\bold{Strip variables} (available for taus reconstructed in the decay modes hadron plus one strip or hadron plus two strips only):
 \begin{itemize}
 \item $\sqrt{\pt^{\gamma} \cdot (\Delta\eta)^{2}}$\ and $\sqrt{\pt^{\gamma} \cdot (\Delta\phi)^{2}}$, 
-  the \pT--weighted RMS of distances along $\eta$\ and $\phi$\ between all photons included in any strip and the charged hadron;
+  the \pT--weighted RMS of distances along $\eta$\ and $\phi$\ direction between all photons included in any strip and the charged hadron;
 \item Fraction of $\tau_{h}$\ candidate energy carried by photons.
 \end{itemize}
 
@@ -210,7 +214,7 @@ MVA training variables can be divided into four groups and are used in the train
 \item $(N_{hits}^{GSF} - N_{hits}^{KF})/(N_{hits}^{GSF} + N_{hits}^{KF})$, where $N_{hits}^{GSF}$\ and $N_{hits}^{KF}$\ are the number of tracker hits associated to the GSF and KF tracks, respectively;
 \end{itemize}
 
-\bold{GSF electron variables} (only available when a GSF electron is found near the candidate):
+\bold{GSF electron variables} (only available in case a GSF electron is found near the hadronic tau candidate):
 \begin{itemize}
 \item The ratio between the total ECAL energy and the electron momentum measured at the IP;
 \item Normalized \chisq, $\ln (\pt)$, $\eta$, \pT resolution ($\sigma_{\pt}/\pt$), and numbers of hits in the tracker of the electron GSF track;
@@ -218,12 +222,13 @@ MVA training variables can be divided into four groups and are used in the train
 \item $F_{brem}=(P_{in}-P_{out})/P_{in}$, the ratio between the bremsstrahlung photon energy as measured by the track and the electron momentum measured at the IP;
 \end{itemize}
 
-Four working points are defined, \emph{Loose }, \emph{Medium}, \emph{Tight} and \emph{Very Tight} with decreasing fake rate and nominal efficiency spanning from 95\% to 80\% in steps of 5\%. For each working point a set of different thresholds for each category is obtained by a recursive optimization. Starting from the tightest possible value (threshold set at 1 for each category), the algorithm progressively lowers the requirement in the category that allows for the highest gain in efficiency over fake-rate. The procedure is repeated until the desired fake rate is obtained.
+Four working points are defined: \emph{loose }, \emph{medium}, \emph{tight} and \emph{very tight}, nominal efficiency ranging from 95\% to 80\% in steps of 5\% and corresponding decreasing $e \To \tau_h$ fake rate. %For each working point a set of different thresholds for each category is obtained by a recursive optimization. Starting from the tightest possible value (threshold set at 1 for each category), the algorithm progressively lowers the requirement in the category that allows for the highest gain in efficiency over fake-rate. The procedure is repeated until the desired fake rate is obtained.
 
-\paragraph{Muon rejection:} uses a cut-based approach, looking for muon signatures in the surroundings of the tau. Two working points are provided:
+\paragraph{Muon rejection:} uses a cut-based approach, looking for segments in the muon chambers near the direction of %muon signatures in the surroundings of 
+the tau. Two working points are provided:
 
 \begin{itemize}
-\item \bold{Loose}: tau candidates are rejected if track segments in at least two muon stations are found within a \DR distance of 0.5 or if the sum of ECAL and HCAL energy deposits associated to the leading charged hadron are less than 20\% of its estimated momentum.
+\item \bold{Loose}: tau candidates are rejected if track segments in at least two muon stations are found within $\Delta R < 0.5$ or if the sum of ECAL and HCAL energy deposits associated to the leading charged hadron are less than 20\% of the momentum of its associated track.
 \item \bold{Tight}: in addition to the loose working point selection no hits in the two outermost muon stations have to be found in a cone of $\D R = 0.5$\ from the tau direction.
 \end{itemize}
 
@@ -231,24 +236,24 @@ Four working points are defined, \emph{Loose }, \emph{Medium}, \emph{Tight} and 
 
 \subsubsection{Identification efficiency}
 \label{sec:tauid_eff}
-The hadronic tau identification efficiency has been measured in 2011 using an integrated luminosity of 1.2 fb\Inv collected at $\sqrt{s}=7$ TeV. 
+The hadronic tau identification efficiency has been measured in 2011 data using an integrated luminosity of 1.2 fb\Inv collected at $\sqrt{s}=7$ TeV. 
 The measurement was part of the PhD work presented in this thesis and was based on a \emph{tag-and-probe} method applied to $\Z\To\tau_\mu\tau_h$\ events, where $\tau_\mu$ indicates $\tau\To\mu\nu_\mu\nu_\tau$. 
 
 Events used for the efficiency measurement have been selected as follows:
 \begin{itemize}
-\item The event must have fired the single-muon trigger path with $\pt^\mu > 17$ GeV. The chosen trigger path prevents any bias on the hadronic tau leg selection, while the \pT threshold corresponds to the least unprescaled one for the analyzed run period;
+\item The event is required to have fired the single-muon trigger path with $\pt^\mu > 17$ GeV. The chosen trigger path prevents any bias on the hadronic tau leg selection, while the \pT threshold corresponds to the lowest unprescaled single muon trigger path for the analyzed run period;
 \item The event must contain at least one vertex with $\geq 4$\ degrees of freedom, reconstructed within 24 cm along $z$\ from the nominal interaction point and within 2 cm in the transverse plane from the beamspot position;
-\item The event must contain one muon with $\pt > 20$\ GeV and $|\eta| < 2.1$\ with a relative isolation, \emph{not \db corrected}, below 0.3 in a cone of $\D R < 0.4$;
-\item The event must contain a tau-jet candidate with $\pt > 20$\ GeV and $|\eta| < 2.3$. To reject electrons and muons being identified as tau-jet candidates the object has to be separated from any segment in the muon system by $\D R > 0.5$\ and to be identified as background-like by the PF electron and photon MVA identification. In addition, the \emph{leading} (highest \pT) object in the candidate is required to be a charged hadron with $\pt > 5$\ GeV and the \pT sum of charged and photon PF objects in a hollow cone of $0.15 < \D R < 0.6$\ around the leading track must be below 2.5 GeV. These last two requirements are found to significantly reduce the backgrounds while having a little influence on the outcome of the measurement; 
+\item The event must contain one muon with $\pt > 20$\ GeV and $|\eta| < 2.1$, with a relative isolation below 0.3 in a cone of $\D R < 0.4$ (no \db corrections to the muon isolation are applied);
+\item The event must contain a tau-jet candidate with $\pt > 20$\ GeV and $|\eta| < 2.3$. In order to reject electrons and muons being identified as tau-jet candidates it has to be separated from any segment in the muon system by $\D R > 0.5$\ and to be identified as hadron-like by the PF electron and photon MVA identification. In addition, the \emph{leading} (highest \pT) object in the tau-jet candidate is required to be a charged hadron with $\pt > 5$\ GeV and the \pT sum of charged and photon PF objects in an annulus of size $0.15 < \D R < 0.6$\ around the leading track must be below 2.5 GeV. These last two requirements are found to significantly reduce the backgrounds while having a high efficiency for genuine taus;%little influence on the outcome of the measurement; 
 \item A veto on any additional global muon is imposed on the event.
 \end{itemize}
 
-Events passing the previous selection are then divided into six mutually-exclusive categories (called A, B, C1p, C1f, C2, and D). C1p and C1f categories contain $\Z\To\tau_\mu\tau_h$\ events where the \tauh passes or fails hadronic tau identification, respectively. The other categories are dominated by the two main backgrounds to this analysis, $\W+Jets$ and QCD events, and are used by a simultaneous fit to constrain the yields of these to backgrounds in the signal region.
+Events passing the previous selection are then divided into six mutually-exclusive categories (called A, B, C1p, C1f, C2, and D). C1p and C1f categories contain $\Z\To\tau_\mu\tau_h$\ events where the \tauh\ passes or fails the hadronic tau identification criteria, respectively. The other categories are dominated by the two main backgrounds to this analysis, $\W+Jets$ and QCD events, and are used in a simultaneous fit to constrain the yields of these to backgrounds in the signal region.
 Events are assigned to the proper category as follows: % according to the following event properties:
 \begin{itemize}
 \item In the C1p, C1f, C2, and D categories the muon relative isolation is required to be below 0.1;
 \item In the C1p, C1f, C2, and A categories the muon and the tau-jet leading track are required to be of opposite charge;
-\item In the C1 categories is required that $M_T(\mu, \vecmet) < 40$\ GeV and that $\pz -1.5 \cdot \pz^{vis} > -20$\ GeV, where:
+\item In the C1 categories it is required that $M_T(\mu, \vecmet) < 40$\ GeV and that $\pz -1.5 \cdot \pz^{vis} > -20$\ GeV, where:
 
 \begin{equation}
  M_T(\mu, \vecmet) = \sqrt{(E_{T}^\mu+\met)^2 - (\vec{\pt^\mu}+\vecmet)^2}
@@ -260,7 +265,7 @@ Events are assigned to the proper category as follows: % according to the follow
  \pz^{vis} = (\vec{\pt^\mu} + \vec{\pt^{\tau\,jet}}) \cdot \vec{\zeta}
 \end{equation}
 
-where $\vec{\zeta}$\ is the versor bisecting the angle between the two visible transverse momenta;
+where $\vec{\zeta}$\ is the versor bisecting the angle between the muon and the tau-jet candidate in the transverse plane \cite{CDFrefPzeta}.%two visible transverse momenta;
 \item The categories C1p and C1f contain the events where the tau-jet candidate passes or fails the tau identification working point, respectively.
 \end{itemize}
 
@@ -275,7 +280,8 @@ A graphical illustration of the event categories is shown in Figure \ref{fig:tau
 \end{center}
 \end{figure}
 
-The processes considered as contributing in the defined regions are: $\Z\To\tau\tau$, $\Z\To\mu\mu$, $\W\To\ell\nu+\rm{Jets}$, $t\anti{t}+\rm{Jets}$\ and multijet production processes. All the kinematic distribution shapes used for this processes in the analysis are taken from MC simulation and normalized to the NLO predictions with the exception of the QCD shape in the C1p and C1f regions, where, to mitigate the lack of MC statistics, the shape is taken from the data distribution in the B region with the additional requirements of $M_T < 40$\ GeV and $\pz -1.5 \cdot \pz^{vis} > -20$. 
+The processes considered signal and background in the tau identification efficiency measurement %as contributing in the defined regions 
+are: $\Z\To\tau\tau$, $\Z\To\mu\mu$, $\W\To\ell\nu+\rm{Jets}$, $t\anti{t}+\rm{Jets}$\ and QCD multijet production processes. All the kinematic distribution shapes used for this processes in the analysis are taken from MC simulation and normalized to the NLO predictions with the exception of the QCD shape in the C1p and C1f regions, where, to mitigate the lack of MC statistics, the shape is taken from the data distribution in the B region with the additional requirements of $M_T < 40$\ GeV and $\pz -1.5 \cdot \pz^{vis} > -20$. 
 
 The yield of each process contributing to the measurement is expressed as a product of the total yield ($N^i$), the probability to pass (or fail) the muon isolation ($p_{\mu\,\rm{Iso}}^i$), the probability to pass (or fail) the leading track charge requirement ($p_{ch}^i$), the probability to pass (or fail) the topological cuts ($p_{topo}^i$) and the probability pass (or fail) the given tau-identification discriminator, $p_{\tau ID}^i$. The parameters listed above, initialized to their MC expectation, are inferred from data with a simultaneous template fit of all the regions and the different signal and background components. The physical observables used for the template fit is the invariant mass of the visible decay products, also called \emph{visible mass}, ($M_{vis}$), for the C1p and C1f categories and the transverse mass of the muon and \MET for the others. Figure \ref{fig:TauID_2011_fits} shows the results of the template fit for the loose discriminator.
 
@@ -297,7 +303,7 @@ The yield of each process contributing to the measurement is expressed as a prod
 			\put(72.0, 54.5){\small (D)}
 		\end{picture}
 		\caption{
-         Measured distributions of $M_{T}$\ for the regions $A$, $B$, $C2$\ and $D$\ and of $M_{vis}$\ for $C1p$\ and $C1f$\ compared to the sum of templates associated to the signal and background processes. ``EWK Bgr.'' denotes the sum of $Z \to \mu^{+} \mu^{-}$\ and $W$\ + jet background contributions. The templates are scaled by normalization factors inferred by the fit model, for the loose working--point of the HPS algorithm.
+         Measured distributions of $M_{T}$\ for the regions $A$, $B$, $C2$\ and $D$\ and of $M_{vis}$\ for $C1p$\ and $C1f$\ compared to the sum of templates associated to the signal and background processes. ``EWK Bgr.'' denotes the sum of $Z \to \mu^{+} \mu^{-}$\ and $W$\ + jet background contributions. The templates are scaled by normalization factors obtained by the fit for the loose working-point of the HPS combined isolation discriminator.
 }
 		\label{fig:TauID_2011_fits}
 	\end{center}
@@ -312,11 +318,13 @@ The inferred probability to pass the tau identification discriminator is related
 
 Where the symbols $\epsilon$\ denote the preselection efficiencies and $k$\ the correction factors. The correction factors account for the fraction of taus that would pass the tau identification, but fail either the jet isolation ($k_i$), or the leading track requirement ($k_p$), and for the small amount of quark and gluon jets present in the $\Z\To\tau\tau$\ templates ($k_{jet \To \tau}$). These correction factors are extracted from MC simulation. 
 
-The hadronic tau identification efficiency is computed as a deviation from the predicted efficiency of the MC simulation. All the measured efficiencies are found in agreement with the MC prediction within the uncertainties even though a small trend towards lower values can be seen for the tighter working points. The uncertainty in the efficiency of the working point used in this work is 6\% considering both statistical and systematic uncertainties. The main source of statistical error comes from the large uncertainties in the $\Z\To\tau\tau$ yield in the C1f region, while the leading systematic uncertainty is the reconstruction efficiency for hadronic tracks. A summary of the systematic uncertainties considered can be found in Table~\ref{tab:tau_eff_sys}.
+The measured hadronic tau identification efficiency is compared to the MC prediction. %computed as a deviation from the predicted efficiency of the MC simulation. 
+The efficiencies measured for all the tau identification discriminators are found to be in agreement with the MC prediction within the uncertainties, even though a small trend towards lower values may be seen for the tighter working points. The uncertainty in the efficiency for hadronic tau decays to pass the working point used in the search for the $\rm{H}\To\tau\tau$ presented in this thesis amounts to 
+ 6\% with an identification efficiency of roughly 60\%. The uncertainty represents the sum of statistical and systematic uncertainties added in quadrature. The main source of statistical error comes from the large uncertainties in the $\Z\To\tau\tau$ yield in the C1f region, while the leading systematic uncertainty is the reconstruction efficiency for hadronic tracks. A summary of the systematic uncertainties considered in the measurement can be found in Table~\ref{tab:tau_eff_sys}.
 
 \begin{table}
 \begin{center}
-\caption{Summary of the systematic uncertainties affecting the hadronic tau identification efficiency measure, and their effect on the final result.}
+\caption{Summary of systematic uncertainties considered in the hadronic tau identification efficiency measurement, and their effect on the final result.}
 \label{tab:tau_eff_sys}
 \begin{tabular}{|c|c|}
  \hline
@@ -341,13 +349,13 @@ Total & $6.0\%$ \\
 
 \subsubsection{Jet fake probability}
 
-The $\rm{jet} \To \tau_h$ fake probability is measured using $\W+\rm{Jets}$ and QCD events. Events are selected online by a single--muon (W events) or single--jet (QCD events) trigger. W+Jets events are required to contain a well identified and isolated muon with $M_T(\mu, \met) > 50$ GeV. The $\rm{jet} \To \tau_h$ fake probability is computed for all taus with $\pt > 20$ GeV, $|\eta| < 2.3$ and passing the ``decay mode finding'' step and discriminator with respect to all the jets with $\pt > 20$ GeV and $|\eta| < 2.3$ as explained by the following equation:
+The $\rm{jet} \To \tau_h$ fake probability is measured using $\W+\rm{Jets}$ and QCD events. Events are selected online by a single--muon (W events) or single--jet (QCD events) trigger. W+Jets events are required to contain a well identified and isolated muon with $M_T(\mu, \met) > 50$ GeV. The $\rm{jet} \To \tau_h$ fake probability is computed for all taus with $\pt > 20$ GeV, $|\eta| < 2.3$ and passing the combination of ``decay mode finding'' plus the isolation discriminator under study with respect to all jets of $\pt > 20$ GeV and $|\eta| < 2.3$ \cite{DP-14-015}:
 
 \begin{equation}
  p(jet \To \tau_h) = \dfrac{\operatorname{N}(\pt^{\tau_h} > 20\GeV \AND |\eta^{\tau_h}| < 2.3 \AND \mathrm{Decay-Mode} \AND \mathrm{Discriminator\,WP})}{\operatorname{N}(\pt^{jet} > 20\GeV \AND |\eta^{jet}| < 2.3)}
 \end{equation}
 
-The distribution of the $jet \To \tau_h$ fake probability as a function of jet \pT, $\eta$, $\phi$ and number of reconstructed vertices in W+Jets events can be found in Figure \ref{fig:jetToTauFakeRate_Wjets_HPScombIso3Hit}. The $jet \To \tau_h$ fake probability is found to be strongly dependent to the jet \pT. An increase of the fake probability is also observed at high $\eta$ values, where the tracking efficiency decreases affecting the discriminating power of the isolation-based discriminators. A mild dependence on the number of pileup vertices is also observed. This effect is due to the \db correction, which gradually switches off the neutral isolation discrimination as the pileup increases, leaving only the track-based isolation. It must also be noted that the \db correction has been tuned to keep the efficiency constant as a function of the number of pileup interactions, causing the fake-rate to increase; another possible solution could have been keeping the fake-rate stable at the cost of reducing the efficiency. The slight mismatch between data and MC prediction is due to a mismodeling in the simulation of \emph{out-of-time pileup}, i.e. the effect that collisions from previous bunch crossings have in the current event. This effect is visible only in high-latency detectors such as ECAL.
+The $jet \To \tau_h$ fake probability measured in W+jets events as a function of jet \pT, $\eta$, $\phi$ and as a function of the number of reconstructed vertices is shown in Figure \ref{fig:jetToTauFakeRate_Wjets_HPScombIso3Hit}. The $jet \To \tau_h$ fake probability is found to be strongly dependent to the jet \pT. An increase of the fake probability is also observed at high $\eta$ values, where the tracking efficiency decreases, affecting the discriminating power of the isolation-based discriminators. A mild dependence on the number of pileup vertices is also observed. This effect is due to the \db correction, which gradually switches off the neutral isolation discrimination as the pileup increases, leaving only the track-based isolation. Please note that the \db correction has been tuned to keep the efficiency constant as a function of the number of pileup interactions, causing the fake-rate to increase; another possible solution could have been keeping the fake-rate stable at the cost of reducing the efficiency. The slight mismatch between data and MC prediction is due to a mismodeling in the simulation of \emph{out-of-time pileup}, i.e. the effect that collisions from previous bunch crossings have in the current event. This effect is visible only in high-latency detectors such as the ECAL.
 
 \begin{figure}
 \setlength{\unitlength}{1mm}
@@ -371,7 +379,7 @@ The distribution of the $jet \To \tau_h$ fake probability as a function of jet \
 
 \subsubsection{Electron and Muon fake probability}
 
-The rejection power of the anti-electron and anti-muon discriminators is computed in $\Z\To\ell\ell$ events with a tag-and-probe technique. Well identified and isolated leptons are used to select the events both online and offline. The event is also required to contain a tau candidate passing only the decay-mode finding step and loose isolation requirements (probe). The dimuon invariant mass distribution is fitted both in regions passing and failing the anti-lepton requirement to extract the rejection power and the ratio between data and MC. 
+The rejection power of the anti-electron and anti-muon discriminators is computed in $\Z\To\ell\ell$ events with a tag-and-probe technique. Well identified and isolated leptons are used to select the events both online and offline. The event is required also to contain a tau candidate passing only the decay-mode finding plus loose isolation discriminators (probe). The dimuon invariant mass distribution is fitted both in regions passing and failing the anti-lepton requirement to extract the rejection power and the ratio between data and MC. 
 
 %The achieved rejection power for the two leptons is summarized in Table \ref{tab:tau_lep_rej}
 
