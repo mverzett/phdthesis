@@ -1,6 +1,6 @@
 \chapter[$pp\rightarrow\W\rm{H}$]{Search for the Higgs boson in tau decays in the process $pp\rightarrow\W\rm{H}$}%Search for a Standard Model Higgs boson in association with a W}
 
-As described in Chapter 1, the Higgs boson is produced at the LHC via three main processes: the gluon fusion (GF), the vector boson fusion (VBF) and the associated production (AP). The associated production has a production section one order of magnitude smaller than the dominant gluon fusion process. The presence of an additional high-\pT lepton enhances the signal over background ratio significantly,  increasing the sensitivity of the AP channel to a level that is comparable to the sensitivity GF process. 
+As described in Chapter 1, the Higgs boson is produced at the LHC via three main processes: the gluon fusion (GF), the vector boson fusion (VBF) and the associated production (VH). The associated production has a production section one order of magnitude smaller than the dominant gluon fusion process. The presence of an additional high-\pT lepton enhances the signal over background ratio significantly,  increasing the sensitivity of the VH channel to a level that is comparable to the sensitivity of the GF process. 
 %Moreover, the associated production is a promising channel to measure the tau Yukawa coupling once enough integrated luminosity will be collected. \bold{ TODO: I STILL HAVE TO EXPLAIN WHY}
 
 In this chapter we describe the search for the associated production of a W and a Higgs boson, where the W boson decays into a light lepton (electron or muon, generically denoted as $\ell$ from now on) and a neutrino, and the Higgs boson decays into a tau pair, with one tau decaying leptonically and the other tau hadronically. Three final states are considered: $\mu\mu\tau_h$, $e\mu\tau_h$ and $ee\tau_h$. 
@@ -118,7 +118,7 @@ Measured and simulated kinematic distributions are compared in dedicated control
 \includegraphics[width=0.49\textwidth]{4_Analisys/pics/8TeV/plots/zmm/mass_rebin_log.pdf}
 \includegraphics[width=0.49\textwidth]{4_Analisys/pics/8TeV/plots/em/mass_rebin_log-fakes.pdf}\\
 \includegraphics[width=0.49\textwidth]{4_Analisys/pics/8TeV/plots/zee/mass_wfakes_log.pdf}
-\caption{Data to MC agreement on 8 TeV data in dedicated $\Z\To\mu\mu$ (top left), $\Z\To \tau\tau \To e\mu$ (top right), and $\Z\To ee$ (bottom) control regions. The background contributions labeled ``Fakes'' is estimated as described in Section~\ref{sec:fakemethod}. %are computed as the reducible background in the main analysis and described in the following section. 
+\caption{Dilepton invariant mass distribution measured with 8 TeV data in dedicated $\Z\To\mu\mu$ (top left), $\Z\To \tau\tau \To e\mu$ (top right), and $\Z\To ee$ (bottom) control regions. Data are represented by solid points while the expectation is given by the stacked histogram. The background contributions labeled ``Fakes'' is estimated as described in Section~\ref{sec:fakemethod}. %are computed as the reducible background in the main analysis and described in the following section. 
 }
 \label{fig:(dis)agreement}
 \end{figure}
@@ -192,9 +192,8 @@ A summary of the chosen minima and of the confidence interval boundaries is give
 \begin{figure}
 \includegraphics[width=0.5\textwidth]{4_Analisys/pics/8TeV/ProfileNeighbors/MM/h2taucuts020/LT_chi2.pdf}
 \includegraphics[width=0.5\textwidth]{4_Analisys/pics/8TeV/ProfileNeighbors/MM/h2taucuts020_LT.pdf} \\
-\caption{\chisq scan of different %neighbors value 
-values for the number of neighbors used in the kNN algorithm for background estimation 
-(left) and corresponding minima fit (right) for sub-leading muons in the $\mu\mu\tau_h$ channel. The variable used for the scan is the scalar sum of the \pT of the two leptons and the jet}
+\caption{\chisq as a function of the number of neighbors used in the kNN algorithm for background estimation 
+(left) and corresponding fit (right) for sub-leading muons in the $\mu\mu\tau_h$ channel. The variable used for the scan is the scalar sum of the \pT of the two leptons and the jet}
 \label{fig:kNN_minima_sample}
 \end{figure}
 
@@ -259,7 +258,7 @@ Reasonable agreement is observed, considering that the expected background in th
   \includegraphics[width=0.49\textwidth]{4_Analisys/pics/7TeV/plots/mmt/f3/Full/final-f3-tPt-Full.pdf}
   \caption{Comparison of measured and predicted backgrounds in the $\mu\mu\tau_h$ ``fake tau'' control region for 7 TeV data.
   From top left to bottom: mass of the sub-leading muon and the tau system, scalar sum of the leptons \pT ($L_T$), \pT of the leading and sub-leading muon, and \pT of the hadronic tau.
-  The reducible background contribution is estimated by the kNN method, in the same manner as in the signal region.
+  The reducible background contribution is estimated by the kNN method, as in the signal region.
   The shaded band represents the uncertainty on the sum of the background contributions.
   }
   \label{fig:LLT_mmt_f3_control_7TeV}
@@ -275,7 +274,7 @@ Reasonable agreement is observed, considering that the expected background in th
   \includegraphics[width=0.49\textwidth]{4_Analisys/pics/8TeV/plots/mmt/f3/Full/final-f3-tPt-Full.pdf}
   \caption{Comparison of measured and predicted backgrounds in the $\mu\mu\tau_h$ ``fake tau'' control region for 8 TeV data.
   From top left to bottom: mass of the sub-leading muon and the tau system, scalar sum of the leptons \pT ($L_T$), \pT of the leading and sub-leading muon, and \pT of the hadronic tau.
-  The reducible background contribution is estimated by the kNN method, in the same manner as in the signal region.
+  The reducible background contribution is estimated by the kNN method, as in the signal region.
   The shaded band represents the uncertainty on the sum of the background contributions.
   }
   \label{fig:LLT_mmt_f3_control_8TeV}
@@ -291,7 +290,7 @@ Reasonable agreement is observed, considering that the expected background in th
   \includegraphics[width=0.49\textwidth]{4_Analisys/pics/7TeV/plots/emt/f3/Full/final-f3-tPt-Full.pdf}
   \caption{Comparison of measured and predicted backgrounds in the $e\mu\tau_h$ ``fake tau'' control region for 7 TeV data.
   From top left to bottom: mass of the sub-leading lepton and the tau system, scalar sum of the leptons \pT ($L_T$), \pT of the electron, muon, and hadronic tau.
-  The reducible background contribution is estimated by the kNN method, in the same manner as in the signal region.
+  The reducible background contribution is estimated by the kNN method, as in the signal region.
   The shaded band represents the uncertainty on the sum of the background contributions.
   }
   \label{fig:LLT_emt_f3_control_7TeV}
@@ -307,7 +306,7 @@ Reasonable agreement is observed, considering that the expected background in th
   \includegraphics[width=0.49\textwidth]{4_Analisys/pics/8TeV/plots/emt/f3/Full/final-f3-tPt-Full.pdf}
   \caption{Comparison of measured and predicted backgrounds in the $e\mu\tau_h$ ``fake tau'' control region for 8 TeV data.
   From top left to bottom: mass of the sub-leading lepton and the tau system, scalar sum of the leptons \pT ($L_T$), \pT of the electron, muon, and hadronic tau.
-  The reducible background contribution is estimated by the kNN method, in the same manner as in the signal region.
+  The reducible background contribution is estimated by the kNN method, as in the signal region.
   The shaded band represents the uncertainty on the sum of the background contributions.
   }
   \label{fig:LLT_emt_f3_control_8TeV}
@@ -324,7 +323,7 @@ Reasonable agreement is observed, considering that the expected background in th
   \includegraphics[width=0.49\textwidth]{4_Analisys/pics/7TeV/plots/eet/f3/Full/final-f3-tPt-Full.pdf}
   \caption{Comparison of measured and predicted backgrounds in the $ee\tau_h$ ``fake tau'' control region for 7 TeV data.
   From top left to bottom: mass of the sub-leading electron and the tau system, scalar sum of the leptons \pT ($L_T$), \pT of the leading and sub-leading electron, and \pT of the hadronic tau.
-  The reducible background contribution is estimated by the kNN method, in the same manner as in the signal region.
+  The reducible background contribution is estimated by the kNN method, as in the signal region.
   The shaded band represents the uncertainty on the sum of the background contributions.
   }
   \label{fig:LLT_eet_f3_control_7TeV}
@@ -340,7 +339,7 @@ Reasonable agreement is observed, considering that the expected background in th
   \includegraphics[width=0.49\textwidth]{4_Analisys/pics/8TeV/plots/eet/f3/Full/final-f3-tPt-Full.pdf}
   \caption{Comparison of measured and predicted backgrounds in the $ee\tau_h$ ``fake tau'' control region for 8 TeV data.
   From top left to bottom: mass of the sub-leading electron and the tau system, scalar sum of the leptons \pT ($L_T$), \pT of the leading and sub-leading electron, and \pT of the hadronic tau.
-  The reducible background contribution is estimated by the kNN method, in the same manner as in the signal region.
+  The reducible background contribution is estimated by the kNN method, as in the signal region.
   The shaded band represents the uncertainty on the sum of the background contributions.
   }
   \label{fig:LLT_eet_f3_control_8TeV}
@@ -380,7 +379,7 @@ ranges from 6\% at low tau \pT in the end--cap region, to 1\% at high \pT ($ > 8
   \includegraphics[width=0.33\textwidth]{4_Analisys/pics/8TeV/fakerate_fits/tau_fr_barrel.pdf}
   \includegraphics[width=0.33\textwidth]{4_Analisys/pics/8TeV/fakerate_fits/tau_fr_transition.pdf}
   \includegraphics[width=0.33\textwidth]{4_Analisys/pics/8TeV/fakerate_fits/tau_fr_endcap.pdf}
-  \caption{Jet $\to \tau_h$ misidentification rates in 7 TeV (top) and 8 TeV (bottom) data, in W$\to \mu$+jet events, versus tau \pT in barrel (left), transition (center) and endcap (right) regions.}
+  \caption{Jet $\to \tau_h$ misidentification probability in 7 TeV (top) and 8 TeV (bottom) data, in W$\to \mu$+jet events, as function of tau \pT in barrel (left), transition (center) and endcap (right) regions. The red line shows the result fit to the data.}
   \label{fig:LLT_tau_FR}
 \end{figure}
 
@@ -436,14 +435,14 @@ The di-electron invariant mass spectrum in this region is shown in figure~\ref{f
   \includegraphics[width=0.5\textwidth]{4_Analisys/pics/8TeV/fakerate_fits/charge_flip_prob_map_dataos_trkMass.pdf}
   \includegraphics[width=0.5\textwidth]{4_Analisys/pics/8TeV//fakerate_fits/charge_flip_prob_map_datass_trkMass.pdf} \\  
   \caption{
-  Comparison of the fit to dielectron invariant mass distributions opposite sign (left) and same sign (right) dielectron candidates from Drell--Yan simulation (top) and $\Z\To ee$ data (bottom). The measured invariant mass scale factor is 0.7\% for simulated events and 1.2\% for data}
+  Comparison of the fit to dielectron invariant mass distributions for opposite-sign (left) and same-sign (right) dielectron candidates from Drell--Yan MC simulation (top) and $\Z\To ee$ data (bottom). The measured invariant mass scale factor is 0.7\% for simulated events and 1.2\% for data}
   \label{fig:ee_invMass_fit}
 \end{figure}
 
 \begin{figure}
   \begin{center}
   \includegraphics[width=0.8\textwidth]{4_Analisys/pics/8TeV/plots/zee/EE_Charge_Flip_xcheck_trk_invMass.pdf}
-  \caption{Invariant mass distribution of same sign dielectron events: the red histogram is obtained using the information extracted from simulation
+  \caption{Invariant mass distribution of same-sign dielectron events: the red histogram is obtained using the information extracted from simulation
 (charge misassignment probability and invariant mass scale correction) and applied them to opposite--sign data. The yellow histogram is obtained by applying the fake lepton method to estimate the reducible background.}
   \label{fig:control_Zee}
   \end{center}
@@ -483,13 +482,13 @@ The categorization is expected to perform \emph{at least} as well as the equival
   \includegraphics[width=0.5\textwidth]{4_Analisys/pics/8TeV/limits/emt.pdf} \\
   \includegraphics[width=0.5\textwidth]{4_Analisys/pics/7TeV/limits/eet.pdf}
   \includegraphics[width=0.5\textwidth]{4_Analisys/pics/8TeV/limits/eet.pdf} \\
-  \caption{Expected significance versus \LT\ threshold value for the $\mu\mu\tau_h$ (top), the $e\mu\tau_h$ (center), and the $ee\tau_h$ (bottom) channels in 7 TeV (left) and 8 TeV (right) running periods for two optimization options. The variation of the LT threshold is represented by the black dots, the separation of LT event categories by the red points.}
+  \caption{Expected significance versus \LT\ threshold value for the $\mu\mu\tau_h$ (top), the $e\mu\tau_h$ (center), and the $ee\tau_h$ (bottom) channels in 7 TeV (left) and 8 TeV (right) datasets for two optimization options. The LT threshold is represented by the black dots, the separation of LT event categories by the red boxes.}
   \label{fig:LT_scan}
 \end{figure}
 
 \begin{table}
 \begin{center}
-\caption{Systematic uncertainties affecting the $2\ell\tau_h$ categories.  Where the value used in 2012 differs from 2011, it is indicated in parenthesis.}
+\caption{Threshold values and categorization approach used in signal extraction for each channel and dataset.}
 \label{tab:LT_options}
 \begin{tabular}{c c c c}
 \hline
@@ -541,7 +540,7 @@ A summary of the sources of systematic uncertainties, their values, and their tr
 
 \begin{table}
   \begin{center}
-    \caption{Systematic uncertainties affecting the $\ell\ell\tau_h$ categories.  Where the value used in 2012 differs from 2011, it is indicated in parenthesis.}
+    \caption{Systematic uncertainties affecting the $\ell\ell\tau_h$ categories. Values specific to the 2011 datasets are indicated in paranthesis.}
     \label{tab:systematics}
     \begin{tabular}{c c c c}
       \hline
@@ -627,7 +626,7 @@ A summary of the different observed distributions, compared to the respective ex
 
 \begin{sidewaystable}
 %\begin{table}
-\caption{Expected event yields for the different background processes and for a 125 GeV WH, $\rm{H}\To\tau\tau$ signal compared to the number of events observed in the data, split by channel and category, for 8 TeV data. The uncertainty quoted on each background process represents statistical plus systematic uncertainty.
+\caption{Expected event yields for the different background processes and for a 125 GeV WH, $\rm{H}\To\tau\tau$ signal compared to the number of events observed in the data, split by channel and category, for 8 TeV data. The uncertainty quoted in each background process represents statistical plus systematic uncertainty.
 %considered in the analysis and number of observed events, divided by channel and category for 8 TeV data. The uncertainty quoted for each background process also includes normalization systematics
 }
 \input{4_Analisys/tabs/yield_table_8TeV.tex}
@@ -638,7 +637,7 @@ A summary of the different observed distributions, compared to the respective ex
 %\begin{sidewaystable}
 \begin{table}
 \caption{%Expected yields for the different signal and background processes considered in the analysis and number of observed events, divided by channel and category for 7 TeV data. The uncertainty quoted for each background process also includes normalization systematics
-Expected event yields for the different background processes and for a 125 GeV WH, $\rm{H}\To\tau\tau$ signal compared to the number of events observed in the data, split by channel and category, for 7 TeV data. The uncertainty quoted on each background process represents statistical plus systematic uncertainty.}
+Expected event yields for the different background processes and for a 125 GeV WH, $\rm{H}\To\tau\tau$ signal compared to the number of events observed in the data, split by channel and category, for 7 TeV data. The uncertainty quoted in each background process represents statistical plus systematic uncertainty.}
 \input{4_Analisys/tabs/yield_table_7TeV.tex}
 \label{tab:prefit_yields_table_7TeV}
 %\end{sidewaystable}
@@ -654,7 +653,7 @@ The binned $\rm{M}_{\ell_2 \tau}$ distributions of each channel and category hav
 
 {\color{red}
 The expected background and signal distributions are fitted to the data to infer the value of the signal normalization, $\mu$, by maximizing a likelihood function.
-The likelihood function is formulated in terms of $\mu \cdot s(\boldtheta) + b(\boldtheta)$, where $b(\boldtheta)$ denotes the expected background yield and distribution, while $s(\boldtheta)$ denotes the expected distribution of the signal process. Both $b(\boldtheta)$ and $s(\boldtheta)$ depend on the ensemble of \emph{nuisance parameters} ($\boldtheta$), which represent the statistical and systematic uncertainties on the background predictions. The multiplicative $\mu$ parameter in front of $s(\boldtheta)$, known as \emph{signal strength modifier}, is the parameter of interest which describe the strength of the observed signal with respect to the expected SM value ($\sigma_{obs}/\sigma_{SM}$). The value of the $\mu$ parameter is allowed to become negative to avoid any bias in the fit.
+The likelihood function is formulated in terms of $\mu \cdot s(\boldtheta) + b(\boldtheta)$, where $b(\boldtheta)$ denotes the expected background yield and distribution, while $s(\boldtheta)$ denotes the expected distribution of the signal process. Both $b(\boldtheta)$ and $s(\boldtheta)$ depend on the ensemble of \emph{nuisance parameters} ($\boldtheta$), which represent the statistical and systematic uncertainties in the background predictions. The multiplicative $\mu$ parameter in front of $s(\boldtheta)$, known as \emph{signal strength modifier}, is the parameter of interest which describe the strength of the observed signal with respect to the expected SM value ($\sigma_{obs}/\sigma_{SM}$). The value of the $\mu$ parameter is allowed to become negative to avoid any bias in the fit.
 
 The likelihood implemented in the fit is defined as the product of the likelihoods for each category times the likelihood function for the nuisance parameters:
 }
@@ -679,7 +678,7 @@ with $k = 1+ \epsilon$, where $\epsilon$ is the size of the yield uncertainty.
 Shape uncertainties are modeled using three distributions: the distribution for the central value plus the templates for the upward and downward shifts by one standard deviation of the respective nuisance parameter. A family of distributions is obtained starting from these three templates using a morphing technique. The morphing function interpolates the contents of each bin as a function of the nuisance parameter. The interpolation is quadratic within the boundaries provided by the two additional shifted templates and linear beyond this point. A gaussian distribution with mean 0 and $\sigma = 1$ is assigned to the single morphing parameter. The extrapolation is built in such a way that the nuisance parameter assumes the value 0 for the central template and the values $\pm1$ for the shifted templates. More details on this ``vertical morphing'' technique can be found in \cite{Conway:2011in}.
 
 {\color{red}
-In case the fit shows no significant presence of signal, which is related to a value of $\mu$ negative or compatible with zero, exclusions limit can be set.
+In case the fit shows no significant presence of signal, which is related to a negative value of $\mu$ or compatible with zero, exclusions limit can be set.
 }
 
 
@@ -817,7 +816,7 @@ Even though these plots have relatively limited statistical meaning, they help s
 
 
 {\color{red}
-The computation of the $\mu$ values for the different channels and the combination of them confirms this background under-fluctuation. Figure~\ref{fig:mu_vals} shows the observed $\mu$ values for the three $\ell\ell\tau_h$ channels and their combination. Even though these values are negative, the combination is still compatible with the SM value $\mu = 1$. The right plot on figure~\ref{fig:mu_vals} shows the best fit $\mu$ values for each different $\rm{H}\To\tau\tau$ channel search performed by CMS. The fluctuation observed in the $\ell\ell\tau_h$ channels described in this thesis fit into the spread observed among the larger amount of channels searched by CMS. 
+The computation of the $\mu$ values for the different channels and their combination confirms the background under-fluctuation. Figure~\ref{fig:mu_vals} shows the observed $\mu$ values for the three $\ell\ell\tau_h$ channels and their combination. Even though these values are negative, the combination is still compatible with the SM value $\mu = 1$. The right plot on figure~\ref{fig:mu_vals} shows the best fit $\mu$ values for each different $\rm{H}\To\tau\tau$ channel search performed by CMS. The fluctuation observed in the $\ell\ell\tau_h$ channels described in this thesis fit into the spread observed among the larger amount of channels searched by CMS. 
 
 As described in section \ref{sec:higgs_res} the combination of these channels, including the ones presented in this thesis, led to the first observation of the SM Higgs boson into tau lepton pairs in CMS.
 }
@@ -843,7 +842,7 @@ The exclusion limit on the process $pp\To\W\rm{H}\To\ell\nu_\ell\tau\tau$ is com
 For each mass point the expected exclusion limit and its one and two sigma confidence intervals are computed  by evaluating the exclusion limit (and variance) on the \emph{Asimov dataset}\footnote{The Asimov dataset owes its name to the famous sci-fi novelist Isaac Asimov, author of the short story \emph{Franchise} \cite{franchise}, in which elections are performed by polling the opinion of a single randomly chosen representative of the population.}, a set of pseudo-data that reflects the average expected background. 
 
 {\color{red}
-As an evidence for the decay of the 125 GeV Higgs boson to tau pairs exists, signal-injected limits are also computed. In this case, while the observed limit remains the same, the expected limit and respective one and two sigma confidence intervals are computed from the distribution of toy limits sampled from signal plus background distribution.
+As an evidence for the decay of the 125 GeV Higgs boson to tau pairs exists, signal-injected limits are also computed. In this case, while the observed limit remains the same, the expected limit and respective one and two sigma confidence intervals are computed from the distribution of toy limits sampled from signal plus background distributions.
 }
 
 Expected and observed exclusion limits on SM Higgs boson detection in the three channels are shown in figure \ref{fig:llt_chan_limits}, the signal-injected version of those limits is available in figure \ref{fig:llt_chan_injected}. Figure \ref{fig:llt_limits_78TeV} shows the combined limit for 7 TeV and 8 TeV datasets, while figure~\ref{fig:llt_limits} shows the combination of the whole WH analysis.
@@ -859,7 +858,7 @@ Expected and observed exclusion limits on SM Higgs boson detection in the three 
   \includegraphics[width=0.32\textwidth]{4_Analisys/pics/limits/eet/eet_7TeV.pdf}
   \includegraphics[width=0.32\textwidth]{4_Analisys/pics/limits/eet/eet_8TeV.pdf}
   \includegraphics[width=0.32\textwidth]{4_Analisys/pics/limits/eet/eet.pdf} \\
-  \caption{Expected and observed exclusion limits on $\sigma/\sigma_{SM}$ for the process $\W\rm{H} \To \ell \ell \tau$ for 7 TeV (left), 8 TeV (middle) and combined (right) data. Top, middle and bottom plots show the limits obtained by the $\mu\mu\tau_h$, $e\mu\tau_h$ and $ee\tau_h$ channels, respectively. Values above the solid black line are excluded by the data. The benchmark points used for the computation of the exclusion limits are shown as a dot in the black line. The red line represent the expected exclusion limit while the green and yellow bands show the one and two standard deviations on such expected limit, respectively.}
+  \caption{Expected and observed exclusion limits on $\sigma/\sigma_{SM}$ for the process $\W\rm{H} \To \ell \ell \tau$ for 7 TeV (left), 8 TeV (middle) and combined (right) data. Top, middle and bottom plots show the limits obtained by the $\mu\mu\tau_h$, $e\mu\tau_h$ and $ee\tau_h$ channels, respectively. Values above the solid black line are excluded by the data. The benchmark points used for the computation of the exclusion limits are shown as a dot in the black line. The red line represent the expected exclusion limit in presence of background only while the green and yellow bands show the one and two standard deviation intervals on the expected limit, respectively.}
   \label{fig:llt_chan_limits}
 \end{center}
 \end{figure}
@@ -875,7 +874,7 @@ Expected and observed exclusion limits on SM Higgs boson detection in the three 
   \includegraphics[width=0.32\textwidth]{4_Analisys/pics/limits/eet/eet_injected_7TeV.pdf}
   \includegraphics[width=0.32\textwidth]{4_Analisys/pics/limits/eet/eet_injected_8TeV.pdf}
   \includegraphics[width=0.32\textwidth]{4_Analisys/pics/limits/eet/eet_injected.pdf} \\
-  \caption{Injected and observed exclusion limits on $\sigma/\sigma_{SM}$ for the process $\W\rm{H} \To \ell \ell \tau$ for 7 TeV (left), 8 TeV (middle) and combined (right) data. Top, middle and bottom plots show the limits obtained by the $\mu\mu\tau_h$, $e\mu\tau_h$ and $ee\tau_h$ channels, respectively. Values above the solid black line are excluded by the data. The benchmark points used for the computation of the exclusion limits are shown as a dot in the black line. The red line represent the expected exclusion limit under the hypothesis of the presence of a 125 GeV SM Higgs boson signal while the blue and azure bands show the one and two standard deviations on such expected limit, respectively.}
+  \caption{Expected and observed exclusion limits on $\sigma/\sigma_{SM}$ for the process $\W\rm{H} \To \ell \ell \tau$ for 7 TeV (left), 8 TeV (middle) and combined (right) data. Top, middle and bottom plots show the limits obtained by the $\mu\mu\tau_h$, $e\mu\tau_h$ and $ee\tau_h$ channels, respectively. Values above the solid black line are excluded by the data. The benchmark points used for the computation of the exclusion limits are shown as a dot in the black line. The red line represent the expected exclusion limit under the hypothesis of the presence of a 125 GeV SM Higgs boson signal while the blue and azure bands show the one and two standard deviation intervals on the expected limit, respectively.}
   \label{fig:llt_chan_injected}
 \end{center}
 \end{figure}
@@ -887,8 +886,7 @@ Expected and observed exclusion limits on SM Higgs boson detection in the three 
   \includegraphics[width=0.49\textwidth]{4_Analisys/pics/limits/vhtt_wh/vhtt_wh_8TeV.pdf}\\
   \includegraphics[width=0.49\textwidth]{4_Analisys/pics/limits/vhtt_wh/vhtt_wh_injected_7TeV.pdf}
   \includegraphics[width=0.49\textwidth]{4_Analisys/pics/limits/vhtt_wh/vhtt_wh_injected_8TeV.pdf}\\
-  \caption{Comparison of expected (top) and signal-injected (bottom) exclusion limits vs. observed limits in the 7 TeV (left) and 8 TeV (right) datasets. }
-%  Combined expected and observed limits for WH$\To\ell\ell\tau_h$ for the 7 TeV (top left), the 8 TeV (top right) datasets. Signal-injected expected and observed limits for WH$\To\ell\ell\tau_h$ for the 7 TeV (bottom left), the 8 TeV (bottom right).}
+  \caption{Expected and observed exclusion limits under the assumption of background only (top) and background plus SM Higgs signal (bottom) for the 7 TeV (left) and 8 TeV (right) datasets.}
   \label{fig:llt_limits_78TeV}
 \end{center}
 \end{figure}
@@ -897,7 +895,7 @@ Expected and observed exclusion limits on SM Higgs boson detection in the three 
 \begin{center}
   \includegraphics[width=0.6\textwidth]{4_Analisys/pics/limits/vhtt_wh/vhtt_wh.pdf}\\
   \includegraphics[width=0.6\textwidth]{4_Analisys/pics/limits/vhtt_wh/vhtt_wh_injected.pdf}
-  \caption{Comparison of expected (top) and signal-injected (bottom) exclusion limits vs. observed limits with combined 7 TeV and 8 TeV datasets.}
+  \caption{Expected and observed exclusion limits under the assumption of background only (top) and background plus SM Higgs signal (bottom) for the combination of 7 TeV and 8 TeV datasets.}
   \label{fig:llt_limits}
 \end{center}
 \end{figure}
@@ -906,29 +904,30 @@ Expected and observed exclusion limits on SM Higgs boson detection in the three 
 \chapter{Conclusions and possible future developments}
 
 %A search for the decay $\W\rm{H}\To\ell\nu_\ell\tau\tau \To \ell \nu_\ell \ell \tau_h$ has been performed. This channel, combined with the other VH, H$\To\tau\tau$ channels, is very sensitive to very-low Higgs boson masses, with a sensitivity rapidly decreasing. Nonetheless this channel provides a clean signature that could be exploited in future to measure the Higgs coupling to taus with high precision. 
-A search for the decay $\W\rm{H}\To\ell\nu_\ell\tau\tau \To \ell \nu_\ell \ell \tau_h$ has been performed. This channel, combined with the other VH, H$\To\tau\tau$ channels, is sensitive to Standard Model Higgs boson production in the mass range $[90, 130]$ GeV. The VH production mode furthermore provides a clean signature that could be exploited in future to measure the Higgs coupling to taus with high precision. 
+A search for the process $\W\rm{H}\To\ell\nu_\ell\tau\tau \To \ell \nu_\ell \tau_\ell \tau_h$ has been performed. This channel, combined with the other VH, H$\To\tau\tau$ channels, is sensitive to SM Higgs boson production in the mass range 90--130 GeV. The VH production mode furthermore provides a clean signature that could be exploited in future accurate measurements of Higgs coupling to taus.
 
-The search has been performed in three distinct channels: $\mu\mu\tau_h$, $e\mu\tau_h$, and $ee\tau_h$, analyzing data from LHC Run I collected by the CMS detector. The total integrated luminosity analyzed amounts to 4.9 fb$\inv$ that has been recorded at center-of-mass energy $\sqrt{s} = 7$ TeV plus 19.7 fb$\inv$ recorded at $\sqrt{s} = 8$ TeV. Events are selected by requiring two isolated and well identified electrons or muons plus an isolated and well identified hadronic tau. An additional separation of the selected events in two categories according to the scalar sum of the \pT of the leptons is performed to increase %has been found beneficial for 
-the sensitivity of the analysis. 
+The search has been performed in three distinct channels: $\mu\mu\tau_h$, $e\mu\tau_h$, and $ee\tau_h$, analyzing data from LHC Run I collected by the CMS detector. The total integrated and analyzed luminosity amounts to 4.9 fb$\inv$, recorded at the center-of-mass energy $\sqrt{s} = 7$ TeV, plus 19.7 fb$\inv$ recorded at $\sqrt{s} = 8$ TeV. Events are selected by requiring two isolated and well identified electrons or muons plus an isolated and well identified hadronic tau. An additional separation of the selected events in two categories according to the scalar sum of the \pT of the leptons is performed to increase %has been found beneficial for 
+the sensitivity to the signal. 
 
-The main backgrounds for this channel are the WZ production, which has the same signature as the signal process, and the W+Jets production, in which two jets are misidentified as light lepton and as hadronic tau respectively. 
+The main backgrounds for this channel are the WZ production, which has the same signature as the signal process, and the W+Jets production, in which two jets are misidentified as light lepton and hadronic tau, respectively. 
 Despite the performance of the CMS detector and reconstruction algorithms to discriminate electrons, muons, and hadronic taus from jets, the large W+Jets production cross section causes this reducible, fake, background to yield a relevant contribution to the event sample selected in the signal region.
 %Despite the optimal performance of our detector and reconstruction system the overwhelming production cross section difference between the investigated process and the W production cause a relevant number of these events to enter in our signal region.
 
 The reducible backgrounds, which include W+Jets and all the backgrounds with at least one mis--identified final state electron, muon or hadronic tau, are modeled in a data-driven way based on the  sidebands with inverted lepton isolation. The probability for a jet to be mis-identified as a lepton is computed in dedicated signal--free regions, with a topology as close as possible to the signal region. The mis-identification probabilities are evaluated with a functional fit in the case of hadronic taus, and using a k-Nearest Neighbor algorithm in case of light leptons. 
 
-A dedicated study on the performance of the kNN estimator has been carried out in order to maximize the agreement between the background and its modeling and to infer the statistical systematics connected to the limited size of the training sample and the choice of the training variables.
+A dedicated study on the performance of the kNN estimator has been carried out in order to maximize the agreement between the background and its modeling and to infer the systematic uncertainties of statistical nature connected to the limited size of the training sample and the choice of the training variables.
 
-The measurement of the hadronic tau identification efficiency presented in this thesis has been performed with 2011 data and has been used as input for previous versions of the $\rm{H} \To \tau \tau$ searches performed at CMS.
+The measurement of the hadronic tau identification efficiency presented in this thesis has been performed with 2011 data and has been used as input for previous versions of the $\rm{H} \To \tau \tau$ searches performed at CMS. It shows that hadronic tau decays can be identified with approximately 60\% efficiency and percent level fake probability.
 
-The data observed show no evidence of the presence of the Higgs boson, obtaining a combined $\mu$ value of $\mu = -2.64 \pm 1.71$. As no significative evidence of the presence of the searched process can be found, exclusion limits were set, excluding, for a SM Higgs boson of 125 GeV, a production rate above 2.5 the expected SM value.
+The data observed show no evidence of the presence of the Higgs boson, obtaining a combined $\mu$ value of $\mu = -2.64 \pm 1.71$. As no significative evidence of signal is found, exclusion limits are set, excluding, for a SM Higgs boson of 125 GeV, a production rate above 2.5 the expected SM value.
 
-This result has been combined with other searches for the SM Higgs boson to tau pair decays, obtaining a combined $3.2\sigma$ evidence for the $\rm{H} \To \tau \tau$ decay process. The combined signal strength and best fit mass are both compatible with SM expectations. From this combination has also been possible to infer the couplings of the Higgs boson to fermions and vector bosons, obtaining results in agreement with the SM.
+This result has been combined with other searches for the SM Higgs boson to tau pair decays, obtaining a combined $3.2\sigma$ evidence for the $\rm{H} \To \tau \tau$ decay process. The combined signal strength and best fit mass are both compatible with SM expectations. From this combination the couplings of the Higgs boson to fermions and vector bosons have been measured, obtaining results in agreement with the SM.
 
 %%%%%%%%
 %
 %%%%%%%%
 
-Future analysis improvements might come from a better assignment of the electron or muon as Higgs decay product and by a better mass reconstruction technique. Theoretically both tasks can be achieved with a single algorithm exploiting the topology of the event including the missing transverse energy information. The SVFit algorithm, already used in the rest of the $\rm{H} \To \tau\tau$ analysis is a very good candidate to perform these tasks, but a MVA approach is also a viable option. The latest developments in the tau identification algorithm from the CMS collaboration are also very promising, as they are expected to significantly reduce the $\rm{jet} \To \tau_h$ fake background for the same efficiency levels.
+Future analysis improvements might come from a better assignment of the electron or muon as Higgs decay product and by a better mass reconstruction technique. In principle both tasks can be achieved with a single algorithm exploiting the topology of the event including the missing transverse energy information. The SVFit algorithm, already used in other channels of the $\rm{H} \To \tau\tau$ searches is a very good candidate to perform these tasks, but a MVA approach is also a viable option. The latest developments in the tau identification within the CMS collaboration are also very promising, as they are expected to significantly reduce the $\rm{jet} \To \tau_h$ fake background while retaining the same detection efficiency.
 
-Reducible background is the second major source of background for the analysis, with a sizable increase in the 8 TeV dataset due to pileup conditions. The dire running environment of LHC Run II will see an increase of this source of backgrounds. More detailed studies on the misidentification probability, with the aim to bring the fake tau method to the same strength of the fake lepton one, would allow for an average of the two background shapes, leading to a significant reduction of the uncertainties.
+Reducible background is the second major source of background for the analysis, with a sizable increase in the 8 TeV dataset due to the larger instantaneous luminosity. The dire running environment of LHC Run II will see an increase of this source of backgrounds. More detailed studies of the misidentification probability, with the aim to bring the fake tau method to the same strength of the fake lepton one, would allow %for an average of the two background shapes, leading to 
+a significant reduction of the uncertainties.

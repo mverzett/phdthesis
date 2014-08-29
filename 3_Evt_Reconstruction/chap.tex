@@ -1,6 +1,6 @@
 \chapter{Event reconstruction in CMS}
 
-While traversing the different detector layers, the particles produced in the physics collisions deposit energy in the detectors that is amplified and recorded. Most sub-detectors are capable of measuring the particle position as well as the deposited energy. Each collision event results in a series of position measurements in the different layers of the tracking detectors plus energy clusters in the calorimeter. The reconstruction algorithms takes care of ``connecting the dots'' and provide the most complete and accurate description of the event as it originated from the collision. In this task the algorithm execution time plays an important role, as the algorithms used by the reconstruction cannot be excessively resource demanding. In this chapter we will briefly describe the techniques used to reconstruct the events recorded by the CMS detector starting from the most basic objects and then moving towards the most complex ones. Finally, we describe the \emph{Particle Flow} algorithm that gives a global description of the event. At the end of the chapter we will describe in detail the hadronic tau reconstruction, which plays a fundamental role in this work, and the techniques used to measure its efficiency.
+While traversing the different detector layers, the particles produced in the physics collisions deposit energy in the detectors that is amplified and recorded. Most sub-detectors are capable of measuring the particle position as well as the deposited energy. Each collision event results in a series of position measurements in the different layers of the tracking detectors plus energy clusters in the calorimeter. The reconstruction algorithms takes care of ``connecting the dots'' and provide the most complete and accurate description of the event as it originated from the collision. In this task the execution time plays an important role, as the algorithms used by the reconstruction cannot be excessively resource demanding. In this chapter we will briefly describe the techniques used to reconstruct the events recorded by the CMS detector starting from the most basic objects and then moving towards the most complex ones. Finally, we describe the \emph{Particle Flow} algorithm that gives a global description of the event. In the final section of the chapter we will describe in detail the hadronic tau reconstruction, which plays a fundamental role in this work, and the techniques used to measure its efficiency, a measurement which has been carried as part of the doctoral work presented in this thesis.
 
 \section{Track reconstruction}
 
@@ -59,7 +59,6 @@ Several variables are used to discriminate between fake and real electrons, such
 Photon identification is based on the same supercluster quantities as the electron identification but doesn't require a charged track to be matched to the ECAL energy deposit.  
 
 \section{Particle Flow}
-
 
 The redundancy of signals that particles traversing the CMS detector leave in multiple sub detectors is exploited by the \emph{Particle Flow} (PF) algorithm in order to improve the overall description of the event. The particle flow method furthermore allows for cross-cleaning of spurious signals and achieve to a global description of the event.
 
@@ -173,7 +172,7 @@ Three working points are provided: loose, medium and tight, corresponding to iso
 
 \subsection{Light lepton rejection}
 
-The PF charged--hadron collection may contain a significant amount of electrons and muons that don't pass the selections to enter the PF electron and muon collections, and therefore are considered to be charged hadrons by the tau reconstruction algorithm. Electrons and muons from the decay of W and Z bosons are typically isolated. 
+The PF charged--hadron collection may contain a significant amount of electrons and muons that do not pass the selections to enter the PF electron and muon collections, and therefore are considered to be charged hadrons by the tau reconstruction algorithm. Electrons and muons from the decay of W and Z bosons are typically isolated. 
 As a consequence, the background due to $e\To\tau_h$\ and $\mu\To\tau_h$\ fakes may be sizable. %The combination of this two effects causes a relatively large $e\To\tau_h$\ and $\mu\To\tau_h$\ fake rates, especially in the single hadron (muon and electrons) and in the hadron plus one strip (electrons only) decay modes. 
 In order to reduce these backgrounds, dedicated discriminators against electrons and muons have been developed \cite{AN-12-417}.
 
@@ -237,7 +236,7 @@ the tau. Two working points are provided:
 \subsubsection{Identification efficiency}
 \label{sec:tauid_eff}
 The hadronic tau identification efficiency has been measured in 2011 data using an integrated luminosity of 1.2 fb\Inv collected at $\sqrt{s}=7$ TeV. 
-The measurement was part of the PhD work presented in this thesis and was based on a \emph{tag-and-probe} method applied to $\Z\To\tau_\mu\tau_h$\ events, where $\tau_\mu$ indicates $\tau\To\mu\nu_\mu\nu_\tau$. 
+The measurement is part of the doctoral work presented in this thesis and was based on a \emph{tag-and-probe} method applied to $\Z\To\tau_\mu\tau_h$\ events, where $\tau_\mu$ indicates $\tau\To\mu\nu_\mu\nu_\tau$. 
 
 Events used for the efficiency measurement have been selected as follows:
 \begin{itemize}
@@ -372,7 +371,7 @@ The $jet \To \tau_h$ fake probability measured in W+jets events as a function of
 \end{picture}
 \end{center}
 \caption{
-  Probabilities for quark and gluon jets in $W$+jets events to pass the \emph{HPS combined isolation 3--hit}) discriminator, as function of jet $P_{T}$ (a), $\eta$ (b), $\phi$ (c) and as function of $N_{vtx}$, the number of vertices reconstructed in an event (d). The fake--rates measured in data are compared to the Monte Carlo expectation.}
+  Probabilities for quark and gluon jets in $W$+jets events to pass the \emph{HPS combined isolation 3--hit}) discriminator, as function of jet $P_{T}$ (a), $\eta$ (b), $\phi$ (c) and as function of $N_{vtx}$, the number of vertices reconstructed in an event (d). The probabilities measured in data are compared to the Monte Carlo expectation.}
 \label{fig:jetToTauFakeRate_Wjets_HPScombIso3Hit}
 \end{figure}
 
