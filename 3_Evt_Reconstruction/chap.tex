@@ -1,6 +1,6 @@
 \chapter{Event reconstruction in CMS}
 
-While traversing the different detector layers, the particles produced in the physics collisions deposit energy in the detectors that is amplified and recorded. Most subdetectors are capable of measuring the particle position as well as the deposited energy. Each collision event results in a series of position measurements in the different layers of the tracking detectors plus energy clusters in the calorimeter. The reconstruction algorithms takes care of ``connecting the dots'' and provide the most complete and accurate description of the event as it originated from the collision. In this task the algorithm execution time plays an important role, as the algorithms used by the reconstruction cannot be excessively resource demanding. In this chapter we will briefly describe the techniques used to reconstruct the events recorded by the CMS detector starting from the most basic objects and then moving towards the most complex ones. Finally, we describe the \emph{Particle Flow} algorithm that gives a global description of the event. At the end of the chapter we will describe in detail the hadronic tau reconstruction, which plays a fundamental role in this work, and the techniques used to measure its efficiency.
+While traversing the different detector layers, the particles produced in the physics collisions deposit energy in the detectors that is amplified and recorded. Most sub-detectors are capable of measuring the particle position as well as the deposited energy. Each collision event results in a series of position measurements in the different layers of the tracking detectors plus energy clusters in the calorimeter. The reconstruction algorithms takes care of ``connecting the dots'' and provide the most complete and accurate description of the event as it originated from the collision. In this task the algorithm execution time plays an important role, as the algorithms used by the reconstruction cannot be excessively resource demanding. In this chapter we will briefly describe the techniques used to reconstruct the events recorded by the CMS detector starting from the most basic objects and then moving towards the most complex ones. Finally, we describe the \emph{Particle Flow} algorithm that gives a global description of the event. At the end of the chapter we will describe in detail the hadronic tau reconstruction, which plays a fundamental role in this work, and the techniques used to measure its efficiency.
 
 \section{Track reconstruction}
 
@@ -95,7 +95,7 @@ I_{rel} = \dfrac{I_{abs}}{\pt} =  \dfrac{\sum{p_{T charged}} + \operatorname{max
 
 \subsection{Jet clustering}
 
-The particles reconstructed by the PF algorith are clustered into jets using the \emph{Anti-kT} \cite{Cacciari:2008gp} algorithm. The Anti-kT belongs to the family of sequential recombination algorithms together with the Cambridge-Aachen and the kT algorithm \cite{Ellis:1993tq,Dokshitzer:1997in}. All these algorithms require the definition of the distance measure between two objects (in this case PF particles) and of the distance from the beam axis. In case of the Anti-kT algorithm, the distance between two objects is defined as:
+The particles reconstructed by the PF algorithm are clustered into jets using the \emph{Anti-kT} \cite{Cacciari:2008gp} algorithm. The Anti-kT belongs to the family of sequential recombination algorithms together with the Cambridge-Aachen and the kT algorithm \cite{Ellis:1993tq,Dokshitzer:1997in}. All these algorithms require the definition of the distance measure between two objects (in this case PF particles) and of the distance from the beam axis. In case of the Anti-kT algorithm, the distance between two objects is defined as:
 
 \begin{equation}
 d_{ij} = \operatorname{min}(\dfrac{1}{p_{Ti}^2},\dfrac{1}{p_{Tj}^2})\dfrac{\Delta R_{ij}^2}{r^2},
@@ -274,7 +274,7 @@ A graphical illustration of the event categories is shown in Figure \ref{fig:tau
 \begin{figure}
 \begin{center}
 \includegraphics[angle=-0,width=0.8\textwidth]{3_Evt_Reconstruction/pics/figTauIdEffIllustration.pdf}
-\caption{Illustration of signal and control regions used in the efficiency measurement and thier reqirements.
+\caption{Illustration of signal and control regions used in the efficiency measurement and their requirements.
 \label{fig:tau_eff_ABCD}
 }
 \end{center}
@@ -334,7 +334,7 @@ Muon momentum scale & $\ll 1\%$ \\
 $\tau$--Jet energy scale & $ < 1\%$ \\
 Hadronic track reconstruction & $3.9\%$ \\
 Track momentum scale & $< 1\%$ \\
-Loose Isolaton & $2.5\%$ \\
+Loose Isolation & $2.5\%$ \\
 $\rm{Jet}\To\tau_h$ fake rate & $1.2\%$ \\
 $k_p$ uncertainty & $1.7\%$ \\
 $k_i$ uncertainty & $2.1\%$ \\
