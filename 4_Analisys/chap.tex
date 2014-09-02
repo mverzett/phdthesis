@@ -105,7 +105,7 @@ The irreducible backgrounds are modeled by the Monte Carlo simulation. The hard 
 The presence of pileup in MC events is simulated by adding simulated \emph{minimum bias} events to the generated ``hard'' process. The distribution of pileup events in the simulated sample is different, and generally generated with higher pileup, with respect to real running conditions. 
 This mis-match was created on purpose to ensure good coverage of the pileup distribution even for running periods posterior to the MC creation.
 % as a precaution against unexpected rise in the machine instantaneous luminosity, as most of the times the MC samples have been produced during data-taking periods. 
-Simulated events are therefore reweighted according to the number of pileup events in the MC and the distribution of pileup events in data. This procedure, called \emph{pileup reweighting}, removes the differences induced by the mis-match in the pileup distribution. The distribution of pileup events in real data is computed based on the luminosity profile and the inelastic p--p scattering cross section~\cite{Antchev:2013paa}.
+Simulated events are therefore reweighted according to the number of pileup events in the MC and the distribution of pileup events in data. This procedure, called \emph{pileup reweighting}, removes the differences induced by the mis-match in the pileup distribution. The distribution of pileup events in real data is computed based on the luminosity profile and the inelastic p--p scattering cross Section~\cite{Antchev:2013paa}.
 %inferred by the luminosity monitors.
 
 Residual differences concerning the trigger selection, lepton identification and isolation are accounted for with dedicated analyses yielding a set of data to MC correction factors and corresponding uncertainty. When differing from unity, these scale factors are applied to simulated samples in the form of an event weight.
@@ -180,7 +180,7 @@ The minimum $\chi^2$ value obtained by the scan is taken to define $k$ for train
 A parabolic fit around the minimum is performed to estimate the one sigma confidence interval as the value for which the parabolic fit yields the value of $\chi^2_{min} + 1$. %is $fcn(i) = \chi^2_{min} + 1$. 
 This confidence interval reflects both the statistical uncertainties on the training sample and the related uncertainty on the choice of the training parameters. For each channel and each lepton, three classifiers are trained with the corresponding central values and one sigma boundaries.
 
-A summary of the chosen minima and of the confidence interval boundaries is given in table~\ref{tab:kNN_minima}. A graphic representation of a sample scan is shown in figure~\ref{fig:kNN_minima_sample}. The misidentification rate observed in the training sample is displayed in figure~\ref{fig:fake_rate_sample}, overlaid with the output of the respective kNN classifier.
+A summary of the chosen minima and of the confidence interval boundaries is given in Table~\ref{tab:kNN_minima}. A graphic representation of a sample scan is shown in Figure~\ref{fig:kNN_minima_sample}. The misidentification rate observed in the training sample is displayed in Figure~\ref{fig:fake_rate_sample}, overlaid with the output of the respective kNN classifier.
 
 
 \begin{table}
@@ -247,7 +247,7 @@ The method for estimating the reducible backgrounds is validated in two control 
 These control regions provide an independent validation, as they are naturally exclusive with respect to the event sample used to train the kNN. Events in the control region are selected by maintaining
 the light-lepton same-charge requirement, but inverting the isolation requirement of the $\tau_h$ candidate and in one of the regions the charge of the tau is furthermore required to be the same as the leptons.
 This regions are dominated by W+Jets and $t\anti{t}$ backgrounds.
-Comparison between the observed and predicted kinematic distributions in the control regions is shown for the $\mu\mu\tau_h$, $e\mu\tau_h$ and $ee\tau_h$ channels in figures~\ref{fig:LLT_mmt_f3_control_7TeV}--\ref{fig:LLT_eet_f3_control_8TeV} respectively.
+Comparison between the observed and predicted kinematic distributions in the control regions is shown for the $\mu\mu\tau_h$, $e\mu\tau_h$ and $ee\tau_h$ channels in Figures~\ref{fig:LLT_mmt_f3_control_7TeV}--\ref{fig:LLT_eet_f3_control_8TeV} respectively.
 Reasonable agreement is observed, considering that the expected background in this region lacks an additional systematic uncertainty, described in the next section and not defined in this region, which has sizable effect both on the distribution and total normalization of the reducible background.
 
 \begin{figure}
@@ -370,7 +370,7 @@ The tau fake-rate is measured individually for the 2011 and 2012 run periods in 
 The width and peak parameters are adjusted to best match the measured $\rm{jet}\To\tau_h$ fake-rates.
 
 The fake rates measured in the %measured tau misidentification rates in both 
-7 TeV and 8 TeV data are shown in figure~\ref{fig:LLT_tau_FR}. The $\rm{jet}\To\tau_h$ fake-rate %measured tau misidentification rate 
+7 TeV and 8 TeV data are shown in Figure~\ref{fig:LLT_tau_FR}. The $\rm{jet}\To\tau_h$ fake-rate %measured tau misidentification rate 
 ranges from 6\% at low tau \pT in the end-cap region, to 1\% at high \pT ($ > 80$ GeV) in the central region.
 
 \begin{figure}
@@ -405,11 +405,11 @@ The most common reason for the mis-measurement of the electron charge inside the
 An electron can radiate a photon, carrying most of its momentum, which may subsequently convert into an $e^+e^-$ pair with highly unbalanced momenta, producing an electron with charge opposite to the initial one that carries most of the initial energy. %If these two processes happen 
 In case the bremsstrahlung and the photon conversion processes occur 
 in proximity to the interaction point, the reconstruction algorithm cannot identify the electron as originating from a conversion.
-The description of this process in the simulation is handled by \textsc{GEANT}~\cite{geant}. The probability for an electron to be reconstructed with opposite charge is measured as a function of the electron $\eta$ and \pT using a $\Z \rightarrow ee$ MC sample. The results are shown in figure~\ref{fig:charge_flip_prob_map}.
+The description of this process in the simulation is handled by \textsc{GEANT}~\cite{geant}. The probability for an electron to be reconstructed with opposite charge is measured as a function of the electron $\eta$ and \pT using a $\Z \rightarrow ee$ MC sample. The results are shown in Figure~\ref{fig:charge_flip_prob_map}.
 
 Another effect associated to the charge mis-measurement is a partial energy loss by radiation that fails to get associated to the electron candidate by the reconstruction algorithm.
 This effect causes a shift of the dielectron invariant mass spectrum.
-The precision with which this phenomenon is modeled in the simulation is not totally satisfactory. To quantify the effect, the spectra of opposite sign (OS) and same sign (SS) electron pairs were fitted with a Cruijfian function (a two-sided gaussian with exponential tails) allowing only a global shifting factor to float. The results of these fits are shown in figure~\ref{fig:ee_invMass_fit}. The process is repeated for both data and simulated events. The value extracted from the former is taken as central value, while the one taken from the latter is used as systematic uncertainty.
+The precision with which this phenomenon is modeled in the simulation is not totally satisfactory. To quantify the effect, the spectra of opposite sign (OS) and same sign (SS) electron pairs were fitted with a Cruijfian function (a two-sided gaussian with exponential tails) allowing only a global shifting factor to float. The results of these fits are shown in Figure~\ref{fig:ee_invMass_fit}. The process is repeated for both data and simulated events. The value extracted from the former is taken as central value, while the one taken from the latter is used as systematic uncertainty.
 
 The probability for the electron charge mis-measurement is applied as a weight on opposite sign $e^\pm e^\mp \tau_h$ events, which pass the same selection as the signal region, in order to obtain a data-driven estimate for this type of background. The invariant mass distribution obtained with this method is artificially shifted towards lower values 
 by the amount computed in the $\Z \rightarrow ee$ data.
@@ -418,7 +418,7 @@ by the amount computed in the $\Z \rightarrow ee$ data.
 
 The background induced by charge misassignment is validated in a dedicated $\Z \To e^\pm e^\pm$ control region.
 This region has the same selection as the $ee\tau_h$ signal region with the exception that events containing a tau are removed.
-The di-electron invariant mass spectrum in this region is shown in figure~\ref{fig:control_Zee}. The red histogram represents opposite-sign dielectron events weighted by the charge misassignment probability and with the invariant mass scaled by an offset extracted from MC simulation.
+The di-electron invariant mass spectrum in this region is shown in Figure~\ref{fig:control_Zee}. The red histogram represents opposite-sign dielectron events weighted by the charge misassignment probability and with the invariant mass scaled by an offset extracted from MC simulation.
 
 \begin{figure}
   \begin{center}
@@ -474,7 +474,7 @@ Single bin fluctuations in the reducible background shape due to the limited sta
 During the optimization two options were tested: either apply a cut rejecting all the events below a certain \LT\ threshold, or divide the events in two categories (called \LT-high and \LT-low) that get fitted simultaneously, increasing the total sensitivity of the analysis. 
 For each \LT \ threshold tested, the expected frequentist significance of both options has been computed for a SM Higgs boson of 125 GeV. The \LT\ scan was performed by varying the cut threshold between 60 and 170 GeV in 10 GeV steps. 
 
-The categorization is expected to perform \emph{at least} as well as the equivalent cut option, since the \LT-high category alone has the same statistical power as the corresponding cut case. The categorization choice, however, requires a significant amount of data in both the event categories in order for the optimization to be stable. For this reason the categorization option has not been investigated in case of the 7 TeV data. In the 8 TeV $ee\tau_h$ channel the difference between the two options was found to be negligible and therefore the more simple cut was chosen. Figure~\ref{fig:LT_scan} show the results of the threshold scans for the three channels in the two run periods, while table~\ref{tab:LT_options} shows the \LT\ threshold values that maximize the significance for each channel, the reported selection is used to extract the final result.
+The categorization is expected to perform \emph{at least} as well as the equivalent cut option, since the \LT-high category alone has the same statistical power as the corresponding cut case. The categorization choice, however, requires a significant amount of data in both the event categories in order for the optimization to be stable. For this reason the categorization option has not been investigated in case of the 7 TeV data. In the 8 TeV $ee\tau_h$ channel the difference between the two options was found to be negligible and therefore the more simple cut was chosen. Figure~\ref{fig:LT_scan} show the results of the threshold scans for the three channels in the two run periods, while Table~\ref{tab:LT_options} shows the \LT\ threshold values that maximize the significance for each channel, the reported selection is used to extract the final result.
 
 \begin{figure}
   \includegraphics[width=0.5\textwidth]{4_Analisys/pics/7TeV/limits/mmt.pdf}
@@ -529,15 +529,15 @@ Varying the $\tau_h$ energy scale (within a 3\%~\cite{H_tautau} uncertainty) is 
 The uncertainty in the compatibility between simulated and measured efficiency of a light quark or gluon jet to be misidentified as a b-tagged jet, causing the b-veto to 
 fail is propagated to the analysis and found to be covered by a 1\% uncertainty in the yields of the simulated samples.
 
-Uncertainties in the reducible background estimation related to the choice of the number of neighbors, $k$, of the kNN algorithm and in the statistical power of the training sample are computed as described in section~\ref{sec:kNN_uncertainties} and propagated to the signal region as a shape uncertainty, which is also allowed to affect the total normalization of the process. The uncertainty is correlated between categories belonging to the same channel and running period.
+Uncertainties in the reducible background estimation related to the choice of the number of neighbors, $k$, of the kNN algorithm and in the statistical power of the training sample are computed as described in Section~\ref{sec:kNN_uncertainties} and propagated to the signal region as a shape uncertainty, which is also allowed to affect the total normalization of the process. The uncertainty is correlated between categories belonging to the same channel and running period.
 
 Uncertainties due to the limited statistical power of the inverted isolation regions that are used to compute the reducible background shape are accounted for by introducing an additional normalization uncertainty that ranges between 12\% and 52\% plus bin-by-bin shape uncertainties. These uncertainties are uncorrelated between all categories and channels.
 
 Finally, the possible mis-modeling caused by the differences in background processes composition between the kNN training sample and the isolation-inverted region is estimated with the ``fake tau'' method and applied as a shape uncertainty, uncorrelated between the different channels and categories.
 
-A 4\% (7\%) uncertainty for each electron candidate in the final state is assigned to account for systematic uncertainties on the charge mis-measurement background yield in addition to the statistical power of the sample for 8 TeV and 7 TeV data, respectively. A 42\% (89\%) uncertainty is assigned to the invariant mass scaling factor (described in section~\ref{sec:charge_misid}) that is applied to the shape templates for the charge mis-measured background in the 8 TeV and 7 TeV data, respectively. The uncertainty is applied as a shape uncertainty with no normalization effect. %Both the uncertainties are uncorrelated between channels and running periods. 
+A 4\% (7\%) uncertainty for each electron candidate in the final state is assigned to account for systematic uncertainties on the charge mis-measurement background yield in addition to the statistical power of the sample for 8 TeV and 7 TeV data, respectively. A 42\% (89\%) uncertainty is assigned to the invariant mass scaling factor (described in Section~\ref{sec:charge_misid}) that is applied to the shape templates for the charge mis-measured background in the 8 TeV and 7 TeV data, respectively. The uncertainty is applied as a shape uncertainty with no normalization effect. %Both the uncertainties are uncorrelated between channels and running periods. 
 
-A summary of the sources of systematic uncertainties, their values, and their treatment is given in table~\ref{tab:systematics}.
+A summary of the sources of systematic uncertainties, their values, and their treatment is given in Table~\ref{tab:systematics}.
 
 \begin{table}
   \begin{center}
@@ -584,7 +584,7 @@ The physics observable used to discriminate between the signal and the different
 
 The presence of a considerable missing energy source such as the neutrino produced in the W decay does not allow the exploitation of more refined mass reconstruction algorithms such as SVFit.
 
-A summary of the different observed distributions, compared to the respective expectations, is shown in figures~\ref{fig:LLT_mmt_prefit}, \ref{fig:LLT_emt_prefit}, \ref{fig:LLT_eet_prefit} for the different channels, categories and run periods. Tables~\ref{tab:prefit_yields_table_8TeV} and~\ref{tab:prefit_yields_table_7TeV} summarizes the expected and observed yields in each category and run period.
+A summary of the different observed distributions, compared to the respective expectations, is shown in Figures~\ref{fig:LLT_mmt_prefit}, \ref{fig:LLT_emt_prefit}, \ref{fig:LLT_eet_prefit} for the different channels, categories and run periods. Tables~\ref{tab:prefit_yields_table_8TeV} and~\ref{tab:prefit_yields_table_7TeV} summarizes the expected and observed yields in each category and run period.
 
 \begin{figure}
 \begin{center}
@@ -670,7 +670,7 @@ where
 \operatorname{Poisson}(obs_c, \mu, \boldtheta) = \dfrac{(\mu s_i(\boldtheta) + b_i(\boldtheta))^{n_i}}{n_i!}e^{(\mu s_i(\boldtheta) + b_i(\boldtheta))}.
 \end{equation}
 
-As described in section~\ref{sec:systematics}, two kinds of systematic uncertainties were considered. Systematic uncertainties associated to the overall normalization are considered to be distributed according to a \emph{log-normal} distribution:
+As described in Section~\ref{sec:systematics}, two kinds of systematic uncertainties were considered. Systematic uncertainties associated to the overall normalization are considered to be distributed according to a \emph{log-normal} distribution:
 
 \begin{equation}
 \rho(\theta, \hat{\theta}) = \dfrac{1}{\theta\sqrt{2\pi}\opname{ln}(k)} e^{-\left(\dfrac{\opname{ln}(\theta/\hat{\theta})}{\sqrt{2}\opname{ln}k}\right)^2}
@@ -800,7 +800,7 @@ Figures~\ref{fig:LLT_mmt_postfit}, \ref{fig:LLT_emt_postfit}, \ref{fig:LLT_eet_p
 
 The resulting shapes after the fitting process can be combined together to have a more complete view of the results. The combination is performed in such a way that each category contributes to the total by an amount that is proportional to its signal purity evaluated as $S / (S+B)$, where $S$ denotes the integral of the signal and $B$ the sum of the backgrounds as from pre-fit values. The total normalization of the shapes is kept constant: i.e. the integral of the observed data is not affected by this procedure. Given the differences in the choice of binning this combination is only possible among 7 TeV and 8 TeV categories separately. 
 
-From this process, result of which is shown in figure~\ref{fig:sbweight}, one can see that the number of events observed in the mass region in which the Higgs signal is expected to appear is below the background expectation. %an under-fluctuation of the backgrounds is clearly visible.
+From this process, result of which is shown in Figure~\ref{fig:sbweight}, one can see that the number of events observed in the mass region in which the Higgs signal is expected to appear is below the background expectation. %an under-fluctuation of the backgrounds is clearly visible.
 Even though these plots have relatively limited statistical meaning, they help showcase the background under-fluctuation observed in the data.
 
 \begin{figure}
@@ -812,9 +812,9 @@ Even though these plots have relatively limited statistical meaning, they help s
 \end{center}
 \end{figure}
 
-The computation of the $\mu$ values for the different channels and their combination confirms the background under-fluctuation. Figure~\ref{fig:mu_vals} shows the observed $\mu$ values for the three $\ell\ell\tau_h$ channels and their combination. Even though these values are negative, the combination is still compatible with the SM value $\mu = 1$. The right plot on figure~\ref{fig:mu_vals} shows the best fit $\mu$ values for each different $\rm{H}\To\tau\tau$ channel search performed by CMS.% The fluctuation observed in the $\ell\ell\tau_h$ channels described in this thesis is  into the spread observed among the larger amount of channels searched by CMS. 
+The computation of the $\mu$ values for the different channels and their combination confirms the background under-fluctuation. Figure~\ref{fig:mu_vals} shows the observed $\mu$ values for the three $\ell\ell\tau_h$ channels and their combination. Even though these values are negative, the combination is still compatible with the SM value $\mu = 1$. The right plot on Figure~\ref{fig:mu_vals} shows the best fit $\mu$ values for each different $\rm{H}\To\tau\tau$ channel search performed by CMS.% The fluctuation observed in the $\ell\ell\tau_h$ channels described in this thesis is  into the spread observed among the larger amount of channels searched by CMS. 
 
-As described in section~\ref{sec:higgs_res} the combination of these channels, including the ones presented in this thesis, led to the first observation of the SM Higgs boson into tau lepton pairs in CMS.
+As described in Section~\ref{sec:higgs_res} the combination of these channels, including the ones presented in this thesis, led to the first observation of the SM Higgs boson into tau lepton pairs in CMS.
 
 \begin{figure}
         \centering
@@ -836,7 +836,7 @@ For each mass point the expected exclusion limit and its one and two sigma confi
 
 As an evidence for the decay of the 125 GeV Higgs boson to tau pairs exists, signal-injected limits are also computed. In this case, while the observed limit remains the same, the expected limit and the respective one and two sigma confidence intervals are computed from the distribution of toy limits sampled from signal plus background distributions.
 
-Expected and observed exclusion limits on SM Higgs boson detection in the three channels are shown in figure~\ref{fig:llt_chan_limits}, the signal-injected version of those limits is available in figure~\ref{fig:llt_chan_injected}. Figure~\ref{fig:llt_limits_78TeV} shows the combined limit for 7 TeV and 8 TeV datasets, while figure~\ref{fig:llt_limits} shows the combination of the whole WH analysis.
+Expected and observed exclusion limits on SM Higgs boson detection in the three channels are shown in Figure~\ref{fig:llt_chan_limits}, the signal-injected version of those limits is available in Figure~\ref{fig:llt_chan_injected}. Figure~\ref{fig:llt_limits_78TeV} shows the combined limit for 7 TeV and 8 TeV datasets, while Figure~\ref{fig:llt_limits} shows the combination of the whole WH analysis.
 
 \begin{figure}
 \begin{center}
