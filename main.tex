@@ -69,7 +69,7 @@ separate-uncertainty
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{tablefootnote}
-
+%\usepackage{fancyhdr}
 % keeps the distance between paragraphs constant
 \setlength{\parskip}{1ex plus 0.0ex minus 0.0ex}
 
@@ -109,6 +109,8 @@ separate-uncertainty
 % backmatter
 \backmatter
 \bibliographystyle{lucas_unsrt} %ieeetr} %plain}
+\markboth{Bibliography}{Bibliography}
+%\fancyhead[RE]{\small \slshape Bibliography}
 \bibliography{bibliography}
 %\addcontentsline{toc}{chapter}{Bibliography}
 %\pagestyle{myheadings} \markright{Bibliography}
